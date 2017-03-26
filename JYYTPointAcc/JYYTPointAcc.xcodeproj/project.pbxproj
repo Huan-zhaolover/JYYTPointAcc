@@ -80,6 +80,12 @@
 				7D86FDBB1E864D4A008EA024 /* Main.storyboard */,
 				7D86FDBE1E864D4A008EA024 /* Assets.xcassets */,
 				7D86FDC31E864D4A008EA024 /* Info.plist */,
+				7D86FE031E87B244008EA024 /* Category */,
+				7D86FE041E87B244008EA024 /* Common */,
+				7D86FE051E87B245008EA024 /* OtherResoure */,
+				7D86FE061E87B245008EA024 /* Sections */,
+				7D86FE071E87B245008EA024 /* Tools */,
+				7D86FE081E87B245008EA024 /* Venders */,
 			);
 			path = JYYTPointAcc;
 			sourceTree = "<group>";
@@ -91,6 +97,48 @@
 				7D86FDCE1E864D4A008EA024 /* Info.plist */,
 			);
 			path = JYYTPointAccTests;
+			sourceTree = "<group>";
+		};
+		7D86FE031E87B244008EA024 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		7D86FE041E87B244008EA024 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		7D86FE051E87B245008EA024 /* OtherResoure */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = OtherResoure;
+			sourceTree = "<group>";
+		};
+		7D86FE061E87B245008EA024 /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		7D86FE071E87B245008EA024 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		7D86FE081E87B245008EA024 /* Venders */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Venders;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
