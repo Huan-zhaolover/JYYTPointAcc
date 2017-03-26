@@ -11,7 +11,6 @@
 		7D86FDBA1E864D4A008EA024 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D86FDB91E864D4A008EA024 /* ViewController.swift */; };
 		7D86FDBD1E864D4A008EA024 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D86FDBB1E864D4A008EA024 /* Main.storyboard */; };
 		7D86FDBF1E864D4A008EA024 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D86FDBE1E864D4A008EA024 /* Assets.xcassets */; };
-		7D86FDC21E864D4A008EA024 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D86FDC01E864D4A008EA024 /* LaunchScreen.storyboard */; };
 		7D86FDCD1E864D4A008EA024 /* JYYTPointAccTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D86FDCC1E864D4A008EA024 /* JYYTPointAccTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,7 +30,6 @@
 		7D86FDB91E864D4A008EA024 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7D86FDBC1E864D4A008EA024 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7D86FDBE1E864D4A008EA024 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		7D86FDC11E864D4A008EA024 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7D86FDC31E864D4A008EA024 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D86FDC81E864D4A008EA024 /* JYYTPointAccTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JYYTPointAccTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D86FDCC1E864D4A008EA024 /* JYYTPointAccTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JYYTPointAccTests.swift; sourceTree = "<group>"; };
@@ -81,7 +79,6 @@
 				7D86FDB91E864D4A008EA024 /* ViewController.swift */,
 				7D86FDBB1E864D4A008EA024 /* Main.storyboard */,
 				7D86FDBE1E864D4A008EA024 /* Assets.xcassets */,
-				7D86FDC01E864D4A008EA024 /* LaunchScreen.storyboard */,
 				7D86FDC31E864D4A008EA024 /* Info.plist */,
 			);
 			path = JYYTPointAcc;
@@ -181,7 +178,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D86FDC21E864D4A008EA024 /* LaunchScreen.storyboard in Resources */,
 				7D86FDBF1E864D4A008EA024 /* Assets.xcassets in Resources */,
 				7D86FDBD1E864D4A008EA024 /* Main.storyboard in Resources */,
 			);
@@ -231,14 +227,6 @@
 				7D86FDBC1E864D4A008EA024 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		7D86FDC01E864D4A008EA024 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7D86FDC11E864D4A008EA024 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -339,10 +327,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 39LA9J6HHG;
 				INFOPLIST_FILE = JYYTPointAcc/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.someaccount.JYYTPointAcc;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shjy.JYPointAcc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -352,10 +342,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 39LA9J6HHG;
 				INFOPLIST_FILE = JYYTPointAcc/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.someaccount.JYYTPointAcc;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shjy.JYPointAcc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -410,6 +402,7 @@
 				7D86FDD31E864D4A008EA024 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7D86FDD41E864D4A008EA024 /* Build configuration list for PBXNativeTarget "JYYTPointAccTests" */ = {
 			isa = XCConfigurationList;
@@ -418,6 +411,7 @@
 				7D86FDD61E864D4A008EA024 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
