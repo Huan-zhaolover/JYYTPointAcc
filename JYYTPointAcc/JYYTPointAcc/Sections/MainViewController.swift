@@ -17,14 +17,7 @@ class MainViewController: UITabBarController {
         addSelfChildViewController(childVC: StatementVC(), title: "报表", imageString: "home_tabbar_bb")
         addSelfChildViewController(childVC: InvoiceListVC(), title: "发票", imageString: "home_tabbar_fp")
         addSelfChildViewController(childVC: PartnerVC(), title: "伙伴", imageString: "home_tabbar_hb")
-
-         //  动态获取命名空间
-        let nas = Bundle.main.infoDictionary! ["CFBundleExecutable"] as! String
-        
-        let cls:AnyClass? =  NSClassFromString(nas+".".appending("BillListVC"))
-        let vcclas =  cls as! UIViewController.Type
-        let vcccc = vcclas.init()
-        print(vcccc)
+        text1()
         
         // Do any additional setup after loading the view.
     }
@@ -37,6 +30,33 @@ class MainViewController: UITabBarController {
         
         let nav = UINavigationController(rootViewController: childVC)
         addChildViewController(nav)
+    }
+   private func text1()  {
+        //  动态获取命名空间
+        let nas = Bundle.main.infoDictionary! ["CFBundleExecutable"] as! String
+        
+        let cls:AnyClass? =  NSClassFromString(nas+".".appending("BillListVC"))
+        let vcclas =  cls as! UIViewController.Type
+        let vcccc = vcclas.init()
+        print(vcccc)
+        
+        let path = Bundle.main.path(forResource: "home.plist", ofType: nil)
+        if let filePath = path{
+            do {
+                let data = NSData(contentsOfFile: filePath)
+                let diarry:Any = try JSONSerialization.jsonObject(with: data! as Data, options: JSONSerialization.ReadingOptions.mutableContainers)
+                
+                for adic in diarry as! [[String:String]] {
+                    print(adic)
+                    
+                }
+                print(diarry)
+                
+            } catch   {
+                print("读取本地数据出现错误！")
+            }
+        }
+
     }
 
 }
