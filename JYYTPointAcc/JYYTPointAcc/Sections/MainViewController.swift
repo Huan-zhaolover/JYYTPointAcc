@@ -18,6 +18,14 @@ class MainViewController: UITabBarController {
         addSelfChildViewController(childVC: InvoiceListVC(), title: "发票", imageString: "home_tabbar_fp")
         addSelfChildViewController(childVC: PartnerVC(), title: "伙伴", imageString: "home_tabbar_hb")
 
+         //  动态获取命名空间
+        let nas = Bundle.main.infoDictionary! ["CFBundleExecutable"] as! String
+        
+        let cls:AnyClass? =  NSClassFromString(nas+".".appending("BillListVC"))
+        let vcclas =  cls as! UIViewController.Type
+        let vcccc = vcclas.init()
+        print(vcccc)
+        
         // Do any additional setup after loading the view.
     }
     private func addSelfChildViewController(childVC: UIViewController,title:String,imageString:String) {
