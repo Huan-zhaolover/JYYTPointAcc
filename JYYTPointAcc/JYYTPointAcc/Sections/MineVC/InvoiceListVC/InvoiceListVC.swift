@@ -1,5 +1,5 @@
 //
-//  PartnerVC.swift
+//  InvoiceListVC.swift
 //  JYYTPointAcc
 //
 //  Created by shjyyt on 2017/3/26.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PartnerVC: BaseViewController {
+class InvoiceListVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

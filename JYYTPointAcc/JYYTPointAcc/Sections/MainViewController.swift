@@ -13,12 +13,11 @@ class MainViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tabBar.tintColor=UIColor.orange
+        addSelfChildViewController(childVC: HomeVC(), title: "首页", imageString: "home_tabbar_fp")
         addSelfChildViewController(childVC: BillListVC(), title: "账单", imageString: "home_tabbar_zd")
         addSelfChildViewController(childVC: StatementVC(), title: "报表", imageString: "home_tabbar_bb")
-        addSelfChildViewController(childVC: InvoiceListVC(), title: "发票", imageString: "home_tabbar_fp")
-        addSelfChildViewController(childVC: PartnerVC(), title: "伙伴", imageString: "home_tabbar_hb")
+        addSelfChildViewController(childVC: MineVC(), title: "我的", imageString: "home_tabbar_hb")
         text1()
-        
         // Do any additional setup after loading the view.
     }
     private func addSelfChildViewController(childVC: UIViewController,title:String,imageString:String) {

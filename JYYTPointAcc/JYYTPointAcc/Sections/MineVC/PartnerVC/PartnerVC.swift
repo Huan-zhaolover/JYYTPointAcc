@@ -1,5 +1,5 @@
 //
-//  MineVC.swift
+//  PartnerVC.swift
 //  JYYTPointAcc
 //
 //  Created by shjyyt on 2017/3/26.
@@ -8,11 +8,10 @@
 
 import UIKit
 
-class MineVC: BaseViewController {
+class PartnerVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        nologvvv.setUpNologViewInfo(imageString: "visitordiscover_image_profile", title: "我的个人信息我的伙伴我的发票都在这里")
 
         // Do any additional setup after loading the view.
     }

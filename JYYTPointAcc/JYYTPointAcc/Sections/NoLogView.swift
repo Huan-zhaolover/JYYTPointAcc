@@ -19,13 +19,14 @@ class NoLogView: UIView {
     @IBOutlet weak var regisButton: UIButton!
     @IBOutlet weak var logginButton: UIButton!
     
- 
+    // 根据控制器的不同，设置未登录页界面的图片和文字
     func setUpNologViewInfo(imageString:String,title:String){
  
         rotationView.isHidden=true
         iconImageView.image=UIImage(named: imageString)
         messageLable.text=title
     }
+    //  MARK: 设置首页转轮动画
     func addRotationAnimation(){
         
         let animation = CABasicAnimation(keyPath: "transform.rotation.z")
@@ -34,6 +35,7 @@ class NoLogView: UIView {
         animation.toValue = M_PI * 2
         animation.repeatCount=MAXFLOAT
         animation.isRemovedOnCompletion = false
+        animation.duration = 10   // 结束一次动画的时常
         
         rotationView.layer.add(animation, forKey: "homeRotation")
     }

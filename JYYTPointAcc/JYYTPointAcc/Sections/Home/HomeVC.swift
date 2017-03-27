@@ -1,18 +1,19 @@
 //
-//  InvoiceListVC.swift
+//  HomeVC.swift
 //  JYYTPointAcc
 //
-//  Created by shjyyt on 2017/3/26.
+//  Created by shjyyt on 2017/3/27.
 //  Copyright © 2017年 shjy. All rights reserved.
 //
 
 import UIKit
 
-class InvoiceListVC: BaseViewController {
+class HomeVC: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        nologvvv.addRotationAnimation()
         // Do any additional setup after loading the view.
     }
 

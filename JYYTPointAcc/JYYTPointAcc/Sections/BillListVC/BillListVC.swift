@@ -12,8 +12,8 @@ class BillListVC: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        nologvvv.setUpNologViewInfo(imageString: "icon_empty_bill", title: "账单信息我的伙伴审批账单都在这里")
 
-        nologvvv.addRotationAnimation()
         
         // Do any additional setup after loading the view.
     }

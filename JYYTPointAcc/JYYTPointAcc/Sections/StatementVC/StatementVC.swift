@@ -12,7 +12,7 @@ class StatementVC: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        nologvvv.setUpNologViewInfo(imageString: "icon_empty_nonew", title: "添加账单的报表统计在这里")
         // Do any additional setup after loading the view.
     }
 
