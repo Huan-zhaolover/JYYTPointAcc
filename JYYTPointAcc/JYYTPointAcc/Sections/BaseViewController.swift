@@ -11,28 +11,20 @@ import UIKit
 class BaseViewController: UIViewController {
 
     let isHadLoggin :Bool = false
-    
+    lazy var nologvvv : NoLogView = NoLogView.shareNoLogView()
+
     override func loadView() {
         isHadLoggin ?  super.loadView(): setNoLogView()
     }
-    private func setNoLogView() {
-        let aview=UIView()
-        aview.backgroundColor=UIColor.red
-        
-        view=aview
-    }
+  
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setNologViewItems()
+        
         // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
-
+    
     /*
     // MARK: - Navigation
 
@@ -44,3 +36,16 @@ class BaseViewController: UIViewController {
     */
 
 }
+
+extension  BaseViewController {
+    func setNoLogView() {
+        let aview=nologvvv
+        view=aview
+    }
+    
+     func setNologViewItems(){
+    
+        
+    }
+}
+

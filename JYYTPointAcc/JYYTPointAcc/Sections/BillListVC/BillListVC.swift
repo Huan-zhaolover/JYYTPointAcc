@@ -13,6 +13,8 @@ class BillListVC: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        nologvvv.addRotationAnimation()
+        
         // Do any additional setup after loading the view.
     }
 

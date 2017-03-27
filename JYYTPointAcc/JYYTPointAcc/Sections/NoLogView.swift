@@ -10,12 +10,31 @@ import UIKit
 
 class NoLogView: UIView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    class func shareNoLogView() -> NoLogView {
+       return Bundle.main.loadNibNamed("NoLogView", owner: nil, options: nil)?.first as! NoLogView
     }
-    */
-
+    @IBOutlet weak var rotationView: UIImageView!
+    @IBOutlet weak var iconImageView: UIImageView!
+    @IBOutlet weak var messageLable: UILabel!
+    @IBOutlet weak var regisButton: UIButton!
+    @IBOutlet weak var logginButton: UIButton!
+    
+ 
+    func setUpNologViewInfo(imageString:String,title:String){
+ 
+        rotationView.isHidden=true
+        iconImageView.image=UIImage(named: imageString)
+        messageLable.text=title
+    }
+    func addRotationAnimation(){
+        
+        let animation = CABasicAnimation(keyPath: "transform.rotation.z")
+        
+        animation.fromValue = 0
+        animation.toValue = M_PI * 2
+        animation.repeatCount=MAXFLOAT
+        animation.isRemovedOnCompletion = false
+        
+        rotationView.layer.add(animation, forKey: "homeRotation")
+    }
 }
