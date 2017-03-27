@@ -19,6 +19,8 @@
 		7D86FE171E87B5C7008EA024 /* StatementVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D86FE161E87B5C7008EA024 /* StatementVC.swift */; };
 		7D86FE1B1E87B922008EA024 /* PartnerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D86FE1A1E87B922008EA024 /* PartnerVC.swift */; };
 		7D86FE1D1E889B83008EA024 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D86FE1C1E889B83008EA024 /* BaseViewController.swift */; };
+		7D86FE1F1E88DDBE008EA024 /* NoLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D86FE1E1E88DDBE008EA024 /* NoLogView.swift */; };
+		7D86FE211E88DDD0008EA024 /* NoLogView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D86FE201E88DDD0008EA024 /* NoLogView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		7D86FE161E87B5C7008EA024 /* StatementVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatementVC.swift; sourceTree = "<group>"; };
 		7D86FE1A1E87B922008EA024 /* PartnerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartnerVC.swift; sourceTree = "<group>"; };
 		7D86FE1C1E889B83008EA024 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		7D86FE1E1E88DDBE008EA024 /* NoLogView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoLogView.swift; sourceTree = "<group>"; };
+		7D86FE201E88DDD0008EA024 /* NoLogView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoLogView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +143,8 @@
 			children = (
 				7D86FE091E87B485008EA024 /* MainViewController.swift */,
 				7D86FE1C1E889B83008EA024 /* BaseViewController.swift */,
+				7D86FE1E1E88DDBE008EA024 /* NoLogView.swift */,
+				7D86FE201E88DDD0008EA024 /* NoLogView.xib */,
 				7D86FE181E87B909008EA024 /* LoginAndRegist */,
 				7D86FE191E87B909008EA024 /* PartnerVC */,
 				7D86FE0F1E87B585008EA024 /* BillListVC */,
@@ -295,6 +301,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D86FE211E88DDD0008EA024 /* NoLogView.xib in Resources */,
 				7D86FDBF1E864D4A008EA024 /* Assets.xcassets in Resources */,
 				7D86FDBD1E864D4A008EA024 /* Main.storyboard in Resources */,
 			);
@@ -322,6 +329,7 @@
 				7D86FE1D1E889B83008EA024 /* BaseViewController.swift in Sources */,
 				7D86FE111E87B598008EA024 /* BillListVC.swift in Sources */,
 				7D86FE171E87B5C7008EA024 /* StatementVC.swift in Sources */,
+				7D86FE1F1E88DDBE008EA024 /* NoLogView.swift in Sources */,
 				7D86FE1B1E87B922008EA024 /* PartnerVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

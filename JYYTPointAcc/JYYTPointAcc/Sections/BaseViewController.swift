@@ -10,15 +10,10 @@ import UIKit
 //  首页四个控制器的父类，作为未登录状态判断
 class BaseViewController: UIViewController {
 
-    let isHadLoggin = false
+    let isHadLoggin :Bool = false
     
     override func loadView() {
-        
-        if isHadLoggin {
-            super.loadView()
-        }else{
-            setNoLogView()
-        }
+        isHadLoggin ?  super.loadView(): setNoLogView()
     }
     private func setNoLogView() {
         let aview=UIView()
