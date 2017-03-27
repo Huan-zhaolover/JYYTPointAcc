@@ -8,11 +8,18 @@
 
 import UIKit
 
+protocol  NoLogViewDelegate :NSObjectProtocol{
+    func registButtonWillClick()
+    func logginButtonWillClick()
+}
+
 class NoLogView: UIView {
 
     class func shareNoLogView() -> NoLogView {
        return Bundle.main.loadNibNamed("NoLogView", owner: nil, options: nil)?.first as! NoLogView
     }
+    weak var delegate:NoLogViewDelegate?
+    
     @IBOutlet weak var rotationView: UIImageView!
     @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var messageLable: UILabel!
@@ -26,7 +33,7 @@ class NoLogView: UIView {
         iconImageView.image=UIImage(named: imageString)
         messageLable.text=title
     }
-    //  MARK: 设置首页转轮动画
+     //  MARK: 设置首页转轮动画
     func addRotationAnimation(){
         
         let animation = CABasicAnimation(keyPath: "transform.rotation.z")
@@ -39,4 +46,12 @@ class NoLogView: UIView {
         
         rotationView.layer.add(animation, forKey: "homeRotation")
     }
+ 
+    @IBAction func registButtonClick(_ sender: Any) {
+        delegate?.registButtonWillClick()
+    }
+    @IBAction func logginButtonClick(_ sender: Any) {
+        delegate?.logginButtonWillClick()
+    }
+    
 }

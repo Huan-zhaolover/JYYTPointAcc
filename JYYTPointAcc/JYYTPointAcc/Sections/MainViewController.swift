@@ -12,7 +12,11 @@ class MainViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+       
         tabBar.tintColor=UIColor.orange
+        UINavigationBar.appearance().tintColor=UIColor.orange
+
+//         UINavigationBar.appearance().tintColor=UIColor.init(red: 242.0, green: 196.0, blue: 57.0, alpha: 1)
         addSelfChildViewController(childVC: HomeVC(), title: "首页", imageString: "home_tabbar_fp")
         addSelfChildViewController(childVC: BillListVC(), title: "账单", imageString: "home_tabbar_zd")
         addSelfChildViewController(childVC: StatementVC(), title: "报表", imageString: "home_tabbar_bb")
