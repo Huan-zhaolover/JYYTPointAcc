@@ -37,7 +37,6 @@ class NoLogView: UIView {
     func addRotationAnimation(){
         
         let animation = CABasicAnimation(keyPath: "transform.rotation.z")
-        
         animation.fromValue = 0
         animation.toValue = M_PI * 2
         animation.repeatCount=MAXFLOAT
