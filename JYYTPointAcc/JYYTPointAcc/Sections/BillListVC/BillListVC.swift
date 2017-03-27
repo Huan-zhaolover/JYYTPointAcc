@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BillListVC: UIViewController {
+class BillListVC: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

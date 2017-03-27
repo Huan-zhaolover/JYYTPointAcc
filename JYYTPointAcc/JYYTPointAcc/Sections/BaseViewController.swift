@@ -1,15 +1,31 @@
 //
-//  StatementVC.swift
+//  BaseViewController.swift
 //  JYYTPointAcc
 //
-//  Created by shjyyt on 2017/3/26.
+//  Created by shjyyt on 2017/3/27.
 //  Copyright © 2017年 shjy. All rights reserved.
 //
 
 import UIKit
+//  首页四个控制器的父类，作为未登录状态判断
+class BaseViewController: UIViewController {
 
-class StatementVC: BaseViewController {
-
+    let isHadLoggin = false
+    
+    override func loadView() {
+        
+        if isHadLoggin {
+            super.loadView()
+        }else{
+            setNoLogView()
+        }
+    }
+    private func setNoLogView() {
+        let aview=UIView()
+        aview.backgroundColor=UIColor.red
+        
+        view=aview
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

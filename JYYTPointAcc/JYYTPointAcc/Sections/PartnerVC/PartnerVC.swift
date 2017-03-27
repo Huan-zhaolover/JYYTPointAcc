@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PartnerVC: UIViewController {
+class PartnerVC: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

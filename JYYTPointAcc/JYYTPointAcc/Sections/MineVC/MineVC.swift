@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MineVC: UIViewController {
+class MineVC: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

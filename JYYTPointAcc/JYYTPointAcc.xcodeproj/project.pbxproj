@@ -18,6 +18,7 @@
 		7D86FE151E87B5B9008EA024 /* MineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D86FE141E87B5B9008EA024 /* MineVC.swift */; };
 		7D86FE171E87B5C7008EA024 /* StatementVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D86FE161E87B5C7008EA024 /* StatementVC.swift */; };
 		7D86FE1B1E87B922008EA024 /* PartnerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D86FE1A1E87B922008EA024 /* PartnerVC.swift */; };
+		7D86FE1D1E889B83008EA024 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D86FE1C1E889B83008EA024 /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		7D86FE141E87B5B9008EA024 /* MineVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineVC.swift; sourceTree = "<group>"; };
 		7D86FE161E87B5C7008EA024 /* StatementVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatementVC.swift; sourceTree = "<group>"; };
 		7D86FE1A1E87B922008EA024 /* PartnerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartnerVC.swift; sourceTree = "<group>"; };
+		7D86FE1C1E889B83008EA024 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				7D86FE091E87B485008EA024 /* MainViewController.swift */,
+				7D86FE1C1E889B83008EA024 /* BaseViewController.swift */,
 				7D86FE181E87B909008EA024 /* LoginAndRegist */,
 				7D86FE191E87B909008EA024 /* PartnerVC */,
 				7D86FE0F1E87B585008EA024 /* BillListVC */,
@@ -316,6 +319,7 @@
 				7D86FDBA1E864D4A008EA024 /* ViewController.swift in Sources */,
 				7D86FE131E87B5AA008EA024 /* InvoiceListVC.swift in Sources */,
 				7D86FDB81E864D4A008EA024 /* AppDelegate.swift in Sources */,
+				7D86FE1D1E889B83008EA024 /* BaseViewController.swift in Sources */,
 				7D86FE111E87B598008EA024 /* BillListVC.swift in Sources */,
 				7D86FE171E87B5C7008EA024 /* StatementVC.swift in Sources */,
 				7D86FE1B1E87B922008EA024 /* PartnerVC.swift in Sources */,
