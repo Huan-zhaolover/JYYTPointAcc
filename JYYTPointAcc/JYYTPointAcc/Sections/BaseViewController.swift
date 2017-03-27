@@ -39,6 +39,8 @@ extension  BaseViewController {
     }
     
     func setNavgationBarItems(){
+//        UIBarButtonItem.titleLableWithText(title: "hhhhhh")
+        
         navigationItem.leftBarButtonItem=UIBarButtonItem.init(title: "登录", style: .plain, target: self, action: #selector(registButtonWillClick))
         navigationItem.rightBarButtonItem=UIBarButtonItem.init(title: "注册", style: .plain, target: self, action: #selector(logginButtonWillClick))
     }

@@ -32,6 +32,7 @@ class NoLogView: UIView {
         rotationView.isHidden=true
         iconImageView.image=UIImage(named: imageString)
         messageLable.text=title
+        
     }
      //  MARK: 设置首页转轮动画
     func addRotationAnimation(){
