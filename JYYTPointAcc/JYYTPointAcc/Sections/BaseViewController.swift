@@ -10,7 +10,7 @@ import UIKit
 //  首页四个控制器的父类，作为未登录状态判断
 class BaseViewController: UIViewController,NoLogViewDelegate {
 
-    let isHadLoggin :Bool = false
+    let isHadLoggin :Bool = true
     lazy var nologvvv : NoLogView = NoLogView.shareNoLogView()
 
     override func loadView() {
@@ -19,7 +19,6 @@ class BaseViewController: UIViewController,NoLogViewDelegate {
   
     override func viewDidLoad() {
         super.viewDidLoad()
-        setNavgationBarItems()
         
         // Do any additional setup after loading the view.
     }
@@ -35,11 +34,11 @@ extension  BaseViewController {
         print("zhuce")
     }
     func logginButtonWillClick() {
-         print("denglu")
+        print("denglu")
     }
     
-    func setNavgationBarItems(){
-//        UIBarButtonItem.titleLableWithText(title: "hhhhhh")
+    func setNavgationBarNoLogedItems(){
+        //        UIBarButtonItem.titleLableWithText(title: "hhhhhh")
         
         navigationItem.leftBarButtonItem=UIBarButtonItem.init(title: "登录", style: .plain, target: self, action: #selector(registButtonWillClick))
         navigationItem.rightBarButtonItem=UIBarButtonItem.init(title: "注册", style: .plain, target: self, action: #selector(logginButtonWillClick))

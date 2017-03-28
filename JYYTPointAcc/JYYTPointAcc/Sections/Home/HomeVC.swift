@@ -8,16 +8,40 @@
 
 import UIKit
 
-class HomeVC: BaseViewController {
+class HomeVC: BaseViewController{
 
+    private lazy var homeAnimatir : HomePopOverAnimator = HomePopOverAnimator()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        nologvvv.addRotationAnimation()
+        if isHadLoggin {
+            nologvvv.addRotationAnimation()
+        }
     
+        setHomeNavBars()
+        
         // Do any additional setup after loading the view.
     }
-
+    func  setHomeNavBars(){
+        if isHadLoggin {
+            navigationItem.leftBarButtonItem = UIBarButtonItem(title: "账本", style: .plain, target: self, action: #selector(changeAccoountBook))
+            navigationItem.rightBarButtonItem = UIBarButtonItem(title: "消息", style: .plain, target: self, action: #selector(messageList))
+        }else{
+            setNavgationBarNoLogedItems()
+        }
+    }
+    func changeAccoountBook(){
+        let vc =  LeftChoseAccountBookVC()
+        vc.modalPresentationStyle = .custom
+        vc.transitioningDelegate = homeAnimatir
+        
+        present(vc, animated: true, completion:nil)
+    }
+    func messageList(){
+        
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

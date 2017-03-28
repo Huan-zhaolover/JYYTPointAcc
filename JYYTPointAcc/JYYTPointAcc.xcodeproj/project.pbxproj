@@ -10,6 +10,8 @@
 		7D86003C1E8953F9008EA024 /* UIBarBarItem+category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D86003B1E8953F9008EA024 /* UIBarBarItem+category.swift */; };
 		7D86003F1E89F1C0008EA024 /* LeftChoseAccountBookVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D86003D1E89F1C0008EA024 /* LeftChoseAccountBookVC.swift */; };
 		7D8600401E89F1C0008EA024 /* LeftChoseAccountBookVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D86003E1E89F1C0008EA024 /* LeftChoseAccountBookVC.xib */; };
+		7D8600421E89F909008EA024 /* HomePopOverAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8600411E89F909008EA024 /* HomePopOverAnimator.swift */; };
+		7D8600441E89FC3B008EA024 /* HomeUIPresentationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8600431E89FC3B008EA024 /* HomeUIPresentationVC.swift */; };
 		7D86FDB81E864D4A008EA024 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D86FDB71E864D4A008EA024 /* AppDelegate.swift */; };
 		7D86FDBA1E864D4A008EA024 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D86FDB91E864D4A008EA024 /* ViewController.swift */; };
 		7D86FDBD1E864D4A008EA024 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D86FDBB1E864D4A008EA024 /* Main.storyboard */; };
@@ -41,6 +43,8 @@
 		7D86003B1E8953F9008EA024 /* UIBarBarItem+category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarBarItem+category.swift"; sourceTree = "<group>"; };
 		7D86003D1E89F1C0008EA024 /* LeftChoseAccountBookVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftChoseAccountBookVC.swift; sourceTree = "<group>"; };
 		7D86003E1E89F1C0008EA024 /* LeftChoseAccountBookVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftChoseAccountBookVC.xib; sourceTree = "<group>"; };
+		7D8600411E89F909008EA024 /* HomePopOverAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePopOverAnimator.swift; sourceTree = "<group>"; };
+		7D8600431E89FC3B008EA024 /* HomeUIPresentationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeUIPresentationVC.swift; sourceTree = "<group>"; };
 		7D86FDB41E864D4A008EA024 /* JYYTPointAcc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JYYTPointAcc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D86FDB71E864D4A008EA024 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D86FDB91E864D4A008EA024 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -216,6 +220,8 @@
 				7D86FE291E8909CF008EA024 /* HomeVC.swift */,
 				7D86003D1E89F1C0008EA024 /* LeftChoseAccountBookVC.swift */,
 				7D86003E1E89F1C0008EA024 /* LeftChoseAccountBookVC.xib */,
+				7D8600411E89F909008EA024 /* HomePopOverAnimator.swift */,
+				7D8600431E89FC3B008EA024 /* HomeUIPresentationVC.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -347,7 +353,9 @@
 				7D86FE151E87B5B9008EA024 /* MineVC.swift in Sources */,
 				7D86003C1E8953F9008EA024 /* UIBarBarItem+category.swift in Sources */,
 				7D86FDBA1E864D4A008EA024 /* ViewController.swift in Sources */,
+				7D8600421E89F909008EA024 /* HomePopOverAnimator.swift in Sources */,
 				7D86FDB81E864D4A008EA024 /* AppDelegate.swift in Sources */,
+				7D8600441E89FC3B008EA024 /* HomeUIPresentationVC.swift in Sources */,
 				7D86FE1D1E889B83008EA024 /* BaseViewController.swift in Sources */,
 				7D86FE111E87B598008EA024 /* BillListVC.swift in Sources */,
 				7D86FE271E890954008EA024 /* InvoiceListVC.swift in Sources */,
