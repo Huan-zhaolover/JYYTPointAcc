@@ -1,20 +1,18 @@
 //
-//  HomeVC.swift
+//  LeftChoseAccountBookVC.swift
 //  JYYTPointAcc
 //
-//  Created by shjyyt on 2017/3/27.
+//  Created by shjyyt on 2017/3/28.
 //  Copyright © 2017年 shjy. All rights reserved.
 //
 
 import UIKit
-
-class HomeVC: BaseViewController {
+// 左侧抽屉选择账本
+class LeftChoseAccountBookVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        nologvvv.addRotationAnimation()
-    
+
         // Do any additional setup after loading the view.
     }
 

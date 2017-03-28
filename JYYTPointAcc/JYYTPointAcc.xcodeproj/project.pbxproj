@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7D86003C1E8953F9008EA024 /* UIBarBarItem+category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D86003B1E8953F9008EA024 /* UIBarBarItem+category.swift */; };
+		7D86003F1E89F1C0008EA024 /* LeftChoseAccountBookVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D86003D1E89F1C0008EA024 /* LeftChoseAccountBookVC.swift */; };
+		7D8600401E89F1C0008EA024 /* LeftChoseAccountBookVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D86003E1E89F1C0008EA024 /* LeftChoseAccountBookVC.xib */; };
 		7D86FDB81E864D4A008EA024 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D86FDB71E864D4A008EA024 /* AppDelegate.swift */; };
 		7D86FDBA1E864D4A008EA024 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D86FDB91E864D4A008EA024 /* ViewController.swift */; };
 		7D86FDBD1E864D4A008EA024 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D86FDBB1E864D4A008EA024 /* Main.storyboard */; };
@@ -37,6 +39,8 @@
 
 /* Begin PBXFileReference section */
 		7D86003B1E8953F9008EA024 /* UIBarBarItem+category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarBarItem+category.swift"; sourceTree = "<group>"; };
+		7D86003D1E89F1C0008EA024 /* LeftChoseAccountBookVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftChoseAccountBookVC.swift; sourceTree = "<group>"; };
+		7D86003E1E89F1C0008EA024 /* LeftChoseAccountBookVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftChoseAccountBookVC.xib; sourceTree = "<group>"; };
 		7D86FDB41E864D4A008EA024 /* JYYTPointAcc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JYYTPointAcc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D86FDB71E864D4A008EA024 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D86FDB91E864D4A008EA024 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -210,6 +214,8 @@
 			isa = PBXGroup;
 			children = (
 				7D86FE291E8909CF008EA024 /* HomeVC.swift */,
+				7D86003D1E89F1C0008EA024 /* LeftChoseAccountBookVC.swift */,
+				7D86003E1E89F1C0008EA024 /* LeftChoseAccountBookVC.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -316,6 +322,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D86FE211E88DDD0008EA024 /* NoLogView.xib in Resources */,
+				7D8600401E89F1C0008EA024 /* LeftChoseAccountBookVC.xib in Resources */,
 				7D86FDBF1E864D4A008EA024 /* Assets.xcassets in Resources */,
 				7D86FDBD1E864D4A008EA024 /* Main.storyboard in Resources */,
 			);
@@ -335,6 +342,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D86003F1E89F1C0008EA024 /* LeftChoseAccountBookVC.swift in Sources */,
 				7D86FE0A1E87B485008EA024 /* MainViewController.swift in Sources */,
 				7D86FE151E87B5B9008EA024 /* MineVC.swift in Sources */,
 				7D86003C1E8953F9008EA024 /* UIBarBarItem+category.swift in Sources */,

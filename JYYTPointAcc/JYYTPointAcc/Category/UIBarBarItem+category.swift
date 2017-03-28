@@ -13,7 +13,8 @@ extension UIBarButtonItem {
     class func setTheBarTintColor(color:UIColor){
         UINavigationBar.appearance().tintColor=color
     }
-    /// 返回titleLable
+    /**  返回titleLable
+     */
     class func titleLableWithText(title:String)->UILabel{
         let lable = UILabel()
         lable.clipsToBounds = true
