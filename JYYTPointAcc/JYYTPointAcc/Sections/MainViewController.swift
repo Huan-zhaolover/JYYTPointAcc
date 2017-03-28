@@ -9,14 +9,11 @@
 import UIKit
 
 class MainViewController: UITabBarController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-       
         tabBar.tintColor=UIColor.orange
         UINavigationBar.appearance().tintColor=UIColor.orange
-
-//         UINavigationBar.appearance().tintColor=UIColor.init(red: 242.0, green: 196.0, blue: 57.0, alpha: 1)
         addSelfChildViewController(childVC: HomeVC(), title: "首页", imageString: "home_tabbar_fp")
         addSelfChildViewController(childVC: BillListVC(), title: "账单", imageString: "home_tabbar_zd")
         addSelfChildViewController(childVC: StatementVC(), title: "报表", imageString: "home_tabbar_bb")
@@ -34,7 +31,7 @@ class MainViewController: UITabBarController {
         let nav = UINavigationController(rootViewController: childVC)
         addChildViewController(nav)
     }
-   private func text1()  {
+    private func text1()  {
         //  动态获取命名空间
         let nas = Bundle.main.infoDictionary! ["CFBundleExecutable"] as! String
         
@@ -42,7 +39,6 @@ class MainViewController: UITabBarController {
         let vcclas =  cls as! UIViewController.Type
         let vcccc = vcclas.init()
         print(vcccc)
-        
         let path = Bundle.main.path(forResource: "home.plist", ofType: nil)
         if let filePath = path{
             do {
@@ -51,10 +47,8 @@ class MainViewController: UITabBarController {
                 
                 for adic in diarry as! [[String:String]] {
                     print(adic)
-                    
                 }
                 print(diarry)
-                
             } catch   {
                 print("读取本地数据出现错误！")
             }

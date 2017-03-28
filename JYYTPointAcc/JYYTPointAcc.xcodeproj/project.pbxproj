@@ -84,6 +84,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D4BAEB21E8A37D900CE86C3 /* leftDrop */ = {
+			isa = PBXGroup;
+			children = (
+				7D86003D1E89F1C0008EA024 /* LeftChoseAccountBookVC.swift */,
+				7D86003E1E89F1C0008EA024 /* LeftChoseAccountBookVC.xib */,
+				7D8600411E89F909008EA024 /* HomePopOverAnimator.swift */,
+				7D8600431E89FC3B008EA024 /* HomeUIPresentationVC.swift */,
+			);
+			name = leftDrop;
+			sourceTree = "<group>";
+		};
 		7D86FDAB1E864D4A008EA024 = {
 			isa = PBXGroup;
 			children = (
@@ -218,10 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				7D86FE291E8909CF008EA024 /* HomeVC.swift */,
-				7D86003D1E89F1C0008EA024 /* LeftChoseAccountBookVC.swift */,
-				7D86003E1E89F1C0008EA024 /* LeftChoseAccountBookVC.xib */,
-				7D8600411E89F909008EA024 /* HomePopOverAnimator.swift */,
-				7D8600431E89FC3B008EA024 /* HomeUIPresentationVC.swift */,
+				7D4BAEB21E8A37D900CE86C3 /* leftDrop */,
 			);
 			path = Home;
 			sourceTree = "<group>";

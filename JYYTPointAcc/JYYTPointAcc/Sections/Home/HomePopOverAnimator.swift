@@ -38,8 +38,6 @@ extension HomePopOverAnimator:UIViewControllerAnimatedTransitioning{
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval{
         return 1
     }
-    
-    // This method can only  be a nop if the transition is interactive and not a percentDriven interactive transition.
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning){
 
         if isPresented {

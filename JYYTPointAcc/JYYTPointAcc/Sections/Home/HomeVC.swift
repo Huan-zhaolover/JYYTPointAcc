@@ -17,9 +17,7 @@ class HomeVC: BaseViewController{
         if isHadLoggin {
             nologvvv.addRotationAnimation()
         }
-    
         setHomeNavBars()
-        
         // Do any additional setup after loading the view.
     }
     func  setHomeNavBars(){
@@ -40,8 +38,6 @@ class HomeVC: BaseViewController{
     func messageList(){
         
     }
-    
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
