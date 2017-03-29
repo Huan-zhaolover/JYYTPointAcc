@@ -13,7 +13,8 @@ class MyQRCardVC: UIViewController {
     @IBOutlet weak var qrCardImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        navigationItem.title = "我的名片"
+        
         // Do any additional setup after loading the view.
     }
 
