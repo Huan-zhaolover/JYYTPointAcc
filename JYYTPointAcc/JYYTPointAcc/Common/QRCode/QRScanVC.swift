@@ -65,14 +65,17 @@ class QRScanVC: UIViewController,UITabBarDelegate{
     // 开始扫描动画
     func imageViewStartScanAnimation(){
  
-        self.imageViewToTop.constant = -self.contenerViewH.constant;
-        self.iamgeVIewTwo.layoutIfNeeded()
+        self.iamgeVIewTwo.frame = CGRect(x: 0, y:0, width: contnerView.bounds.size.width, height: contnerView.bounds.size.height)
+
+        UIView.beginAnimations("111111", context: nil)
+        UIView.setAnimationDuration(1)
+        UIView.setAnimationRepeatAutoreverses(true)
+        UIView.setAnimationRepeatCount(MAXFLOAT)
+        UIView.setAnimationCurve(.linear)
+         self.iamgeVIewTwo.layer.frame.origin.y += 300
+        UIView.commitAnimations()
         
-        UIView.animate(withDuration: 1, animations: {
-            self.imageViewToTop.constant = self.contenerViewH.constant;
-            UIView.setAnimationRepeatCount(MAXFLOAT)
-            self.iamgeVIewTwo.layoutIfNeeded()
-        })
+      
     }
     // 开始扫描
     func startScan(){
