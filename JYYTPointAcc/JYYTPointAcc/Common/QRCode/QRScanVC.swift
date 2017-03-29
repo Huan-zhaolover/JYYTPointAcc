@@ -18,8 +18,8 @@ class QRScanVC: UIViewController,UITabBarDelegate{
     @IBOutlet weak var imageViewToTop: NSLayoutConstraint!
     @IBOutlet weak var iamgeVIewTwo: UIImageView!
 //MARK: 懒加载 会话，输入，输出，预览图层
-    private lazy var captureSesson :AVCaptureSession = AVCaptureSession()
-    private lazy var captureDeviceInput : AVCaptureDeviceInput? = {
+     lazy var captureSesson :AVCaptureSession = AVCaptureSession()
+     lazy var captureDeviceInput : AVCaptureDeviceInput? = {
         let device = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
         do{
             let input = try AVCaptureDeviceInput(device: device)
@@ -29,14 +29,14 @@ class QRScanVC: UIViewController,UITabBarDelegate{
             return nil
         }
     }()
-    private lazy var outPut :AVCaptureMetadataOutput = AVCaptureMetadataOutput()
-    private lazy var previewLayer : AVCaptureVideoPreviewLayer = {
+     lazy var outPut :AVCaptureMetadataOutput = AVCaptureMetadataOutput()
+     lazy var previewLayer : AVCaptureVideoPreviewLayer = {
         
         let layer:AVCaptureVideoPreviewLayer = AVCaptureVideoPreviewLayer(session: self.captureSesson)
         layer.frame = UIScreen.main.bounds
         return layer
     }()
-    private lazy var drawCornerLayer : CALayer = {
+     lazy var drawCornerLayer : CALayer = {
         let layer = CALayer()
         layer.frame = UIScreen.main.bounds
         return layer
@@ -54,7 +54,7 @@ class QRScanVC: UIViewController,UITabBarDelegate{
         // 开始扫描动画
         imageViewStartScanAnimation()
         // 2.开始扫描
-        startScan()
+//        startScan()
     }
     // 点击跳转我的名片
     @IBAction func myQRCardClilck(_ sender: Any) {
@@ -64,16 +64,16 @@ class QRScanVC: UIViewController,UITabBarDelegate{
     
     // 开始扫描动画
     func imageViewStartScanAnimation(){
-        let  currentH = contenerViewH.constant;
-        imageViewToTop.constant = -currentH
-        iamgeVIewTwo.layoutIfNeeded()
-        UIView.setAnimationRepeatCount(MAXFLOAT)
-        UIView.animate(withDuration: 1) {
-            self.imageViewToTop.constant = currentH
+ 
+        self.imageViewToTop.constant = -self.contenerViewH.constant;
+        self.iamgeVIewTwo.layoutIfNeeded()
+        
+        UIView.animate(withDuration: 1, animations: {
+            self.imageViewToTop.constant = self.contenerViewH.constant;
+            UIView.setAnimationRepeatCount(MAXFLOAT)
             self.iamgeVIewTwo.layoutIfNeeded()
-        };
+        })
     }
-    
     // 开始扫描
     func startScan(){
         // 判断能否添加输入
@@ -95,22 +95,6 @@ class QRScanVC: UIViewController,UITabBarDelegate{
         view.layer.insertSublayer(previewLayer, at: 0)
         // 开始扫描
         captureSesson.startRunning()
-    }
-    
-    // 清空边角连线
-    func cleanCorners(){
-        if (drawCornerLayer.sublayers == nil) || (drawCornerLayer.sublayers?.count == 0) {
-            return
-        }
-        for subLayer in drawCornerLayer.sublayers! {
-            subLayer.removeFromSuperlayer()
-        }
-    }
-    
-    // 添加边角连线
-    func  startDrawConreLayer(){
-    
-        
     }
 }
 
@@ -135,25 +119,67 @@ extension QRScanVC:AVCaptureMetadataOutputObjectsDelegate{
             contenerViewH.constant = 150
         }
         iamgeVIewTwo.layer.removeAllAnimations()
-        contnerView.layoutIfNeeded()
-        imageViewStartScanAnimation()
+         imageViewStartScanAnimation()
     }
     //  只要解析到数据就会调用
     func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [Any]!, from connection: AVCaptureConnection!){
        //   清除图层
         cleanCorners()
-        let astrinng = metadataObjects.last
-        print(astrinng!);
-        
+        let astrinng = metadataObjects.last as! AVMetadataMachineReadableCodeObject
+        print(astrinng.stringValue);
         // 转换坐标
         for obje in metadataObjects  {
             if obje is  AVMetadataMachineReadableCodeObject{
-            
-                
-                
+                 let codeObje = previewLayer.transformedMetadataObject(for: obje as! AVMetadataObject)
+                if  codeObje != nil {
+                    startDrawConreLayer(codeObje: codeObje as! AVMetadataMachineReadableCodeObject)
+                }
             }
         }
         
     }
+    // 添加边角连线 绘制图形
+    func  startDrawConreLayer(codeObje:AVMetadataMachineReadableCodeObject){
+        if codeObje.corners.isEmpty {
+            return
+        }
+        // 创建涂层
+        let layer = CAShapeLayer()
+        layer.lineWidth = 4.0
+        layer.strokeColor = UIColor.red.cgColor
+        layer.fillColor = UIColor.clear.cgColor
+        // 创建路径
+        let path = UIBezierPath()
+        var point  = CGPoint.zero
+        var index :Int = 0
+        // 移动一个点上
+        point = CGPoint(dictionaryRepresentation: codeObje.corners[index] as! NSDictionary)!
+        path.move(to: point)
+        // 移动下一个点
+        while index < codeObje.corners.count {
+            point = CGPoint(dictionaryRepresentation: codeObje.corners[index] as! NSDictionary)!
+            path.move(to: point)
+            index = index + 1
+        }
+        // 关闭路径
+        path.close()
+        //  绘制路径
+        layer.path = path.cgPath
+        // 生成图层添加到drawLayer 上
+        drawCornerLayer.addSublayer(layer)
+        
+    }
+    
+    // 清空边角连线
+    func cleanCorners(){
+        if (drawCornerLayer.sublayers == nil) || (drawCornerLayer.sublayers?.count == 0) {
+            return
+        }
+        for subLayer in drawCornerLayer.sublayers! {
+            subLayer.removeFromSuperlayer()
+        }
+    }
+    
+
     
 }
