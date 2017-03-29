@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QRScanVC" customModule="JYYTPointAcc" customModuleProvider="target">
+            <connections>
+                <outlet property="contenerViewH" destination="emW-Aa-Cof" id="CzE-Mv-5EU"/>
+                <outlet property="imageViewToTop" destination="Pqr-iD-i4D" id="6I4-07-Fql"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outletCollection property="customerTabBar" destination="iP4-BN-iwT" collectionClass="NSMutableArray" id="gaK-oJ-sad"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iP4-BN-iwT">
+                    <rect key="frame" x="0.0" y="618" width="375" height="49"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <items>
+                        <tabBarItem title="二维码" image="qrcode_tabbar_icon_qrcode" selectedImage="qrcode_tabbar_icon_qrcode_highlighted" id="yHJ-Ki-onb"/>
+                        <tabBarItem tag="1" title="条形码" image="qrcode_tabbar_icon_barcode" selectedImage="qrcode_tabbar_icon_barcode_highlighted" id="34g-8z-20z"/>
+                    </items>
+                    <color key="barTintColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="dcF-jN-Iel"/>
+                    </connections>
+                </tabBar>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lmq-6t-Y1D">
+                    <rect key="frame" x="37.5" y="183.5" width="300" height="300"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrcode_border" translatesAutoresizingMaskIntoConstraints="NO" id="ivO-Kb-Xi2">
+                            <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrcode_scanline_qrcode" translatesAutoresizingMaskIntoConstraints="NO" id="i1V-or-Kaj">
+                            <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="i1V-or-Kaj" firstAttribute="leading" secondItem="lmq-6t-Y1D" secondAttribute="leading" id="74P-Ax-vkI"/>
+                        <constraint firstAttribute="trailing" secondItem="ivO-Kb-Xi2" secondAttribute="trailing" id="BSk-ur-MSH"/>
+                        <constraint firstItem="i1V-or-Kaj" firstAttribute="top" secondItem="lmq-6t-Y1D" secondAttribute="top" id="Pqr-iD-i4D"/>
+                        <constraint firstAttribute="bottom" secondItem="ivO-Kb-Xi2" secondAttribute="bottom" id="Xf7-tL-oYz"/>
+                        <constraint firstItem="i1V-or-Kaj" firstAttribute="height" secondItem="lmq-6t-Y1D" secondAttribute="height" id="YXF-Ee-5qE"/>
+                        <constraint firstAttribute="height" constant="300" id="emW-Aa-Cof"/>
+                        <constraint firstItem="ivO-Kb-Xi2" firstAttribute="top" secondItem="lmq-6t-Y1D" secondAttribute="top" id="fe2-q9-pfX"/>
+                        <constraint firstAttribute="width" constant="300" id="gF7-hb-RbF"/>
+                        <constraint firstItem="ivO-Kb-Xi2" firstAttribute="leading" secondItem="lmq-6t-Y1D" secondAttribute="leading" id="kaK-bb-fAI"/>
+                        <constraint firstAttribute="trailing" secondItem="i1V-or-Kaj" secondAttribute="trailing" id="qZ1-AR-CeO"/>
+                        <constraint firstItem="i1V-or-Kaj" firstAttribute="width" secondItem="lmq-6t-Y1D" secondAttribute="width" id="yPk-Ce-snb"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="lmq-6t-Y1D" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="6EZ-jK-yVx"/>
+                <constraint firstItem="lmq-6t-Y1D" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="D2p-e2-hMx"/>
+            </constraints>
+            <point key="canvasLocation" x="34.5" y="54.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="qrcode_border" width="51" height="51"/>
+        <image name="qrcode_scanline_qrcode" width="218" height="170"/>
+        <image name="qrcode_tabbar_icon_barcode" width="40" height="40"/>
+        <image name="qrcode_tabbar_icon_barcode_highlighted" width="40" height="40"/>
+        <image name="qrcode_tabbar_icon_qrcode" width="40" height="40"/>
+        <image name="qrcode_tabbar_icon_qrcode_highlighted" width="40" height="40"/>
+    </resources>
+</document>

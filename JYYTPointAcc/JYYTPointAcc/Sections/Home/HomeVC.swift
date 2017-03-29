@@ -20,6 +20,15 @@ class HomeVC: BaseViewController{
         setHomeNavBars()
         // Do any additional setup after loading the view.
     }
+    override func viewWillAppear(_ animated: Bool) {
+         super.viewWillAppear(animated)
+        tabBarController?.tabBar.isHidden = false
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        tabBarController?.tabBar.isHidden = true
+    }
+    
     func  setHomeNavBars(){
         if isHadLoggin {
             navigationItem.leftBarButtonItem = UIBarButtonItem(title: "账本", style: .plain, target: self, action: #selector(changeAccoountBook))
@@ -36,7 +45,8 @@ class HomeVC: BaseViewController{
         present(vc, animated: true, completion:nil)
     }
     func messageList(){
-        
+         let  vc  = QRScanVC()
+        navigationController?.pushViewController(vc, animated: true)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
