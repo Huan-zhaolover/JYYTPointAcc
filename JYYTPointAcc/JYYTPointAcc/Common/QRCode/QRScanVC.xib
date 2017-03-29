@@ -11,9 +11,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QRScanVC" customModule="JYYTPointAcc" customModuleProvider="target">
             <connections>
                 <outlet property="contenerViewH" destination="emW-Aa-Cof" id="CzE-Mv-5EU"/>
+                <outlet property="contnerView" destination="lmq-6t-Y1D" id="EQs-GK-YZs"/>
+                <outlet property="customTabbar" destination="iP4-BN-iwT" id="z0e-co-qWM"/>
+                <outlet property="iamgeVIewTwo" destination="i1V-or-Kaj" id="R1G-Zf-zPZ"/>
                 <outlet property="imageViewToTop" destination="Pqr-iD-i4D" id="6I4-07-Fql"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
-                <outletCollection property="customerTabBar" destination="iP4-BN-iwT" collectionClass="NSMutableArray" id="gaK-oJ-sad"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -59,6 +61,14 @@
                         <constraint firstItem="i1V-or-Kaj" firstAttribute="width" secondItem="lmq-6t-Y1D" secondAttribute="width" id="yPk-Ce-snb"/>
                     </constraints>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h9k-B9-uKM">
+                    <rect key="frame" x="144" y="528" width="91" height="29"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="我的名片"/>
+                    <connections>
+                        <action selector="myQRCardClilck:" destination="-1" eventType="touchUpInside" id="TOy-Uu-bid"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>

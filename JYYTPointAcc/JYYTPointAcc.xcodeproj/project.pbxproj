@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		7D416F0D1E8B3E7B003F1D89 /* QRScanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D416F0B1E8B3E7B003F1D89 /* QRScanVC.swift */; };
 		7D416F0E1E8B3E7B003F1D89 /* QRScanVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D416F0C1E8B3E7B003F1D89 /* QRScanVC.xib */; };
+		7D416F111E8B8120003F1D89 /* MyQRCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D416F0F1E8B8120003F1D89 /* MyQRCardVC.swift */; };
+		7D416F121E8B8120003F1D89 /* MyQRCardVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D416F101E8B8120003F1D89 /* MyQRCardVC.xib */; };
 		7D86003C1E8953F9008EA024 /* UIBarBarItem+category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D86003B1E8953F9008EA024 /* UIBarBarItem+category.swift */; };
 		7D86003F1E89F1C0008EA024 /* LeftChoseAccountBookVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D86003D1E89F1C0008EA024 /* LeftChoseAccountBookVC.swift */; };
 		7D8600401E89F1C0008EA024 /* LeftChoseAccountBookVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D86003E1E89F1C0008EA024 /* LeftChoseAccountBookVC.xib */; };
@@ -44,6 +46,8 @@
 /* Begin PBXFileReference section */
 		7D416F0B1E8B3E7B003F1D89 /* QRScanVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScanVC.swift; sourceTree = "<group>"; };
 		7D416F0C1E8B3E7B003F1D89 /* QRScanVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QRScanVC.xib; sourceTree = "<group>"; };
+		7D416F0F1E8B8120003F1D89 /* MyQRCardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyQRCardVC.swift; sourceTree = "<group>"; };
+		7D416F101E8B8120003F1D89 /* MyQRCardVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyQRCardVC.xib; sourceTree = "<group>"; };
 		7D86003B1E8953F9008EA024 /* UIBarBarItem+category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarBarItem+category.swift"; sourceTree = "<group>"; };
 		7D86003D1E89F1C0008EA024 /* LeftChoseAccountBookVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftChoseAccountBookVC.swift; sourceTree = "<group>"; };
 		7D86003E1E89F1C0008EA024 /* LeftChoseAccountBookVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftChoseAccountBookVC.xib; sourceTree = "<group>"; };
@@ -93,6 +97,8 @@
 			children = (
 				7D416F0B1E8B3E7B003F1D89 /* QRScanVC.swift */,
 				7D416F0C1E8B3E7B003F1D89 /* QRScanVC.xib */,
+				7D416F0F1E8B8120003F1D89 /* MyQRCardVC.swift */,
+				7D416F101E8B8120003F1D89 /* MyQRCardVC.xib */,
 			);
 			path = QRCode;
 			sourceTree = "<group>";
@@ -352,6 +358,7 @@
 				7D86FE211E88DDD0008EA024 /* NoLogView.xib in Resources */,
 				7D8600401E89F1C0008EA024 /* LeftChoseAccountBookVC.xib in Resources */,
 				7D86FDBF1E864D4A008EA024 /* Assets.xcassets in Resources */,
+				7D416F121E8B8120003F1D89 /* MyQRCardVC.xib in Resources */,
 				7D416F0E1E8B3E7B003F1D89 /* QRScanVC.xib in Resources */,
 				7D86FDBD1E864D4A008EA024 /* Main.storyboard in Resources */,
 			);
@@ -372,6 +379,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D86003F1E89F1C0008EA024 /* LeftChoseAccountBookVC.swift in Sources */,
+				7D416F111E8B8120003F1D89 /* MyQRCardVC.swift in Sources */,
 				7D86FE0A1E87B485008EA024 /* MainViewController.swift in Sources */,
 				7D86FE151E87B5B9008EA024 /* MineVC.swift in Sources */,
 				7D86003C1E8953F9008EA024 /* UIBarBarItem+category.swift in Sources */,
