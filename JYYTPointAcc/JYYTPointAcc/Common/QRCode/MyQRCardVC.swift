@@ -15,11 +15,9 @@ class MyQRCardVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "我的名片"
-        
         let QRImage = creatQrImage(astring: "fffff")
         qrCardImageView.image = QRImage
         
-        // Do any additional setup after loading the view.
     }
     // 4.生成二维码
     func creatQrImage(astring:String) -> UIImage {
@@ -32,7 +30,6 @@ class MyQRCardVC: UIViewController {
         // 从滤镜中取出图片
         let fileCiImage = filer?.outputImage
         // 创建头像
-        
         let bgImage = createNonInterpolatedUIImageFormCIImage(image: fileCiImage!, size: 300)
 
         // 合成图片

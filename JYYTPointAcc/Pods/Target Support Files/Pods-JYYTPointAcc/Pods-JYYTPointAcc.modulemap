@@ -1,0 +1,6 @@
+framework module Pods_JYYTPointAcc {
+  umbrella header "Pods-JYYTPointAcc-umbrella.h"
+
+  export *
+  module * { export * }
+}
