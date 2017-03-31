@@ -10,7 +10,7 @@ import UIKit
 //  首页四个控制器的父类，作为未登录状态判断
 class BaseViewController: UIViewController,NoLogViewDelegate {
 
-    let isHadLoggin :Bool = true
+    let isHadLoggin :Bool = false
     lazy var nologvvv : NoLogView = NoLogView.shareNoLogView()
 
     override func loadView() {
@@ -35,6 +35,8 @@ extension  BaseViewController {
     }
     func logginButtonWillClick() {
         print("denglu")
+        let VC = LoginVC()
+        navigationController?.pushViewController(VC, animated: true)
     }
     
     func setNavgationBarNoLogedItems(){

@@ -34,6 +34,7 @@
 		7D86FE2A1E8909CF008EA024 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D86FE291E8909CF008EA024 /* HomeVC.swift */; };
 		7DD7BCD51E8E513B005369F7 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7BCD31E8E513B005369F7 /* LoginVC.swift */; };
 		7DD7BCD61E8E513B005369F7 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DD7BCD41E8E513B005369F7 /* LoginVC.xib */; };
+		7DD7BCD81E8EA251005369F7 /* VerticalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7BCD71E8EA251005369F7 /* VerticalButton.swift */; };
 		E48D3A54F04186E1FF709BA3 /* Pods_JYYTPointAcc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3417CD3A6F3CAAF33292C299 /* Pods_JYYTPointAcc.framework */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +83,7 @@
 		7D86FE291E8909CF008EA024 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		7DD7BCD31E8E513B005369F7 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		7DD7BCD41E8E513B005369F7 /* LoginVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
+		7DD7BCD71E8EA251005369F7 /* VerticalButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalButton.swift; sourceTree = "<group>"; };
 		D8E88C51EEC2307D6D23D9EF /* Pods-JYYTPointAcc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JYYTPointAcc.release.xcconfig"; path = "Pods/Target Support Files/Pods-JYYTPointAcc/Pods-JYYTPointAcc.release.xcconfig"; sourceTree = "<group>"; };
 		FCB23C82E8F91FA5724E23B6 /* Pods_JYYTPointAccTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JYYTPointAccTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -188,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				7D86003B1E8953F9008EA024 /* UIBarBarItem+category.swift */,
+				7DD7BCD71E8EA251005369F7 /* VerticalButton.swift */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -521,6 +524,7 @@
 				7D86FE0A1E87B485008EA024 /* MainViewController.swift in Sources */,
 				7D86FE151E87B5B9008EA024 /* MineVC.swift in Sources */,
 				7D86003C1E8953F9008EA024 /* UIBarBarItem+category.swift in Sources */,
+				7DD7BCD81E8EA251005369F7 /* VerticalButton.swift in Sources */,
 				7D86FDBA1E864D4A008EA024 /* ViewController.swift in Sources */,
 				7D8600421E89F909008EA024 /* HomePopOverAnimator.swift in Sources */,
 				7D86FDB81E864D4A008EA024 /* AppDelegate.swift in Sources */,
