@@ -43,6 +43,8 @@
 		7DD7BCEE1E920BA1005369F7 /* NewFeatureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7BCED1E920BA1005369F7 /* NewFeatureVC.swift */; };
 		7DD7BCF01E921A4B005369F7 /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7BCEF1E921A4B005369F7 /* UIView+AutoLayout.swift */; };
 		7DD7BCF21E923461005369F7 /* JYConstFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7BCF11E923461005369F7 /* JYConstFile.swift */; };
+		7DD7BCF61E923D95005369F7 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7BCF41E923D95005369F7 /* WelcomeVC.swift */; };
+		7DD7BCF71E923D95005369F7 /* WelcomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DD7BCF51E923D95005369F7 /* WelcomeVC.xib */; };
 		E48D3A54F04186E1FF709BA3 /* Pods_JYYTPointAcc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3417CD3A6F3CAAF33292C299 /* Pods_JYYTPointAcc.framework */; };
 /* End PBXBuildFile section */
 
@@ -100,6 +102,8 @@
 		7DD7BCED1E920BA1005369F7 /* NewFeatureVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewFeatureVC.swift; sourceTree = "<group>"; };
 		7DD7BCEF1E921A4B005369F7 /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AutoLayout.swift"; sourceTree = "<group>"; };
 		7DD7BCF11E923461005369F7 /* JYConstFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JYConstFile.swift; sourceTree = "<group>"; };
+		7DD7BCF41E923D95005369F7 /* WelcomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
+		7DD7BCF51E923D95005369F7 /* WelcomeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeVC.xib; sourceTree = "<group>"; };
 		D8E88C51EEC2307D6D23D9EF /* Pods-JYYTPointAcc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JYYTPointAcc.release.xcconfig"; path = "Pods/Target Support Files/Pods-JYYTPointAcc/Pods-JYYTPointAcc.release.xcconfig"; sourceTree = "<group>"; };
 		FCB23C82E8F91FA5724E23B6 /* Pods_JYYTPointAccTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JYYTPointAccTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -236,6 +240,7 @@
 				7D86FE201E88DDD0008EA024 /* NoLogView.xib */,
 				7D86FE1C1E889B83008EA024 /* BaseViewController.swift */,
 				7D86FE091E87B485008EA024 /* MainViewController.swift */,
+				7DD7BCF31E923D74005369F7 /* Welcome */,
 				7DD7BCEA1E920B0B005369F7 /* NewFeature */,
 				7D86FE221E89094B008EA024 /* Home */,
 				7D86FE0F1E87B585008EA024 /* BillListVC */,
@@ -338,6 +343,15 @@
 				7DD7BCED1E920BA1005369F7 /* NewFeatureVC.swift */,
 			);
 			path = NewFeature;
+			sourceTree = "<group>";
+		};
+		7DD7BCF31E923D74005369F7 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				7DD7BCF41E923D95005369F7 /* WelcomeVC.swift */,
+				7DD7BCF51E923D95005369F7 /* WelcomeVC.xib */,
+			);
+			path = Welcome;
 			sourceTree = "<group>";
 		};
 		88B3C6BBDE68BC2DA8CA3B25 /* Pods */ = {
@@ -445,6 +459,7 @@
 				7DD7BCD61E8E513B005369F7 /* LoginVC.xib in Resources */,
 				7D86FE211E88DDD0008EA024 /* NoLogView.xib in Resources */,
 				7D8600401E89F1C0008EA024 /* LeftChoseAccountBookVC.xib in Resources */,
+				7DD7BCF71E923D95005369F7 /* WelcomeVC.xib in Resources */,
 				7D86FDBF1E864D4A008EA024 /* Assets.xcassets in Resources */,
 				7D416F121E8B8120003F1D89 /* MyQRCardVC.xib in Resources */,
 				7D416F0E1E8B3E7B003F1D89 /* QRScanVC.xib in Resources */,
@@ -578,6 +593,7 @@
 				7D416F0D1E8B3E7B003F1D89 /* QRScanVC.swift in Sources */,
 				7DD7BCE91E8FAF67005369F7 /* JYBase64.swift in Sources */,
 				7DD7BCE71E8FAF55005369F7 /* AlphaTables.swift in Sources */,
+				7DD7BCF61E923D95005369F7 /* WelcomeVC.swift in Sources */,
 				7D86FE271E890954008EA024 /* InvoiceListVC.swift in Sources */,
 				7D86FE281E890954008EA024 /* PartnerVC.swift in Sources */,
 				7DD7BCDA1E8F65CD005369F7 /* UIColor+category.swift in Sources */,

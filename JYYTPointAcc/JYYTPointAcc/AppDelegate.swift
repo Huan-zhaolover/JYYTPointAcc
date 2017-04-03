@@ -63,7 +63,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 New.imageArry = ["1","2","3","4"]
                 return  New
             }else{
-                return MainViewController()
+                return WelcomeVC()
             }
          }else{
             return MainViewController()
