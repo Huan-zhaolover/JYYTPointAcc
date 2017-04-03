@@ -39,7 +39,7 @@ class NoLogView: UIView {
         
         let animation = CABasicAnimation(keyPath: "transform.rotation.z")
         animation.fromValue = 0
-        animation.toValue = M_PI * 2
+        animation.toValue = Double.pi * 2
         animation.repeatCount=MAXFLOAT
         animation.isRemovedOnCompletion = false
         animation.duration = 10   // 结束一次动画的时常

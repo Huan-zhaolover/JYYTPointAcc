@@ -18,7 +18,7 @@ class MainViewController: UITabBarController {
         addSelfChildViewController(childVC: BillListVC(), title: "账单", imageString: "home_tabbar_zd")
         addSelfChildViewController(childVC: StatementVC(), title: "报表", imageString: "home_tabbar_bb")
         addSelfChildViewController(childVC: MineVC(), title: "我的", imageString: "home_tabbar_hb")
-        text1()
+//        text1()
         // Do any additional setup after loading the view.
     }
     private func addSelfChildViewController(childVC: UIViewController,title:String,imageString:String) {

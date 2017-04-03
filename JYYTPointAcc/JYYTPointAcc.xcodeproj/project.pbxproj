@@ -42,6 +42,7 @@
 		7DD7BCE91E8FAF67005369F7 /* JYBase64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7BCE81E8FAF67005369F7 /* JYBase64.swift */; };
 		7DD7BCEE1E920BA1005369F7 /* NewFeatureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7BCED1E920BA1005369F7 /* NewFeatureVC.swift */; };
 		7DD7BCF01E921A4B005369F7 /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7BCEF1E921A4B005369F7 /* UIView+AutoLayout.swift */; };
+		7DD7BCF21E923461005369F7 /* JYConstFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7BCF11E923461005369F7 /* JYConstFile.swift */; };
 		E48D3A54F04186E1FF709BA3 /* Pods_JYYTPointAcc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3417CD3A6F3CAAF33292C299 /* Pods_JYYTPointAcc.framework */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +99,7 @@
 		7DD7BCE81E8FAF67005369F7 /* JYBase64.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JYBase64.swift; sourceTree = "<group>"; };
 		7DD7BCED1E920BA1005369F7 /* NewFeatureVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewFeatureVC.swift; sourceTree = "<group>"; };
 		7DD7BCEF1E921A4B005369F7 /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AutoLayout.swift"; sourceTree = "<group>"; };
+		7DD7BCF11E923461005369F7 /* JYConstFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JYConstFile.swift; sourceTree = "<group>"; };
 		D8E88C51EEC2307D6D23D9EF /* Pods-JYYTPointAcc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JYYTPointAcc.release.xcconfig"; path = "Pods/Target Support Files/Pods-JYYTPointAcc/Pods-JYYTPointAcc.release.xcconfig"; sourceTree = "<group>"; };
 		FCB23C82E8F91FA5724E23B6 /* Pods_JYYTPointAccTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JYYTPointAccTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -248,6 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				7DD7BCEF1E921A4B005369F7 /* UIView+AutoLayout.swift */,
+				7DD7BCF11E923461005369F7 /* JYConstFile.swift */,
 				7DD7BCE11E8FACBB005369F7 /* Base64 */,
 			);
 			path = Tools;
@@ -564,6 +567,7 @@
 				7D86003C1E8953F9008EA024 /* UIBarBarItem+category.swift in Sources */,
 				7DD7BCD81E8EA251005369F7 /* VerticalButton.swift in Sources */,
 				7DD7BCF01E921A4B005369F7 /* UIView+AutoLayout.swift in Sources */,
+				7DD7BCF21E923461005369F7 /* JYConstFile.swift in Sources */,
 				7DD7BCDC1E8F68A4005369F7 /* HorizontalButton.swift in Sources */,
 				7DD7BCEE1E920BA1005369F7 /* NewFeatureVC.swift in Sources */,
 				7D8600421E89F909008EA024 /* HomePopOverAnimator.swift in Sources */,

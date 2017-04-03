@@ -27,7 +27,7 @@ class HomeVC: BaseViewController{
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        tabBarController?.tabBar.isHidden = true
+//        tabBarController?.tabBar.isHidden = isHadLoggin
     }
     func  setHomeNavBars(){
         if isHadLoggin {
