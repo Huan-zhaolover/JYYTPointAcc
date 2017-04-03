@@ -24,6 +24,7 @@ class LoginVC: UIViewController,UITextFieldDelegate {
     }
     override func viewWillAppear(_ animated: Bool) {
          navigationItem.title = "登录"
+         
     }
     // MARK: 按钮操作
     @IBAction func clearPhoneNumberButtonClick(_ sender: Any) {
@@ -42,12 +43,17 @@ class LoginVC: UIViewController,UITextFieldDelegate {
     }
     
     @objc private func textFielddidChanged(textfield:UITextField){
-        if (textfield.text?.lengthOfBytes(using: .utf8))! > 5 && (textfield.text?.lengthOfBytes(using: .utf8))! < 13 {
+  
+        setSignInButtonStatus(iscanUse: (phoneNumberTextField.text?.lengthOfBytes(using: .utf8))! > 5 && (phoneNumberTextField.text?.lengthOfBytes(using: .utf8))! < 13)
+            
+    }
+    func setSignInButtonStatus(iscanUse:Bool){
+        if iscanUse{
             loginButton.isUserInteractionEnabled = true;
-            loginButton.backgroundColor = UIColor.orange;
+            loginButton.backgroundColor =  UIColor.RGB(r: 242, g: 196, b: 57, a: 1.0)
         }else{
             loginButton.isUserInteractionEnabled = false;
-            loginButton.backgroundColor = UIColor.init(red: 205, green: 205, blue: 205, alpha: 1);
+            loginButton.backgroundColor = UIColor.RGB(r: 204, g: 204, b: 204, a: 1.0)
         }
 
     }

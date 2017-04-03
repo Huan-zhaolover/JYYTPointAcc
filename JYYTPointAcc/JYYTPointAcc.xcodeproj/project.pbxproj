@@ -18,7 +18,6 @@
 		7D8600421E89F909008EA024 /* HomePopOverAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8600411E89F909008EA024 /* HomePopOverAnimator.swift */; };
 		7D8600441E89FC3B008EA024 /* HomeUIPresentationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8600431E89FC3B008EA024 /* HomeUIPresentationVC.swift */; };
 		7D86FDB81E864D4A008EA024 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D86FDB71E864D4A008EA024 /* AppDelegate.swift */; };
-		7D86FDBA1E864D4A008EA024 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D86FDB91E864D4A008EA024 /* ViewController.swift */; };
 		7D86FDBD1E864D4A008EA024 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D86FDBB1E864D4A008EA024 /* Main.storyboard */; };
 		7D86FDBF1E864D4A008EA024 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D86FDBE1E864D4A008EA024 /* Assets.xcassets */; };
 		7D86FDCD1E864D4A008EA024 /* JYYTPointAccTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D86FDCC1E864D4A008EA024 /* JYYTPointAccTests.swift */; };
@@ -35,6 +34,13 @@
 		7DD7BCD51E8E513B005369F7 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7BCD31E8E513B005369F7 /* LoginVC.swift */; };
 		7DD7BCD61E8E513B005369F7 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DD7BCD41E8E513B005369F7 /* LoginVC.xib */; };
 		7DD7BCD81E8EA251005369F7 /* VerticalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7BCD71E8EA251005369F7 /* VerticalButton.swift */; };
+		7DD7BCDA1E8F65CD005369F7 /* UIColor+category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7BCD91E8F65CD005369F7 /* UIColor+category.swift */; };
+		7DD7BCDC1E8F68A4005369F7 /* HorizontalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7BCDB1E8F68A4005369F7 /* HorizontalButton.swift */; };
+		7DD7BCDE1E8F73BC005369F7 /* String+category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7BCDD1E8F73BC005369F7 /* String+category.swift */; };
+		7DD7BCE01E8F7922005369F7 /* NSDate+category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7BCDF1E8F7922005369F7 /* NSDate+category.swift */; };
+		7DD7BCE71E8FAF55005369F7 /* AlphaTables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7BCE61E8FAF55005369F7 /* AlphaTables.swift */; };
+		7DD7BCE91E8FAF67005369F7 /* JYBase64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7BCE81E8FAF67005369F7 /* JYBase64.swift */; };
+		7DD7BCEE1E920BA1005369F7 /* NewFeatureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7BCED1E920BA1005369F7 /* NewFeatureVC.swift */; };
 		E48D3A54F04186E1FF709BA3 /* Pods_JYYTPointAcc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3417CD3A6F3CAAF33292C299 /* Pods_JYYTPointAcc.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,7 +70,6 @@
 		7D8600431E89FC3B008EA024 /* HomeUIPresentationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeUIPresentationVC.swift; sourceTree = "<group>"; };
 		7D86FDB41E864D4A008EA024 /* JYYTPointAcc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JYYTPointAcc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D86FDB71E864D4A008EA024 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7D86FDB91E864D4A008EA024 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7D86FDBC1E864D4A008EA024 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7D86FDBE1E864D4A008EA024 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D86FDC31E864D4A008EA024 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -84,6 +89,13 @@
 		7DD7BCD31E8E513B005369F7 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		7DD7BCD41E8E513B005369F7 /* LoginVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
 		7DD7BCD71E8EA251005369F7 /* VerticalButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalButton.swift; sourceTree = "<group>"; };
+		7DD7BCD91E8F65CD005369F7 /* UIColor+category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+category.swift"; sourceTree = "<group>"; };
+		7DD7BCDB1E8F68A4005369F7 /* HorizontalButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalButton.swift; sourceTree = "<group>"; };
+		7DD7BCDD1E8F73BC005369F7 /* String+category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+category.swift"; sourceTree = "<group>"; };
+		7DD7BCDF1E8F7922005369F7 /* NSDate+category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+category.swift"; sourceTree = "<group>"; };
+		7DD7BCE61E8FAF55005369F7 /* AlphaTables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlphaTables.swift; sourceTree = "<group>"; };
+		7DD7BCE81E8FAF67005369F7 /* JYBase64.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JYBase64.swift; sourceTree = "<group>"; };
+		7DD7BCED1E920BA1005369F7 /* NewFeatureVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewFeatureVC.swift; sourceTree = "<group>"; };
 		D8E88C51EEC2307D6D23D9EF /* Pods-JYYTPointAcc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JYYTPointAcc.release.xcconfig"; path = "Pods/Target Support Files/Pods-JYYTPointAcc/Pods-JYYTPointAcc.release.xcconfig"; sourceTree = "<group>"; };
 		FCB23C82E8F91FA5724E23B6 /* Pods_JYYTPointAccTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JYYTPointAccTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -163,7 +175,6 @@
 			isa = PBXGroup;
 			children = (
 				7D86FDB71E864D4A008EA024 /* AppDelegate.swift */,
-				7D86FDB91E864D4A008EA024 /* ViewController.swift */,
 				7D86FDBB1E864D4A008EA024 /* Main.storyboard */,
 				7D86FDBE1E864D4A008EA024 /* Assets.xcassets */,
 				7D86FDC31E864D4A008EA024 /* Info.plist */,
@@ -190,7 +201,11 @@
 			isa = PBXGroup;
 			children = (
 				7D86003B1E8953F9008EA024 /* UIBarBarItem+category.swift */,
+				7DD7BCDB1E8F68A4005369F7 /* HorizontalButton.swift */,
 				7DD7BCD71E8EA251005369F7 /* VerticalButton.swift */,
+				7DD7BCD91E8F65CD005369F7 /* UIColor+category.swift */,
+				7DD7BCDD1E8F73BC005369F7 /* String+category.swift */,
+				7DD7BCDF1E8F7922005369F7 /* NSDate+category.swift */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -217,6 +232,7 @@
 				7D86FE201E88DDD0008EA024 /* NoLogView.xib */,
 				7D86FE1C1E889B83008EA024 /* BaseViewController.swift */,
 				7D86FE091E87B485008EA024 /* MainViewController.swift */,
+				7DD7BCEA1E920B0B005369F7 /* NewFeature */,
 				7D86FE221E89094B008EA024 /* Home */,
 				7D86FE0F1E87B585008EA024 /* BillListVC */,
 				7D86FE0D1E87B531008EA024 /* MineVC */,
@@ -229,6 +245,7 @@
 		7D86FE071E87B245008EA024 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				7DD7BCE11E8FACBB005369F7 /* Base64 */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -298,6 +315,23 @@
 				7D86FE261E890954008EA024 /* PartnerVC.swift */,
 			);
 			path = PartnerVC;
+			sourceTree = "<group>";
+		};
+		7DD7BCE11E8FACBB005369F7 /* Base64 */ = {
+			isa = PBXGroup;
+			children = (
+				7DD7BCE61E8FAF55005369F7 /* AlphaTables.swift */,
+				7DD7BCE81E8FAF67005369F7 /* JYBase64.swift */,
+			);
+			path = Base64;
+			sourceTree = "<group>";
+		};
+		7DD7BCEA1E920B0B005369F7 /* NewFeature */ = {
+			isa = PBXGroup;
+			children = (
+				7DD7BCED1E920BA1005369F7 /* NewFeatureVC.swift */,
+			);
+			path = NewFeature;
 			sourceTree = "<group>";
 		};
 		88B3C6BBDE68BC2DA8CA3B25 /* Pods */ = {
@@ -520,21 +554,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D86003F1E89F1C0008EA024 /* LeftChoseAccountBookVC.swift in Sources */,
+				7DD7BCE01E8F7922005369F7 /* NSDate+category.swift in Sources */,
 				7D416F111E8B8120003F1D89 /* MyQRCardVC.swift in Sources */,
 				7D86FE0A1E87B485008EA024 /* MainViewController.swift in Sources */,
 				7D86FE151E87B5B9008EA024 /* MineVC.swift in Sources */,
 				7D86003C1E8953F9008EA024 /* UIBarBarItem+category.swift in Sources */,
 				7DD7BCD81E8EA251005369F7 /* VerticalButton.swift in Sources */,
-				7D86FDBA1E864D4A008EA024 /* ViewController.swift in Sources */,
+				7DD7BCDC1E8F68A4005369F7 /* HorizontalButton.swift in Sources */,
+				7DD7BCEE1E920BA1005369F7 /* NewFeatureVC.swift in Sources */,
 				7D8600421E89F909008EA024 /* HomePopOverAnimator.swift in Sources */,
 				7D86FDB81E864D4A008EA024 /* AppDelegate.swift in Sources */,
 				7D8600441E89FC3B008EA024 /* HomeUIPresentationVC.swift in Sources */,
 				7D86FE1D1E889B83008EA024 /* BaseViewController.swift in Sources */,
 				7D86FE111E87B598008EA024 /* BillListVC.swift in Sources */,
 				7D416F0D1E8B3E7B003F1D89 /* QRScanVC.swift in Sources */,
+				7DD7BCE91E8FAF67005369F7 /* JYBase64.swift in Sources */,
+				7DD7BCE71E8FAF55005369F7 /* AlphaTables.swift in Sources */,
 				7D86FE271E890954008EA024 /* InvoiceListVC.swift in Sources */,
 				7D86FE281E890954008EA024 /* PartnerVC.swift in Sources */,
+				7DD7BCDA1E8F65CD005369F7 /* UIColor+category.swift in Sources */,
 				7DD7BCD51E8E513B005369F7 /* LoginVC.swift in Sources */,
+				7DD7BCDE1E8F73BC005369F7 /* String+category.swift in Sources */,
 				7D86FE171E87B5C7008EA024 /* StatementVC.swift in Sources */,
 				7D86FE2A1E8909CF008EA024 /* HomeVC.swift in Sources */,
 				7D86FE1F1E88DDBE008EA024 /* NoLogView.swift in Sources */,

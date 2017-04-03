@@ -18,6 +18,7 @@ class HomeVC: BaseViewController{
             nologvvv.addRotationAnimation()
         }
         setHomeNavBars()
+        textbase64()
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -28,7 +29,6 @@ class HomeVC: BaseViewController{
         super.viewWillDisappear(animated)
         tabBarController?.tabBar.isHidden = true
     }
-    
     func  setHomeNavBars(){
         if isHadLoggin {
             navigationItem.leftBarButtonItem = UIBarButtonItem(title: "账本", style: .plain, target: self, action: #selector(changeAccoountBook))
@@ -52,16 +52,7 @@ class HomeVC: BaseViewController{
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func  textbase64(){
+        
     }
-    */
-
 }
