@@ -8,20 +8,22 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
+private let reuseIdentifier = "NewFeatureCell"
 
 class NewFeatureVC: UICollectionViewController {
 
+    let Layout = NewFeatureLayout()
+    var imageArry : NSArray?
+    init(){
+        super.init(collectionViewLayout: Layout)
+    }
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
-        // Do any additional setup after loading the view.
+        self.collectionView!.register(NewFeatureCell.self, forCellWithReuseIdentifier: reuseIdentifier)
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,53 +44,53 @@ class NewFeatureVC: UICollectionViewController {
     // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return (imageArry?.count)!
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        return 0
+        return 1
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-    
-        // Configure the cell
-    
+        let cell : NewFeatureCell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! NewFeatureCell
+        cell.imageView.image = UIImage.init(named: imageArry![indexPath.item] as! String)
         return cell
     }
 
-    // MARK: UICollectionViewDelegate
-
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
-    
-    }
-    */
-
 }
+
+class NewFeatureLayout: UICollectionViewFlowLayout {
+   
+    override func prepare() {
+        itemSize = UIScreen.main.bounds.size
+        minimumLineSpacing = 0;
+        minimumInteritemSpacing = 0;
+        scrollDirection = .horizontal
+        
+        collectionView?.showsHorizontalScrollIndicator = false
+        collectionView?.isPagingEnabled = true
+        collectionView?.bounces = false
+    }
+}
+ class NewFeatureCell: UICollectionViewCell {
+    
+    lazy var imageView = UIImageView()
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setUpCellUI()
+    }
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func setUpCellUI(){
+        imageView.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
+        contentView.addSubview(imageView)
+        // 2.布局子控件的位置
+      _ =  imageView.YT_Fill(referView: contentView)
+    }
+}
+
+
+

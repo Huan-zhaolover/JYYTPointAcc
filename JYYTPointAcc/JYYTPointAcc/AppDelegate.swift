@@ -20,7 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.backgroundColor=UIColor.white
         
 //        window?.rootViewController=MainViewController()
-        window?.rootViewController =NewFeatureVC()
+        let New =  NewFeatureVC()
+        New.imageArry = ["1","2","3","4"]
+        window?.rootViewController = New
 
         window?.makeKeyAndVisible()
         
