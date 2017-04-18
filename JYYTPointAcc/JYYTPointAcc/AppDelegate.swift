@@ -25,10 +25,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         window?.makeKeyAndVisible()
         
-        
+        AFNNetWorkTool.AFNTools.afnRequest(methodType: .GET, urlString: "http://www.baidu.com", parames: nil) { (rest, error) in
+            guard let rest = rest else{
+                print("\(error!)")
+
+                return
+            }
+            print("\(rest)")
     
-        
-        AFNNetWorkTool.AFNTools.post("", parameters: nil, progress: <#T##((Progress) -> Void)?##((Progress) -> Void)?##(Progress) -> Void#>, success: <#T##((URLSessionDataTask, Any?) -> Void)?##((URLSessionDataTask, Any?) -> Void)?##(URLSessionDataTask, Any?) -> Void#>)
+        }
         return true
     }
    

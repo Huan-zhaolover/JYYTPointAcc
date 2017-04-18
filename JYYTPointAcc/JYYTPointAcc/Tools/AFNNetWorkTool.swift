@@ -17,7 +17,7 @@ enum AFNnetRequsetType {
 class AFNNetWorkTool: AFHTTPSessionManager {
     static let AFNTools:AFNNetWorkTool = {
         let tools = AFNNetWorkTool()
-        tools.responseSerializer.acceptableContentTypes?.insert("text/plain")
+        tools.responseSerializer.acceptableContentTypes?.insert("text/html")
         return tools
         }()
 }
@@ -25,7 +25,6 @@ class AFNNetWorkTool: AFHTTPSessionManager {
 extension AFNNetWorkTool {
 
     typealias callBack = (_ aresult:AnyObject?,_ erro:Error)->()
-
     
     
     func afnRequest(methodType:AFNnetRequsetType,urlString:String,parames:[String:AnyObject]?,finished:@escaping (_ result:Any?,_ error:Error?)->()){
@@ -36,7 +35,7 @@ extension AFNNetWorkTool {
         }
         // 定义失败的回调
         let faitureBlock = { (tast:URLSessionDataTask?,error:Error)->() in
-            finished (tast,error)
+            finished (nil,error)
         }
         
         if methodType == .GET {
