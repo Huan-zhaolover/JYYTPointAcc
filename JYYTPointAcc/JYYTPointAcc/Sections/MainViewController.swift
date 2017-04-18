@@ -11,6 +11,10 @@ import UIKit
 class MainViewController: UITabBarController {
     
     override func viewDidLoad() {
+        
+        
+        
+        
         super.viewDidLoad()
         tabBar.tintColor=UIColor.orange
         UINavigationBar.appearance().tintColor=UIColor.orange

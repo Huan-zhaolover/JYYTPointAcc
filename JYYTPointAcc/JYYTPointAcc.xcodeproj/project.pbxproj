@@ -31,6 +31,7 @@
 		7D86FE271E890954008EA024 /* InvoiceListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D86FE241E890954008EA024 /* InvoiceListVC.swift */; };
 		7D86FE281E890954008EA024 /* PartnerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D86FE261E890954008EA024 /* PartnerVC.swift */; };
 		7D86FE2A1E8909CF008EA024 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D86FE291E8909CF008EA024 /* HomeVC.swift */; };
+		7D97D4001EA5EFE700A8D7BF /* AFNNetWorkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D97D3FF1EA5EFE700A8D7BF /* AFNNetWorkTool.swift */; };
 		7DD7BCD51E8E513B005369F7 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7BCD31E8E513B005369F7 /* LoginVC.swift */; };
 		7DD7BCD61E8E513B005369F7 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DD7BCD41E8E513B005369F7 /* LoginVC.xib */; };
 		7DD7BCD81E8EA251005369F7 /* VerticalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7BCD71E8EA251005369F7 /* VerticalButton.swift */; };
@@ -90,6 +91,7 @@
 		7D86FE241E890954008EA024 /* InvoiceListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvoiceListVC.swift; sourceTree = "<group>"; };
 		7D86FE261E890954008EA024 /* PartnerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartnerVC.swift; sourceTree = "<group>"; };
 		7D86FE291E8909CF008EA024 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		7D97D3FF1EA5EFE700A8D7BF /* AFNNetWorkTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFNNetWorkTool.swift; sourceTree = "<group>"; };
 		7DD7BCD31E8E513B005369F7 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		7DD7BCD41E8E513B005369F7 /* LoginVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
 		7DD7BCD71E8EA251005369F7 /* VerticalButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalButton.swift; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 		7D86FE071E87B245008EA024 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				7D97D3FF1EA5EFE700A8D7BF /* AFNNetWorkTool.swift */,
 				7DD7BCEF1E921A4B005369F7 /* UIView+AutoLayout.swift */,
 				7DD7BCF11E923461005369F7 /* JYConstFile.swift */,
 				7DD7BCE11E8FACBB005369F7 /* Base64 */,
@@ -575,6 +578,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D86003F1E89F1C0008EA024 /* LeftChoseAccountBookVC.swift in Sources */,
+				7D97D4001EA5EFE700A8D7BF /* AFNNetWorkTool.swift in Sources */,
 				7DD7BCE01E8F7922005369F7 /* NSDate+category.swift in Sources */,
 				7D416F111E8B8120003F1D89 /* MyQRCardVC.swift in Sources */,
 				7D86FE0A1E87B485008EA024 /* MainViewController.swift in Sources */,

@@ -8,6 +8,8 @@
 
 import UIKit
 
+import Alamofire
+
 class HomeVC: BaseViewController{
 
     private lazy var homeAnimatir : HomePopOverAnimator = HomePopOverAnimator()
@@ -17,6 +19,9 @@ class HomeVC: BaseViewController{
         if isHadLoggin {
             nologvvv.addRotationAnimation()
         }
+        
+    
+        
         setHomeNavBars()
         textbase64()
         // Do any additional setup after loading the view.
@@ -29,6 +34,8 @@ class HomeVC: BaseViewController{
         super.viewWillDisappear(animated)
 //        tabBarController?.tabBar.isHidden = isHadLoggin
     }
+    
+    
     func  setHomeNavBars(){
         if isHadLoggin {
             navigationItem.leftBarButtonItem = UIBarButtonItem(title: "账本", style: .plain, target: self, action: #selector(changeAccoountBook))
@@ -37,6 +44,8 @@ class HomeVC: BaseViewController{
             setNavgationBarNoLogedItems()
         }
     }
+    
+    
     func changeAccoountBook(){
         let vc =  LeftChoseAccountBookVC()
         vc.modalPresentationStyle = .custom
@@ -44,6 +53,9 @@ class HomeVC: BaseViewController{
         
         present(vc, animated: true, completion:nil)
     }
+    
+    
+    
     func messageList(){
          let  vc  = QRScanVC()
         navigationController?.pushViewController(vc, animated: true)
@@ -53,6 +65,9 @@ class HomeVC: BaseViewController{
         // Dispose of any resources that can be recreated.
     }
     func  textbase64(){
+        
+    
+        
         
     }
 }
