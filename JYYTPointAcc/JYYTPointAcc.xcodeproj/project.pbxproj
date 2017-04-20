@@ -16,6 +16,7 @@
 		7D7D8BEB1EA870500091B491 /* BLHttpSessionsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7D8BEA1EA870500091B491 /* BLHttpSessionsRequest.swift */; };
 		7D7D8BED1EA883B10091B491 /* UIImage+category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7D8BEC1EA883B10091B491 /* UIImage+category.swift */; };
 		7D7D8BEF1EA88AA20091B491 /* textDownLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7D8BEE1EA88AA20091B491 /* textDownLoad.swift */; };
+		7D7D8BF11EA8932B0091B491 /* JYComon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7D8BF01EA8932B0091B491 /* JYComon.swift */; };
 		7D86003C1E8953F9008EA024 /* UIBarBarItem+category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D86003B1E8953F9008EA024 /* UIBarBarItem+category.swift */; };
 		7D86003F1E89F1C0008EA024 /* LeftChoseAccountBookVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D86003D1E89F1C0008EA024 /* LeftChoseAccountBookVC.swift */; };
 		7D8600401E89F1C0008EA024 /* LeftChoseAccountBookVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D86003E1E89F1C0008EA024 /* LeftChoseAccountBookVC.xib */; };
@@ -76,6 +77,7 @@
 		7D7D8BEA1EA870500091B491 /* BLHttpSessionsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLHttpSessionsRequest.swift; sourceTree = "<group>"; };
 		7D7D8BEC1EA883B10091B491 /* UIImage+category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+category.swift"; sourceTree = "<group>"; };
 		7D7D8BEE1EA88AA20091B491 /* textDownLoad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = textDownLoad.swift; sourceTree = "<group>"; };
+		7D7D8BF01EA8932B0091B491 /* JYComon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JYComon.swift; sourceTree = "<group>"; };
 		7D86003B1E8953F9008EA024 /* UIBarBarItem+category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarBarItem+category.swift"; sourceTree = "<group>"; };
 		7D86003D1E89F1C0008EA024 /* LeftChoseAccountBookVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftChoseAccountBookVC.swift; sourceTree = "<group>"; };
 		7D86003E1E89F1C0008EA024 /* LeftChoseAccountBookVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftChoseAccountBookVC.xib; sourceTree = "<group>"; };
@@ -271,6 +273,7 @@
 				7D7D8BEA1EA870500091B491 /* BLHttpSessionsRequest.swift */,
 				7DD7BCEF1E921A4B005369F7 /* UIView+AutoLayout.swift */,
 				7DD7BCF11E923461005369F7 /* JYConstFile.swift */,
+				7D7D8BF01EA8932B0091B491 /* JYComon.swift */,
 				7DD7BCE11E8FACBB005369F7 /* Base64 */,
 			);
 			path = Tools;
@@ -592,6 +595,7 @@
 				7D86003F1E89F1C0008EA024 /* LeftChoseAccountBookVC.swift in Sources */,
 				7D97D4001EA5EFE700A8D7BF /* AFNNetWorkTool.swift in Sources */,
 				7DD7BCE01E8F7922005369F7 /* NSDate+category.swift in Sources */,
+				7D7D8BF11EA8932B0091B491 /* JYComon.swift in Sources */,
 				7D416F111E8B8120003F1D89 /* MyQRCardVC.swift in Sources */,
 				7D86FE0A1E87B485008EA024 /* MainViewController.swift in Sources */,
 				7D86FE151E87B5B9008EA024 /* MineVC.swift in Sources */,

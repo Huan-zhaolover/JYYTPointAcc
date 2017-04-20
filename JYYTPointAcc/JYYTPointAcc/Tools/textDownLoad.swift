@@ -68,27 +68,10 @@ class textAlamofire {
         }
     }
     
-    
 }
 extension textAlamofire {
     
-    //MARK:-------------- 下载数据请求http
-    func httpRequest() {
-        
-        if let cancelledData = self.cancelledData {
-            
-            self.downloadRequest = Alamofire.download(resumingWith: cancelledData,to: self.destinationPath);
-        }else{
-            //页面加载完毕就自动开始下载
-            self.downloadRequest =  Alamofire.download(
-                "http://dldir1.qq.com/qqfile/qq/QQ7.9/16621/QQ7.9.exe", to: self.destinationPath);
-            //print("111111111111");
-        }
-        //下载进度
-        self.downloadRequest.downloadProgress(queue: DispatchQueue.main,closure: downloadProgress);
-        //下载数据响应
-        self.downloadRequest.responseData(completionHandler: downloadResponse);
-    }
+    
     
     //MARK:------------下载过程中改变进度条
     func downloadProgress(progress: Progress) {
@@ -110,12 +93,31 @@ extension textAlamofire {
         }
     }
 
-
     
 }
 
-
+// MARK: --------------下载数据请求http
 extension textAlamofire {
+    
+     func httpRequest() {
+        
+        if let cancelledData = self.cancelledData {
+            
+            self.downloadRequest = Alamofire.download(resumingWith: cancelledData,to: self.destinationPath);
+        }else{
+            //页面加载完毕就自动开始下载
+            self.downloadRequest =  Alamofire.download(
+                "http://dldir1.qq.com/qqfile/qq/QQ7.9/16621/QQ7.9.exe", to: self.destinationPath);
+            //print("111111111111");
+        }
+        //下载进度
+        self.downloadRequest.downloadProgress(queue: DispatchQueue.main,closure: downloadProgress);
+        //下载数据响应
+        self.downloadRequest.responseData(completionHandler: downloadResponse);
+    }
+    
+    
+    
     func atext(){
         let urlStr = "http://www.healthmanage.cn/android/hrsBabyAction_loadHrsBabyHealth.action?";
         let paramsDic:[String:Any] = ["userId":"38567","pagesize":"100","pageIndex":"1"];

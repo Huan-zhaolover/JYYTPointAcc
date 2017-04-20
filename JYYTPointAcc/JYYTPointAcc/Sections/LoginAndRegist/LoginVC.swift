@@ -50,10 +50,10 @@ class LoginVC: UIViewController,UITextFieldDelegate {
     func setSignInButtonStatus(iscanUse:Bool){
         if iscanUse{
             loginButton.isUserInteractionEnabled = true;
-            loginButton.backgroundColor =  UIColor.RGB(r: 242, g: 196, b: 57, a: 1.0)
+            loginButton.backgroundColor =  UIColor.RGB(242, 196, 57)
         }else{
             loginButton.isUserInteractionEnabled = false;
-            loginButton.backgroundColor = UIColor.RGB(r: 204, g: 204, b: 204, a: 1.0)
+            loginButton.backgroundColor = UIColor.RGB(204, 204, 204)
         }
 
     }
