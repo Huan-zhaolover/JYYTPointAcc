@@ -7,6 +7,7 @@
 //
 
 import UIKit
+
 import AFNetworking
 
 enum AFNnetRequsetType {
@@ -21,14 +22,32 @@ class AFNNetWorkTool: AFHTTPSessionManager {
         return tools
         }()
 }
-// 内部封装AFN 请求
+
 extension AFNNetWorkTool {
 
-    typealias callBack = (_ aresult:AnyObject?,_ erro:Error)->()
+    typealias callBack = (_ aresult:Any?,_ erro:Error)->()
     
+    // 加载
+    func loadAccessToken(code: String, finished: @escaping callBack) {
     
+        let urlString = "https://api.weibo.com/oauth2/access_token"
+        
+        let params = ["client_id": "",
+                      "client_secret": "",
+                      "grant_type": "authorization_code",
+                      "code": "",
+                      "redirect_uri": ""]
+        afnRequest(methodType: .POST, urlString: urlString, parames: params as [String : AnyObject], finished: finished as! (Any?, Error?) -> ())
+    
+       
+    
+    }
+}
+// 内部封装AFN 请求
+extension AFNNetWorkTool{
+
     func afnRequest(methodType:AFNnetRequsetType,urlString:String,parames:[String:AnyObject]?,finished:@escaping (_ result:Any?,_ error:Error?)->()){
-    
+        
         // 定义成功的回调
         let seccessBlck = { (task:URLSessionDataTask,resuurt:Any?)->() in
             finished(resuurt,nil)
@@ -44,6 +63,7 @@ extension AFNNetWorkTool {
         }else{
             post(urlString, parameters: parames, progress: nil, success: seccessBlck, failure: faitureBlock)
         }
-    
+        
     }
 }
+

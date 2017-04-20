@@ -5,7 +5,8 @@ use_frameworks!
 
 target 'JYYTPointAcc' do
 pod 'Alamofire', '~> 4.4.0’
-pod ‘AFNetworking’
+pod 'AFNetworking'
+pod 'SwiftyJSON'
 end
 
 target 'JYYTPointAccTests' do
