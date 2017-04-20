@@ -11,27 +11,43 @@ import UIKit
 extension String {
 
     /**
-     将当前字符串拼接到cache目录后面
+     将当前字符串拼接到cache目录后面 如果没有路径，返回cache目录
      */
-    func cacheDir() -> String{
-        let path = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.cachesDirectory, FileManager.SearchPathDomainMask.userDomainMask, true).last!  as NSString
-        return path.appendingPathComponent((self as NSString).lastPathComponent)
+    
+    static func cacheDir(path:String?) -> String{
+        let cactchpath = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.cachesDirectory, FileManager.SearchPathDomainMask.userDomainMask, true).last!  as NSString
+        if path == nil {
+            return cactchpath as String
+        }else{
+            return cactchpath.appendingPathComponent((path!as  NSString).lastPathComponent)
+        
+        }
     }
     /**
-     将当前字符串拼接到doc目录后面
+     将当前字符串拼接到doc目录后面 ，如果没有路径，返回doc目录
      */
-    func docDir() -> String
+    static func docDir(path:String?) -> String
     {
-        let path = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true).last!  as NSString
-        return path.appendingPathComponent((self as NSString).lastPathComponent)
+        let docupath = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true).last!  as NSString
+        if path == nil {
+            return docupath as String
+
+        }else{
+            return docupath.appendingPathComponent((path! as NSString).lastPathComponent)
+        }
     }
     /**
-     将当前字符串拼接到tmp目录后面
+     将当前字符串拼接到tmp目录后面  如果没有路径，返回tmp目录
      */
-    func tmpDir() -> String
+    static func tmpDir(path:String?) -> String
     {
-        let path = NSTemporaryDirectory() as NSString
-        return path.appendingPathComponent((self as NSString).lastPathComponent)
+        let tempopath = NSTemporaryDirectory() as NSString
+        if path == nil {
+            return tempopath as String
+        }else{
+            return tempopath.appendingPathComponent((path! as NSString).lastPathComponent)
+        }
+    
     }
 
 }

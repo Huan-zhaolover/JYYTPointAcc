@@ -10,12 +10,14 @@ import UIKit
 
 class MainViewController: UITabBarController {
     
+    let  loggOn = true
+    
+    
     override func viewDidLoad() {
         
-        
-        
-        
         super.viewDidLoad()
+        setUpUI()
+        
         tabBar.tintColor=UIColor.orange
         UINavigationBar.appearance().tintColor=UIColor.orange
         addSelfChildViewController(childVC: HomeVC(), title: "首页", imageString: "home_tabbar_fp")
@@ -59,5 +61,31 @@ class MainViewController: UITabBarController {
         }
 
     }
+}
 
+
+extension MainViewController{
+    func  setUpUI(){
+    
+        
+        
+        
+        
+        
+        
+        
+    }
+    
+    func isNewVerson()->(Bool) {
+
+        let path = String.cacheDir(path: "verson.data")
+        
+        
+        
+        
+    
+       return true
+    }
+    
+    
 }
