@@ -13,6 +13,7 @@
 		7D416F111E8B8120003F1D89 /* MyQRCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D416F0F1E8B8120003F1D89 /* MyQRCardVC.swift */; };
 		7D416F121E8B8120003F1D89 /* MyQRCardVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D416F101E8B8120003F1D89 /* MyQRCardVC.xib */; };
 		7D7D8BE91EA84A190091B491 /* ALamoNetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7D8BE81EA84A190091B491 /* ALamoNetworkTool.swift */; };
+		7D7D8BEB1EA870500091B491 /* BLHttpSessionsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7D8BEA1EA870500091B491 /* BLHttpSessionsRequest.swift */; };
 		7D86003C1E8953F9008EA024 /* UIBarBarItem+category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D86003B1E8953F9008EA024 /* UIBarBarItem+category.swift */; };
 		7D86003F1E89F1C0008EA024 /* LeftChoseAccountBookVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D86003D1E89F1C0008EA024 /* LeftChoseAccountBookVC.swift */; };
 		7D8600401E89F1C0008EA024 /* LeftChoseAccountBookVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D86003E1E89F1C0008EA024 /* LeftChoseAccountBookVC.xib */; };
@@ -70,6 +71,7 @@
 		7D416F0F1E8B8120003F1D89 /* MyQRCardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyQRCardVC.swift; sourceTree = "<group>"; };
 		7D416F101E8B8120003F1D89 /* MyQRCardVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyQRCardVC.xib; sourceTree = "<group>"; };
 		7D7D8BE81EA84A190091B491 /* ALamoNetworkTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALamoNetworkTool.swift; sourceTree = "<group>"; };
+		7D7D8BEA1EA870500091B491 /* BLHttpSessionsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLHttpSessionsRequest.swift; sourceTree = "<group>"; };
 		7D86003B1E8953F9008EA024 /* UIBarBarItem+category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarBarItem+category.swift"; sourceTree = "<group>"; };
 		7D86003D1E89F1C0008EA024 /* LeftChoseAccountBookVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftChoseAccountBookVC.swift; sourceTree = "<group>"; };
 		7D86003E1E89F1C0008EA024 /* LeftChoseAccountBookVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftChoseAccountBookVC.xib; sourceTree = "<group>"; };
@@ -258,8 +260,9 @@
 		7D86FE071E87B245008EA024 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				7D97D3FF1EA5EFE700A8D7BF /* AFNNetWorkTool.swift */,
 				7D7D8BE81EA84A190091B491 /* ALamoNetworkTool.swift */,
+				7D97D3FF1EA5EFE700A8D7BF /* AFNNetWorkTool.swift */,
+				7D7D8BEA1EA870500091B491 /* BLHttpSessionsRequest.swift */,
 				7DD7BCEF1E921A4B005369F7 /* UIView+AutoLayout.swift */,
 				7DD7BCF11E923461005369F7 /* JYConstFile.swift */,
 				7DD7BCE11E8FACBB005369F7 /* Base64 */,
@@ -602,6 +605,7 @@
 				7DD7BCE71E8FAF55005369F7 /* AlphaTables.swift in Sources */,
 				7DD7BCF61E923D95005369F7 /* WelcomeVC.swift in Sources */,
 				7D86FE271E890954008EA024 /* InvoiceListVC.swift in Sources */,
+				7D7D8BEB1EA870500091B491 /* BLHttpSessionsRequest.swift in Sources */,
 				7D86FE281E890954008EA024 /* PartnerVC.swift in Sources */,
 				7DD7BCDA1E8F65CD005369F7 /* UIColor+category.swift in Sources */,
 				7DD7BCD51E8E513B005369F7 /* LoginVC.swift in Sources */,

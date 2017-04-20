@@ -52,22 +52,17 @@ extension  ALamoNetworkTool {
     }
 }
 
-
 // 图片上传
 extension  ALamoNetworkTool {
     
     func getRequest(urlstring:String ,params:[String:AnyObject],datas:[Data],complection:@escaping (_ result:[String:AnyObject]?,_ error:Error?)->()) {
         
         let headers = ["content-type":"multipart/form-data"]
-        
-        
         Alamofire.upload(multipartFormData: { (multipartFormData) in
-            //666多张图片上传
-            let flag = params["flag"]
-            let userId = params["userId"]
-            
-            multipartFormData.append((flag?.data(using: String.Encoding.utf8.rawValue)!)!, withName: "flag")
-            multipartFormData.append((userId?.data(using: String.Encoding.utf8.rawValue)!)!, withName: "userId")
+            //把剩下的两个参数作为字典参数,
+            for (key, value) in params {
+                multipartFormData.append(value.data(using: String.Encoding.utf8.rawValue)!, withName: key)
+             }
             for i in 0..<datas.count {
                 multipartFormData.append(datas[i], withName: "appPhoto", fileName: "图片\(i)", mimeType: "image/png")
             }
