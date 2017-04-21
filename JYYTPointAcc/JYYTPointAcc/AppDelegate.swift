@@ -14,27 +14,30 @@ import Alamofire
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
+    let NetworkListener = NetworkReachabilityManager(host: "www.baidu.com")
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
  
         NotificationCenter.default.addObserver(self, selector: #selector(changeRoot), name: SwitchRootVCNotification, object: nil)
         window=UIWindow(frame: UIScreen.main.bounds)
         window?.backgroundColor=UIColor.white
-        
-  
         window?.rootViewController =  defaultContoller()
-
         window?.makeKeyAndVisible()
+        textAla()
         
-        /*
-         NSDictionary *dic=@{@"mobile":self.phoneNumberTextField.text,
-         @"password":[NSString md5StringWIthOrinalString:self.passordTextField.text],
-         @"devicesType":@1,
-         };
-         
-         */
-        
+        startListenNetwork()
+        return true
+    }
+    
+       deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+}
+
+//MARK: 测试
+extension AppDelegate {
+    func textAla(){
         let prama : [String:Any] = ["mobile":"111111111",
                                     "password":NSString.md5StringWIthOrinalString("111111"),
                                     "devicesType":"1",
@@ -44,40 +47,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             JYPrint(respon)
             JYPrint(error)
-
+            
         }
+
         
-     
         
-        return true
     }
-   
-    
-  
-    func applicationWillResignActive(_ application: UIApplication) {
-        // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-        // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
-    }
-
-    func applicationDidEnterBackground(_ application: UIApplication) {
-        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-    }
-
-    func applicationWillEnterForeground(_ application: UIApplication) {
-        // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
-    }
-
-    func applicationDidBecomeActive(_ application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-    }
-
-    func applicationWillTerminate(_ application: UIApplication) {
-        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    }
-
+}
+//MARK: 界面切换
+extension  AppDelegate{
     func  defaultContoller()->UIViewController{
-      
+        
         //   1.检测用户是否登录
         let  isLog = true
         if isLog {
@@ -89,10 +69,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }else{
                 return WelcomeVC()
             }
-         }else{
+        }else{
             return MainViewController()
         }
     }
+    
+    
     func changeRoot(noti:NSNotification){
         window?.rootViewController=MainViewController()
     }
@@ -111,8 +93,63 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return false
     }
     
-    deinit {
-        NotificationCenter.default.removeObserver(self)
+
+    
+}
+//MARK: applegate 的代理
+extension  AppDelegate{
+    func applicationWillResignActive(_ application: UIApplication) {
+        // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
+        // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
     }
+    
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
+        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    }
+    
+    func applicationWillEnterForeground(_ application: UIApplication) {
+        // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+    }
+    
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    }
+    
+    func applicationWillTerminate(_ application: UIApplication) {
+        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    
 }
 
+// MARK: - 网络监测
+extension  AppDelegate{
+    func startListenNetwork(){
+        NetworkListener?.listener = { reachabilityStatus in
+            
+            switch reachabilityStatus {
+            case .notReachable:
+                JYPrint("当前无连接")
+            case .unknown:
+                JYPrint("未知连接")
+            case .reachable:
+                    JYPrint("连接可用")
+                    fallthrough      // 穿透
+            case .reachable(.wwan):
+                JYPrint("WWAN连接")
+            case .reachable(.ethernetOrWiFi):
+                JYPrint("WiFi连接")
+
+            default:
+                <#code#>
+            }
+            
+            }
+        
+        NetworkListener?.startListening()
+        
+    }
+    
+    
+}
