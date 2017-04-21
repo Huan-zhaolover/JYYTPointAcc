@@ -14,6 +14,8 @@ let JYAppUrl = "http://mapi.pointacc.com/"          //正式环境
 //let JYAppUrl = "http://demo.shjysoft.com:3020/"    //测试环境
 //let JYAppUrl = "http://10.0.3.147:8090/"          //张环境
 
+let  APPSecreat = "922f1999d6fa3d13ff018e5e1d7cf507"
+
 let AllViewColor  = UIColor.RGB(245, 245, 245)      //view背景色
 let CellLineColor = UIColor.RGB(225, 225, 225)      //cell分割线颜色
 let NavColor      = UIColor.RGB(253, 204, 14)       //导航栏颜色

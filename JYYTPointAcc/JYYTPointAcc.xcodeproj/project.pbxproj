@@ -17,6 +17,8 @@
 		7D7D8BED1EA883B10091B491 /* UIImage+category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7D8BEC1EA883B10091B491 /* UIImage+category.swift */; };
 		7D7D8BEF1EA88AA20091B491 /* textDownLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7D8BEE1EA88AA20091B491 /* textDownLoad.swift */; };
 		7D7D8BF11EA8932B0091B491 /* JYComon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7D8BF01EA8932B0091B491 /* JYComon.swift */; };
+		7D7D8C001EA9CF8A0091B491 /* JYBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7D8BFF1EA9CF8A0091B491 /* JYBase64.m */; };
+		7D7D8C031EA9D2270091B491 /* NSString+NSString_MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7D8C021EA9D2270091B491 /* NSString+NSString_MD5.m */; };
 		7D86003C1E8953F9008EA024 /* UIBarBarItem+category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D86003B1E8953F9008EA024 /* UIBarBarItem+category.swift */; };
 		7D86003F1E89F1C0008EA024 /* LeftChoseAccountBookVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D86003D1E89F1C0008EA024 /* LeftChoseAccountBookVC.swift */; };
 		7D8600401E89F1C0008EA024 /* LeftChoseAccountBookVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D86003E1E89F1C0008EA024 /* LeftChoseAccountBookVC.xib */; };
@@ -44,8 +46,6 @@
 		7DD7BCDC1E8F68A4005369F7 /* HorizontalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7BCDB1E8F68A4005369F7 /* HorizontalButton.swift */; };
 		7DD7BCDE1E8F73BC005369F7 /* String+category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7BCDD1E8F73BC005369F7 /* String+category.swift */; };
 		7DD7BCE01E8F7922005369F7 /* NSDate+category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7BCDF1E8F7922005369F7 /* NSDate+category.swift */; };
-		7DD7BCE71E8FAF55005369F7 /* AlphaTables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7BCE61E8FAF55005369F7 /* AlphaTables.swift */; };
-		7DD7BCE91E8FAF67005369F7 /* JYBase64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7BCE81E8FAF67005369F7 /* JYBase64.swift */; };
 		7DD7BCEE1E920BA1005369F7 /* NewFeatureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7BCED1E920BA1005369F7 /* NewFeatureVC.swift */; };
 		7DD7BCF01E921A4B005369F7 /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7BCEF1E921A4B005369F7 /* UIView+AutoLayout.swift */; };
 		7DD7BCF21E923461005369F7 /* JYConstFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7BCF11E923461005369F7 /* JYConstFile.swift */; };
@@ -78,6 +78,11 @@
 		7D7D8BEC1EA883B10091B491 /* UIImage+category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+category.swift"; sourceTree = "<group>"; };
 		7D7D8BEE1EA88AA20091B491 /* textDownLoad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = textDownLoad.swift; sourceTree = "<group>"; };
 		7D7D8BF01EA8932B0091B491 /* JYComon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JYComon.swift; sourceTree = "<group>"; };
+		7D7D8BF91EA9CEE00091B491 /* JYYTPointAcc-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JYYTPointAcc-Bridging-Header.h"; sourceTree = "<group>"; };
+		7D7D8BFE1EA9CF8A0091B491 /* JYBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYBase64.h; sourceTree = "<group>"; };
+		7D7D8BFF1EA9CF8A0091B491 /* JYBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYBase64.m; sourceTree = "<group>"; };
+		7D7D8C011EA9D2270091B491 /* NSString+NSString_MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+NSString_MD5.h"; sourceTree = "<group>"; };
+		7D7D8C021EA9D2270091B491 /* NSString+NSString_MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NSString_MD5.m"; sourceTree = "<group>"; };
 		7D86003B1E8953F9008EA024 /* UIBarBarItem+category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarBarItem+category.swift"; sourceTree = "<group>"; };
 		7D86003D1E89F1C0008EA024 /* LeftChoseAccountBookVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftChoseAccountBookVC.swift; sourceTree = "<group>"; };
 		7D86003E1E89F1C0008EA024 /* LeftChoseAccountBookVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftChoseAccountBookVC.xib; sourceTree = "<group>"; };
@@ -109,8 +114,6 @@
 		7DD7BCDB1E8F68A4005369F7 /* HorizontalButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalButton.swift; sourceTree = "<group>"; };
 		7DD7BCDD1E8F73BC005369F7 /* String+category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+category.swift"; sourceTree = "<group>"; };
 		7DD7BCDF1E8F7922005369F7 /* NSDate+category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+category.swift"; sourceTree = "<group>"; };
-		7DD7BCE61E8FAF55005369F7 /* AlphaTables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlphaTables.swift; sourceTree = "<group>"; };
-		7DD7BCE81E8FAF67005369F7 /* JYBase64.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JYBase64.swift; sourceTree = "<group>"; };
 		7DD7BCED1E920BA1005369F7 /* NewFeatureVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewFeatureVC.swift; sourceTree = "<group>"; };
 		7DD7BCEF1E921A4B005369F7 /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AutoLayout.swift"; sourceTree = "<group>"; };
 		7DD7BCF11E923461005369F7 /* JYConstFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JYConstFile.swift; sourceTree = "<group>"; };
@@ -171,6 +174,17 @@
 			name = leftDrop;
 			sourceTree = "<group>";
 		};
+		7D7D8BFD1EA9CF820091B491 /* Base64 */ = {
+			isa = PBXGroup;
+			children = (
+				7D7D8BFE1EA9CF8A0091B491 /* JYBase64.h */,
+				7D7D8BFF1EA9CF8A0091B491 /* JYBase64.m */,
+				7D7D8C011EA9D2270091B491 /* NSString+NSString_MD5.h */,
+				7D7D8C021EA9D2270091B491 /* NSString+NSString_MD5.m */,
+			);
+			path = Base64;
+			sourceTree = "<group>";
+		};
 		7D86FDAB1E864D4A008EA024 = {
 			isa = PBXGroup;
 			children = (
@@ -198,6 +212,7 @@
 				7D86FDBB1E864D4A008EA024 /* Main.storyboard */,
 				7D86FDBE1E864D4A008EA024 /* Assets.xcassets */,
 				7D86FDC31E864D4A008EA024 /* Info.plist */,
+				7D7D8BF91EA9CEE00091B491 /* JYYTPointAcc-Bridging-Header.h */,
 				7D86FE061E87B245008EA024 /* Sections */,
 				7D86FE031E87B244008EA024 /* Category */,
 				7D86FE041E87B244008EA024 /* Common */,
@@ -274,7 +289,6 @@
 				7DD7BCEF1E921A4B005369F7 /* UIView+AutoLayout.swift */,
 				7DD7BCF11E923461005369F7 /* JYConstFile.swift */,
 				7D7D8BF01EA8932B0091B491 /* JYComon.swift */,
-				7DD7BCE11E8FACBB005369F7 /* Base64 */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -282,6 +296,7 @@
 		7D86FE081E87B245008EA024 /* Venders */ = {
 			isa = PBXGroup;
 			children = (
+				7D7D8BFD1EA9CF820091B491 /* Base64 */,
 			);
 			path = Venders;
 			sourceTree = "<group>";
@@ -344,15 +359,6 @@
 				7D86FE261E890954008EA024 /* PartnerVC.swift */,
 			);
 			path = PartnerVC;
-			sourceTree = "<group>";
-		};
-		7DD7BCE11E8FACBB005369F7 /* Base64 */ = {
-			isa = PBXGroup;
-			children = (
-				7DD7BCE61E8FAF55005369F7 /* AlphaTables.swift */,
-				7DD7BCE81E8FAF67005369F7 /* JYBase64.swift */,
-			);
-			path = Base64;
 			sourceTree = "<group>";
 		};
 		7DD7BCEA1E920B0B005369F7 /* NewFeature */ = {
@@ -440,6 +446,7 @@
 					7D86FDB31E864D4A008EA024 = {
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = 39LA9J6HHG;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					7D86FDC71E864D4A008EA024 = {
@@ -594,6 +601,7 @@
 			files = (
 				7D86003F1E89F1C0008EA024 /* LeftChoseAccountBookVC.swift in Sources */,
 				7D97D4001EA5EFE700A8D7BF /* AFNNetWorkTool.swift in Sources */,
+				7D7D8C031EA9D2270091B491 /* NSString+NSString_MD5.m in Sources */,
 				7DD7BCE01E8F7922005369F7 /* NSDate+category.swift in Sources */,
 				7D7D8BF11EA8932B0091B491 /* JYComon.swift in Sources */,
 				7D416F111E8B8120003F1D89 /* MyQRCardVC.swift in Sources */,
@@ -604,6 +612,7 @@
 				7DD7BCF01E921A4B005369F7 /* UIView+AutoLayout.swift in Sources */,
 				7DD7BCF21E923461005369F7 /* JYConstFile.swift in Sources */,
 				7DD7BCDC1E8F68A4005369F7 /* HorizontalButton.swift in Sources */,
+				7D7D8C001EA9CF8A0091B491 /* JYBase64.m in Sources */,
 				7DD7BCEE1E920BA1005369F7 /* NewFeatureVC.swift in Sources */,
 				7D8600421E89F909008EA024 /* HomePopOverAnimator.swift in Sources */,
 				7D86FDB81E864D4A008EA024 /* AppDelegate.swift in Sources */,
@@ -612,8 +621,6 @@
 				7D7D8BEF1EA88AA20091B491 /* textDownLoad.swift in Sources */,
 				7D86FE111E87B598008EA024 /* BillListVC.swift in Sources */,
 				7D416F0D1E8B3E7B003F1D89 /* QRScanVC.swift in Sources */,
-				7DD7BCE91E8FAF67005369F7 /* JYBase64.swift in Sources */,
-				7DD7BCE71E8FAF55005369F7 /* AlphaTables.swift in Sources */,
 				7DD7BCF61E923D95005369F7 /* WelcomeVC.swift in Sources */,
 				7D86FE271E890954008EA024 /* InvoiceListVC.swift in Sources */,
 				7D7D8BEB1EA870500091B491 /* BLHttpSessionsRequest.swift in Sources */,
@@ -704,6 +711,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -745,6 +753,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -756,12 +765,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 39LA9J6HHG;
 				INFOPLIST_FILE = JYYTPointAcc/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shjy.JYPointAcc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "JYYTPointAcc/JYYTPointAcc-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -772,12 +784,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 39LA9J6HHG;
 				INFOPLIST_FILE = JYYTPointAcc/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shjy.JYPointAcc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "JYYTPointAcc/JYYTPointAcc-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

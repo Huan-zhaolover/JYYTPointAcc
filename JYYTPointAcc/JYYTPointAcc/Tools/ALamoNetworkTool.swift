@@ -19,23 +19,38 @@ enum AlaRequestType {
 class ALamoNetworkTool  {
   static let netWorkTools = ALamoNetworkTool()
     
-    
-    
 }
 
 // 封装的网络请求 GET POST 图片上传
 extension  ALamoNetworkTool {
     
-    func alaRequest(type:AlaRequestType,url:String,parameters:[String:AnyObject],complection:@escaping (_ result:Any?,_ error:Error?)->()){
+    func alaRequest(type:AlaRequestType,url:String,parameters:[String:Any],complection:@escaping (_ result:Any?,_ error:Error?)->()){
 
+        /*
+         // 加密之后的token
+         NSString *timestring=[NSString stringWithFormat:@"%@|%@",secreat,[NSString nowTimeDetial]];
+         NSString *encryptString=[NSString encrypt:timestring];
+         [theTureDic setValue :encryptString forKey:@"token"];
+         
+         */
+        let totlalUrl = JYAppUrl.appending(url)   // 拼接全路径
+        // |
+        
+        let aency = APPSecreat + "|".appending(Date.nowTimeDetail())
+        var tokenDic : [String:Any] = ["token":NSString.encrypt(aency)! ]
+
+        for (key,value) in parameters {
+            tokenDic[key] = value
+        }
+        
         var alaType:HTTPMethod
         if (type == .GET) {
               alaType = .get;
         }else{
             alaType = .post;
         }
-        
-        Alamofire.request(url, method: alaType, parameters: parameters).responseJSON { (response) in
+
+        Alamofire.request(totlalUrl, method: alaType, parameters: tokenDic).responseJSON { (response) in
             switch response.result {
             case .success:
                 if let value = response.result.value as? [String: AnyObject] {

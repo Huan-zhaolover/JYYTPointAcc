@@ -56,14 +56,13 @@ class MyQRCardVC: UIViewController {
         let bitmapRef = CGContext(data: nil, width: Int(width), height: Int(height), bitsPerComponent: 8, bytesPerRow: 0, space: cs, bitmapInfo: 0)!
         
         let context = CIContext(options: nil)
-//        let bitmapImage: CGImage = context.createCGImage(image, from: extent)!
+        
+        let bitmapImage: CGImage = context.createCGImage(image, from: extent)!
         
         bitmapRef.interpolationQuality = CGInterpolationQuality.none
         bitmapRef.scaleBy(x: scale, y: scale);
         
-//        CGContextDrawImage(bitmapRef, extent, bitmapImage);
-        
-//        CGContext.makeImage(bitmapRef)
+        bitmapRef.draw(bitmapImage, in: extent)
         // 2.保存bitmap到图片
         let scaledImage: CGImage = bitmapRef.makeImage()!
         

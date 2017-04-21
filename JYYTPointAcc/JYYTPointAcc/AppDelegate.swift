@@ -27,14 +27,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         window?.makeKeyAndVisible()
         
-        AFNNetWorkTool.AFNTools.afnRequest(methodType: .GET, urlString: "http://www.baidu.com", parames: nil) { (rest, error) in
-            guard let rest = rest else{
-                print("\(error!)")
+        /*
+         NSDictionary *dic=@{@"mobile":self.phoneNumberTextField.text,
+         @"password":[NSString md5StringWIthOrinalString:self.passordTextField.text],
+         @"devicesType":@1,
+         };
+         
+         */
+        
+        let prama : [String:Any] = ["mobile":"111111111",
+                                    "password":NSString.md5StringWIthOrinalString("111111"),
+                                    "devicesType":"1",
+                                    ]
+        
+        ALamoNetworkTool.netWorkTools.alaRequest(type: .GET, url: "app/loginByEncry.htm?", parameters: prama) { (respon, error) in
+            
+            JYPrint(respon)
+            JYPrint(error)
 
-                return
-            }
-            print("\(rest)")
-    
         }
         
      
