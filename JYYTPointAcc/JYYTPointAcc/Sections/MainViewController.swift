@@ -78,7 +78,7 @@ extension MainViewController{
     
     func isNewVerson()->(Bool) {
 
-        let path = String.cacheDir(path: "verson.data")
+//        let path = String.cacheDir(path: "verson.data")
         
         
         

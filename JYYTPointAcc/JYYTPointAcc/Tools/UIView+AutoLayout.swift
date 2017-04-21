@@ -35,7 +35,7 @@ public enum YT_AlignType {
         
         switch self {
             case .TopLeft:
-                attributes.horizontals(from: .left, to: .left).verticals(from: .top, to: .top)
+                _ = attributes.horizontals(from: .left, to: .left).verticals(from: .top, to: .top)
                 
                 if isInner {
                     return attributes
@@ -46,7 +46,7 @@ public enum YT_AlignType {
                     return attributes.horizontals(from: .right, to: .left)
                 }
             case .TopRight:
-                attributes.horizontals(from: .right, to: .right).verticals(from: .top, to: .top)
+                _ = attributes.horizontals(from: .right, to: .right).verticals(from: .top, to: .top)
                 
                 if isInner {
                     return attributes
@@ -56,7 +56,7 @@ public enum YT_AlignType {
                     return attributes.horizontals(from: .left, to: .right)
                 }
             case .BottomLeft:
-                attributes.horizontals(from: .left, to: .left).verticals(from: .bottom, to: .bottom)
+                _ = attributes.horizontals(from: .left, to: .left).verticals(from: .bottom, to: .bottom)
                 
                 if isInner {
                     return attributes
@@ -66,7 +66,7 @@ public enum YT_AlignType {
                     return attributes.horizontals(from: .right, to: .left)
                 }
             case .BottomRight:
-                attributes.horizontals(from: .right, to: .right).verticals(from: .bottom, to: .bottom)
+                _ = attributes.horizontals(from: .right, to: .right).verticals(from: .bottom, to: .bottom)
                 
                 if isInner {
                     return attributes
@@ -77,19 +77,19 @@ public enum YT_AlignType {
                 }
             // 仅内部 & 垂直参照需要
             case .TopCenter:
-                attributes.horizontals(from: .centerX, to: .centerX).verticals(from: .top, to: .top)
+                _ = attributes.horizontals(from: .centerX, to: .centerX).verticals(from: .top, to: .top)
                 return isInner ? attributes : attributes.verticals(from: .bottom, to: .top)
             // 仅内部 & 垂直参照需要
             case .BottomCenter:
-                attributes.horizontals(from: .centerX, to: .centerX).verticals(from: .bottom, to: .bottom)
+                _ = attributes.horizontals(from: .centerX, to: .centerX).verticals(from: .bottom, to: .bottom)
                 return isInner ? attributes : attributes.verticals(from: .top, to: .bottom)
             // 仅内部 & 水平参照需要
             case .CenterLeft:
-                attributes.horizontals(from: .left, to: .left).verticals(from: .centerY, to: .centerY)
+                _ = attributes.horizontals(from: .left, to: .left).verticals(from: .centerY, to: .centerY)
                 return isInner ? attributes : attributes.horizontals(from: .right, to: .left)
             // 仅内部 & 水平参照需要
             case .CenterRight:
-                attributes.horizontals(from: .right, to: .right).verticals(from: .centerY, to: .centerY)
+                _ = attributes.horizontals(from: .right, to: .right).verticals(from: .centerY, to: .centerY)
                 return isInner ? attributes : attributes.horizontals(from: .left, to: .right)
             // 仅内部参照需要
             case .Center:
@@ -180,7 +180,7 @@ extension UIView {
         var cons = [NSLayoutConstraint]()
         
         let firstView = views[0]
-        firstView.YT_AlignInner(type: YT_AlignType.TopLeft, referView: self, size: nil, offset: CGPoint(x: insets.left, y: insets.top))
+        _ = firstView.YT_AlignInner(type: YT_AlignType.TopLeft, referView: self, size: nil, offset: CGPoint(x: insets.left, y: insets.top))
         cons.append(NSLayoutConstraint(item: firstView, attribute: NSLayoutAttribute.bottom, relatedBy: NSLayoutRelation.equal, toItem: self, attribute: NSLayoutAttribute.bottom, multiplier: 1.0, constant: -insets.bottom))
         
         // 添加后续视图的约束
@@ -189,7 +189,7 @@ extension UIView {
             let subView = views[i]
             
             cons += subView.YT_sizeConstraints(referView: firstView)
-            subView.YT_AlignHorizontal(type: YT_AlignType.TopRight, referView: preView, size: nil, offset: CGPoint(x: insets.right, y: 0))
+            _ = subView.YT_AlignHorizontal(type: YT_AlignType.TopRight, referView: preView, size: nil, offset: CGPoint(x: insets.right, y: 0))
             preView = subView
         }
         
@@ -215,7 +215,7 @@ extension UIView {
         var cons = [NSLayoutConstraint]()
         
         let firstView = views[0]
-        firstView.YT_AlignInner(type: YT_AlignType.TopLeft, referView: self, size: nil, offset: CGPoint(x: insets.left, y: insets.top))
+        _ = firstView.YT_AlignInner(type: YT_AlignType.TopLeft, referView: self, size: nil, offset: CGPoint(x: insets.left, y: insets.top))
         cons.append(NSLayoutConstraint(item: firstView, attribute: NSLayoutAttribute.right, relatedBy: NSLayoutRelation.equal, toItem: self, attribute: NSLayoutAttribute.right, multiplier: 1.0, constant: -insets.right))
         
         // 添加后续视图的约束
@@ -223,7 +223,7 @@ extension UIView {
         for i in 1..<views.count {
             let subView = views[i]
             cons += subView.YT_sizeConstraints(referView: firstView)
-            subView.YT_AlignVertical(type: YT_AlignType.BottomLeft, referView: preView, size: nil, offset: CGPoint(x: 0, y: insets.bottom))
+            _ = subView.YT_AlignVertical(type: YT_AlignType.BottomLeft, referView: preView, size: nil, offset: CGPoint(x: 0, y: insets.bottom))
             preView = subView
         }
         
