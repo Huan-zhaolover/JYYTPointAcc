@@ -82,6 +82,11 @@ extension  ALamoNetworkTool {
         }
         
         if needNetWorkTip {
+            
+            let app =  APPDELEGATE as! AppDelegate
+            if !app.isHaveNet {
+                return;
+            }
             /*
              AppDelegate *appdele=(AppDelegate*)APPDELEGATE;
              if (!appdele.isHaveNet) {
@@ -129,7 +134,10 @@ extension  ALamoNetworkTool {
 // MARK: - -----------------图片上传
 extension  ALamoNetworkTool {
     
-    func getRequest(urlstring:String ,params:[String:AnyObject],datas:[Data],complection:@escaping (_ result:[String:AnyObject]?,_ error:Error?)->()) {
+    func getRequest(urlstring:String ,
+                    params:[String:AnyObject],
+                    datas:[Data],
+                    complection:@escaping (_ result:[String:AnyObject]?,_ error:Error?)->()) {
         
         let headers = ["content-type":"multipart/form-data"]
         Alamofire.upload(multipartFormData: { (multipartFormData) in
