@@ -14,7 +14,7 @@ import Alamofire
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    
+    var isHaveNet:Bool = false
     let NetworkListener = NetworkReachabilityManager(host: "www.baidu.com")
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -43,7 +43,7 @@ extension AppDelegate {
                                     "devicesType":"1",
                                     ]
         
-        ALamoNetworkTool.netWorkTools.alaRequest(type: .GET, url: "app/loginByEncry.htm?", parameters: prama) { (respon, error) in
+        ALamoNetworkTool.netWorkTools.tokenRequest(type: .GET, url: "app/loginByEncry.htm?", parameters: prama) { (respon, error) in
             
             JYPrint(respon)
             JYPrint(error)
@@ -130,22 +130,22 @@ extension  AppDelegate{
             
             switch reachabilityStatus {
             case .notReachable:
+                self.isHaveNet = false
                 JYPrint("当前无连接")
             case .unknown:
                 JYPrint("未知连接")
             case .reachable:
+                self.isHaveNet = true
                     JYPrint("连接可用")
                     fallthrough      // 穿透
             case .reachable(.wwan):
+                self.isHaveNet = true
                 JYPrint("WWAN连接")
             case .reachable(.ethernetOrWiFi):
+                self.isHaveNet = true
                 JYPrint("WiFi连接")
-
-            default:
-                <#code#>
             }
-            
-            }
+        }
         
         NetworkListener?.startListening()
         
