@@ -83,7 +83,7 @@ func JYPrint<T>(_ message : T, fileName : String = #file, lineNum : Int = #line,
     #if DEBUG
         // 处理fileName
         let file = (fileName as NSString).lastPathComponent
-        print("\(file):[\(lineNum)]:[\(lineNum)]")
+        print("------\(file):[\(lineNum)]\n[\(functionName)]\(message)")
     #endif
 }
 

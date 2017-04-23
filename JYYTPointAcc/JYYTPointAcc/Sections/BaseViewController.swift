@@ -11,6 +11,9 @@ import UIKit
 // 设置navBar, 设置tableView，封装上拉下拉刷新
 
 class BaseViewController: UIViewController {
+    
+    let isHadLoggin :Bool = true
+    lazy var nologvvv : NoLogView = NoLogView.shareNoLogView()
 
     //  自定义导航栏
     lazy var navigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: ScreenW, height: 64))
@@ -22,9 +25,6 @@ class BaseViewController: UIViewController {
     // 定义变量区分上拉，下拉刷新
     var isPullup = false
     
-    let isHadLoggin :Bool = false
-    
-    lazy var nologvvv : NoLogView = NoLogView.shareNoLogView()
 
     override var title: String? {
         didSet{
@@ -40,11 +40,8 @@ class BaseViewController: UIViewController {
      }
    // 加载数据，具体实现由子类实现
     func loadData(){
-    
-    }
-    
-    override func loadView() {
-        isHadLoggin ?  super.loadView(): setNoLogView()
+        refreshControl?.endRefreshing()
+        
     }
 
 }
@@ -58,7 +55,8 @@ extension  BaseViewController {
         // 取消自动缩进，如果隐藏了导航条，会缩进20
         automaticallyAdjustsScrollViewInsets = false
         setNavbar()
-        setTableView()
+        isHadLoggin ?  setTableView(): setNoLogView()
+        
     }
      /// 设置导航条
     private func setNavbar(){
@@ -72,6 +70,8 @@ extension  BaseViewController {
         navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.lightGray];
     
     }
+    
+    /// 设置表格视图
     private func setTableView(){
         tableView = UITableView(frame: view.bounds, style: .plain)
         view.insertSubview(tableView!, belowSubview: navigationBar)
@@ -88,6 +88,13 @@ extension  BaseViewController {
          refreshControl = UIRefreshControl()
          tableView?.addSubview(refreshControl!)
          refreshControl?.addTarget(self, action: #selector(loadData), for: .valueChanged)
+    }
+    
+    /// 设置访客视图
+    func setNoLogView() {
+        let aview=nologvvv
+        aview.delegate=self
+        view.insertSubview(aview, belowSubview: navigationBar)
     }
 }
 
@@ -108,7 +115,7 @@ extension  BaseViewController:UITableViewDataSource,UITableViewDelegate {
         let row = indexPath.row
         let section = tableView.numberOfSections - 1
         if row < 0 || section < 0 {
-         return
+            return
         }
         let arow = tableView.numberOfRows(inSection: section)
    
@@ -128,11 +135,7 @@ extension  BaseViewController:UITableViewDataSource,UITableViewDelegate {
 // MARK: - ---------------登录注册的代理
 extension  BaseViewController:NoLogViewDelegate {
     
-    func setNoLogView() {
-        let aview=nologvvv
-        aview.delegate=self
-        view=aview
-    }
+ 
     func registButtonWillClick() {
         print("zhuce")
     }

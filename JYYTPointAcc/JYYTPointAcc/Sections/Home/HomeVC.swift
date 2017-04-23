@@ -17,6 +17,7 @@ class HomeVC: BaseViewController{
     // private
      lazy var homeAnimatir : HomePopOverAnimator = HomePopOverAnimator()
     
+    var  count  = 21
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -27,17 +28,34 @@ class HomeVC: BaseViewController{
     // 重写父类调用数据
     override func loadData() {
         // 模拟dispatchAfter 
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) { 
+        DispatchQueue.main.asyncAfter(wallDeadline: DispatchWallTime.now() + 2) {
             JYPrint("延迟加载")
             if self.isPullup {
-            // 上拉刷新，加载数据后面
+                // 上拉刷新，加载数据后面
             }else {
                 // 下拉刷新，拼接数据在前面
             }
-            
+            self.count += 10
+            // 停止刷新，恢复刷新状态，刷新表格数据
+            self.refreshControl?.endRefreshing()
+            self.isPullup = false
+            self.tableView?.reloadData()
             
         }
-        self.tableView?.reloadData()
+//        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) { 
+//            JYPrint("延迟加载")
+//            if self.isPullup {
+//            // 上拉刷新，加载数据后面
+//            }else {
+//                // 下拉刷新，拼接数据在前面
+//            }
+//            
+//            // 停止刷新，恢复刷新状态，刷新表格数据
+//            self.refreshControl?.endRefreshing()
+//            self.isPullup = false
+//            self.tableView?.reloadData()
+//            
+//        }
         
     }
 }
@@ -84,7 +102,7 @@ extension HomeVC {
 extension HomeVC {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 21
+        return count
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell  = tableView.dequeueReusableCell(withIdentifier: cellid)
