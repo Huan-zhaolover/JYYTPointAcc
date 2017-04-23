@@ -11,20 +11,43 @@ import UIKit
 class BaseViewController: UIViewController,NoLogViewDelegate {
 
     let isHadLoggin :Bool = false
+    //  自定义导航栏
+    lazy var navigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: ScreenW, height: 64))
+    // 自定义导航条目  子类统一使用 navItem
+    lazy var navItem  = UINavigationItem()
+    
     lazy var nologvvv : NoLogView = NoLogView.shareNoLogView()
 
+    override var title: String? {
+        didSet{
+            navItem.title = title
+        }
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setUpNavBar()
+       
+     }
     override func loadView() {
         isHadLoggin ?  super.loadView(): setNoLogView()
     }
-  
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
-    }
+    
+    
 }
-
 extension  BaseViewController {
+
+    func setUpNavBar(){
+        // 添加导航条
+        view.addSubview(navigationBar)
+        // 将item设置给bar
+        navigationBar.items = [navItem]
+        
+    }
+    
+}
+extension  BaseViewController {
+    
     func setNoLogView() {
         let aview=nologvvv
         aview.delegate=self
@@ -36,6 +59,7 @@ extension  BaseViewController {
     func logginButtonWillClick() {
         print("denglu")
         let VC = LoginVC()
+        
         navigationController?.pushViewController(VC, animated: true)
     }
     

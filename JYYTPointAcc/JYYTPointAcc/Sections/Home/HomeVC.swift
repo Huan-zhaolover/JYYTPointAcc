@@ -38,8 +38,9 @@ class HomeVC: BaseViewController{
     
     func  setHomeNavBars(){
         if isHadLoggin {
-            navigationItem.leftBarButtonItem = UIBarButtonItem(title: "账本", style: .plain, target: self, action: #selector(changeAccoountBook))
-            navigationItem.rightBarButtonItem = UIBarButtonItem(title: "消息", style: .plain, target: self, action: #selector(messageList))
+           
+            navItem.leftBarButtonItem =  UIBarButtonItem(titleStr: "账本", target: self, action: #selector(changeAccoountBook))
+            navItem.rightBarButtonItem = UIBarButtonItem(title: "消息", style: .plain, target: self, action: #selector(messageList))
         }else{
             setNavgationBarNoLogedItems()
         }

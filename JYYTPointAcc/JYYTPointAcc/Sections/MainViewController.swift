@@ -34,7 +34,12 @@ class MainViewController: UITabBarController {
         childVC.tabBarItem.title=title
         childVC.title=title;
         
-        let nav = UINavigationController(rootViewController: childVC)
+        
+        // 设置tabbar 标题的大小，颜色 大小默认是12号字体
+        childVC.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName:UIColor.orange], for: .normal)
+        childVC.tabBarItem.setTitleTextAttributes([NSFontAttributeName:UIFont.systemFont(ofSize: 13)], for: .normal)
+        
+        let nav = JYNavigationController(rootViewController: childVC)
         addChildViewController(nav)
     }
     private func text1()  {
@@ -63,17 +68,12 @@ class MainViewController: UITabBarController {
     }
 }
 
-
+// 设置新特性界面，欢迎界面
 extension MainViewController{
     func  setUpUI(){
     
         
-        
-        
-        
-        
-        
-        
+    
     }
     
     func isNewVerson()->(Bool) {

@@ -19,6 +19,7 @@
 		7D7D8BF11EA8932B0091B491 /* JYComon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7D8BF01EA8932B0091B491 /* JYComon.swift */; };
 		7D7D8C001EA9CF8A0091B491 /* JYBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7D8BFF1EA9CF8A0091B491 /* JYBase64.m */; };
 		7D7D8C031EA9D2270091B491 /* NSString+NSString_MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7D8C021EA9D2270091B491 /* NSString+NSString_MD5.m */; };
+		7D7D8C081EAAF9230091B491 /* JYNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7D8C071EAAF9230091B491 /* JYNavigationController.swift */; };
 		7D86003C1E8953F9008EA024 /* UIBarBarItem+category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D86003B1E8953F9008EA024 /* UIBarBarItem+category.swift */; };
 		7D86003F1E89F1C0008EA024 /* LeftChoseAccountBookVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D86003D1E89F1C0008EA024 /* LeftChoseAccountBookVC.swift */; };
 		7D8600401E89F1C0008EA024 /* LeftChoseAccountBookVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D86003E1E89F1C0008EA024 /* LeftChoseAccountBookVC.xib */; };
@@ -83,6 +84,7 @@
 		7D7D8BFF1EA9CF8A0091B491 /* JYBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYBase64.m; sourceTree = "<group>"; };
 		7D7D8C011EA9D2270091B491 /* NSString+NSString_MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+NSString_MD5.h"; sourceTree = "<group>"; };
 		7D7D8C021EA9D2270091B491 /* NSString+NSString_MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NSString_MD5.m"; sourceTree = "<group>"; };
+		7D7D8C071EAAF9230091B491 /* JYNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JYNavigationController.swift; sourceTree = "<group>"; };
 		7D86003B1E8953F9008EA024 /* UIBarBarItem+category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarBarItem+category.swift"; sourceTree = "<group>"; };
 		7D86003D1E89F1C0008EA024 /* LeftChoseAccountBookVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftChoseAccountBookVC.swift; sourceTree = "<group>"; };
 		7D86003E1E89F1C0008EA024 /* LeftChoseAccountBookVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftChoseAccountBookVC.xib; sourceTree = "<group>"; };
@@ -266,8 +268,9 @@
 			children = (
 				7D86FE1E1E88DDBE008EA024 /* NoLogView.swift */,
 				7D86FE201E88DDD0008EA024 /* NoLogView.xib */,
-				7D86FE1C1E889B83008EA024 /* BaseViewController.swift */,
 				7D86FE091E87B485008EA024 /* MainViewController.swift */,
+				7D7D8C071EAAF9230091B491 /* JYNavigationController.swift */,
+				7D86FE1C1E889B83008EA024 /* BaseViewController.swift */,
 				7DD7BCF31E923D74005369F7 /* Welcome */,
 				7DD7BCEA1E920B0B005369F7 /* NewFeature */,
 				7D86FE221E89094B008EA024 /* Home */,
@@ -629,6 +632,7 @@
 				7DD7BCD51E8E513B005369F7 /* LoginVC.swift in Sources */,
 				7D7D8BE91EA84A190091B491 /* ALamoNetworkTool.swift in Sources */,
 				7D7D8BED1EA883B10091B491 /* UIImage+category.swift in Sources */,
+				7D7D8C081EAAF9230091B491 /* JYNavigationController.swift in Sources */,
 				7DD7BCDE1E8F73BC005369F7 /* String+category.swift in Sources */,
 				7D86FE171E87B5C7008EA024 /* StatementVC.swift in Sources */,
 				7D86FE2A1E8909CF008EA024 /* HomeVC.swift in Sources */,
