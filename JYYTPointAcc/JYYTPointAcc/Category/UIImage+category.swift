@@ -70,4 +70,56 @@ extension UIImage {
         
         return img
     }
+    
+    //  处理图片拉伸渲染消耗GPU，或者混合模式，PNG图片透明混合渲染问题
+    //  PNG图片是支持透明的，JPG图片是不支持透明的
+    static func getNoMisalignedImage(aimage:UIImage,size:CGSize)->UIImage?{
+        
+        let rect = CGRect(origin: CGPoint(), size: size)
+
+        // 开启图像上下文
+        // 图像上下文，在内存中开辟一个地址，跟屏幕无关，
+        // 参数 size 绘图的尺寸  ||不透明：false(透明),true(不透明)  || scale 屏幕分辨率，默认使用1.0，可以使用0，是当前屏幕的分辨率
+        
+        UIGraphicsBeginImageContextWithOptions(size, true, 0)
+        // 绘图，指定固定区域内的拉伸屏幕
+        aimage.draw(in: rect)
+        // 取得结果
+        let result = UIGraphicsGetImageFromCurrentImageContext()
+        // 关闭上下文
+        UIGraphicsEndImageContext()
+        return result
+    }
+    
+    func getRoundedImage(aimage:UIImage,size:CGSize,backGroudColor:UIColor?)->UIImage?{
+    
+        let rect = CGRect(origin: CGPoint(), size: size)
+        
+        // 开启图像上下文
+        // 图像上下文，在内存中开辟一个地址，跟屏幕无关，
+        // 参数 size 绘图的尺寸  ||不透明：false(透明),true(不透明)  || scale 屏幕分辨率，默认使用1.0，可以使用0，是当前屏幕的分辨率
+        UIGraphicsBeginImageContextWithOptions(size, true, 0)
+        
+        // 背景填充
+        backGroudColor?.setFill()
+        UIRectFill(rect)
+        // 进行路径裁剪  -> 剪切之后再路径内绘图，设置为不透明，呈现黑色，需要裁剪前进行背景填充
+        let path = UIBezierPath(ovalIn: rect)
+        path.addClip()
+        // 绘图，指定固定区域内的拉伸屏幕
+        aimage.draw(in: rect)
+        
+        // 设置边线
+        UIColor.red.setStroke()
+        path.lineWidth = 2 // 默认是1
+        path.stroke()
+        
+        
+        // 取得结果
+        let result = UIGraphicsGetImageFromCurrentImageContext()
+        // 关闭上下文
+        UIGraphicsEndImageContext()
+        return result
+    }
+    
 }

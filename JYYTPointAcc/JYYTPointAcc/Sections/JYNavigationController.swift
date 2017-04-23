@@ -22,17 +22,18 @@ class JYNavigationController: UINavigationController {
     // 重写push方法，initRootviewcontroller 的时候就压栈，调用此方法
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
         // 当不是栈底控制器的时候，push隐藏tabbar
-        if childViewControllers.count > 0 {
-             viewController.hidesBottomBarWhenPushed = true
-        }
         // 判断控制器的类型
         if let vc = viewController as? BaseViewController {
-            vc.navItem.leftBarButtonItem = UIBarButtonItem(titleStr: "返回", target: self, action: #selector(goBack))
+            var title = "返回"
+            if childViewControllers.count > 0 {
+        
+                title = childViewControllers.first?.title ?? "返回"
+                viewController.hidesBottomBarWhenPushed = true
+            }
+            vc.navItem.leftBarButtonItem = UIBarButtonItem(titleStr: title, target: self, action: #selector(goBack))
         }
         
         super.pushViewController(viewController, animated: animated)
-        
-        
     }
     
     @objc private func  goBack(){

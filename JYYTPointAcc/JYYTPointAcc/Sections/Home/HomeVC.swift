@@ -10,65 +10,93 @@ import UIKit
 
 import Alamofire
 
+private let cellid = "cellID"  //  定义全局常量，使用Private 修饰
+
 class HomeVC: BaseViewController{
 
-    private lazy var homeAnimatir : HomePopOverAnimator = HomePopOverAnimator()
+    // private
+     lazy var homeAnimatir : HomePopOverAnimator = HomePopOverAnimator()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    
         if isHadLoggin {
             nologvvv.addRotationAnimation()
         }
+    }
+    // 重写父类调用数据
+    override func loadData() {
+        // 模拟dispatchAfter 
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) { 
+            JYPrint("延迟加载")
+            if self.isPullup {
+            // 上拉刷新，加载数据后面
+            }else {
+                // 下拉刷新，拼接数据在前面
+            }
+            
+            
+        }
+        self.tableView?.reloadData()
         
-    
-        
+    }
+}
+extension HomeVC {
+
+    override func setUpUI() {
+        super.setUpUI()
         setHomeNavBars()
-        textbase64()
-        // Do any additional setup after loading the view.
-    }
-    override func viewWillAppear(_ animated: Bool) {
-         super.viewWillAppear(animated)
-        tabBarController?.tabBar.isHidden = false
-    }
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-//        tabBarController?.tabBar.isHidden = isHadLoggin
+        tableView?.register(UITableViewCell.self, forCellReuseIdentifier: cellid)
+        
+        
     }
     
     
+}
+extension HomeVC {
+    //MARK: ---------------设置NavBar
     func  setHomeNavBars(){
         if isHadLoggin {
-           
+            
             navItem.leftBarButtonItem =  UIBarButtonItem(titleStr: "账本", target: self, action: #selector(changeAccoountBook))
             navItem.rightBarButtonItem = UIBarButtonItem(title: "消息", style: .plain, target: self, action: #selector(messageList))
         }else{
             setNavgationBarNoLogedItems()
         }
     }
-    
-    
-    func changeAccoountBook(){
+    //MARK: ---------------设置NavBar 的点击
+    /// 切换账本
+   @objc func changeAccoountBook(){
         let vc =  LeftChoseAccountBookVC()
         vc.modalPresentationStyle = .custom
+    
         vc.transitioningDelegate = homeAnimatir
         
         present(vc, animated: true, completion:nil)
     }
-    
-    
-    
-    func messageList(){
-         let  vc  = QRScanVC()
+    /// 查看消息
+    @objc func messageList(){
+        let  vc  = QRScanVC()
         navigationController?.pushViewController(vc, animated: true)
     }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    func  textbase64(){
-        
-    
-        
-        
-    }
 }
+
+extension HomeVC {
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 21
+    }
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell  = tableView.dequeueReusableCell(withIdentifier: cellid)
+        
+        cell?.textLabel?.text = "\(indexPath.section)+\(indexPath.row)"
+        
+        return cell!
+    }
+    
+    
+    
+}
+
+
+

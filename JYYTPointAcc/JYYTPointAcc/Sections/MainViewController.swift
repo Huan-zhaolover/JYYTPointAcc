@@ -12,9 +12,7 @@ class MainViewController: UITabBarController {
     
     let  loggOn = true
     
-    
     override func viewDidLoad() {
-        
         super.viewDidLoad()
         setUpUI()
         
