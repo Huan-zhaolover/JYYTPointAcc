@@ -7,6 +7,7 @@ target 'JYYTPointAcc' do
 pod 'Alamofire', '~> 4.4.0’
 pod 'AFNetworking'
 pod 'SwiftyJSON'
+pod 'YYModel'
 end
 
 target 'JYYTPointAccTests' do
