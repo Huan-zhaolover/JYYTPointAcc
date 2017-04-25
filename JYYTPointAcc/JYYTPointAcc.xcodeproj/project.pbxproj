@@ -10,10 +10,6 @@
 		2CF02516A90B4CF70188A83B /* Pods_JYYTPointAccTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCB23C82E8F91FA5724E23B6 /* Pods_JYYTPointAccTests.framework */; };
 		7D2A935E1EAF3E0A00ED43A2 /* AppDelegate+Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2A935D1EAF3E0A00ED43A2 /* AppDelegate+Realm.swift */; };
 		7D2A93611EAF475500ED43A2 /* JYUserInfomation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2A93601EAF475500ED43A2 /* JYUserInfomation.swift */; };
-		7D416F0D1E8B3E7B003F1D89 /* QRScanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D416F0B1E8B3E7B003F1D89 /* QRScanVC.swift */; };
-		7D416F0E1E8B3E7B003F1D89 /* QRScanVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D416F0C1E8B3E7B003F1D89 /* QRScanVC.xib */; };
-		7D416F111E8B8120003F1D89 /* MyQRCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D416F0F1E8B8120003F1D89 /* MyQRCardVC.swift */; };
-		7D416F121E8B8120003F1D89 /* MyQRCardVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D416F101E8B8120003F1D89 /* MyQRCardVC.xib */; };
 		7D7D8BE91EA84A190091B491 /* ALamoNetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7D8BE81EA84A190091B491 /* ALamoNetworkTool.swift */; };
 		7D7D8BEB1EA870500091B491 /* BLHttpSessionsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7D8BEA1EA870500091B491 /* BLHttpSessionsRequest.swift */; };
 		7D7D8BED1EA883B10091B491 /* UIImage+category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7D8BEC1EA883B10091B491 /* UIImage+category.swift */; };
@@ -54,6 +50,10 @@
 		7DD7BCF21E923461005369F7 /* JYConstFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7BCF11E923461005369F7 /* JYConstFile.swift */; };
 		7DD7BCF61E923D95005369F7 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7BCF41E923D95005369F7 /* WelcomeVC.swift */; };
 		7DD7BCF71E923D95005369F7 /* WelcomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DD7BCF51E923D95005369F7 /* WelcomeVC.xib */; };
+		7DFF6EC21EAFA0A50052369F /* MyQRCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFF6EBE1EAFA0A50052369F /* MyQRCardVC.swift */; };
+		7DFF6EC31EAFA0A50052369F /* MyQRCardVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DFF6EBF1EAFA0A50052369F /* MyQRCardVC.xib */; };
+		7DFF6EC41EAFA0A50052369F /* QRScanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFF6EC01EAFA0A50052369F /* QRScanVC.swift */; };
+		7DFF6EC51EAFA0A50052369F /* QRScanVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DFF6EC11EAFA0A50052369F /* QRScanVC.xib */; };
 		E48D3A54F04186E1FF709BA3 /* Pods_JYYTPointAcc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3417CD3A6F3CAAF33292C299 /* Pods_JYYTPointAcc.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,10 +74,6 @@
 		659075420C8BD02F216BBAFF /* Pods-JYYTPointAccTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JYYTPointAccTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JYYTPointAccTests/Pods-JYYTPointAccTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7D2A935D1EAF3E0A00ED43A2 /* AppDelegate+Realm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Realm.swift"; sourceTree = "<group>"; };
 		7D2A93601EAF475500ED43A2 /* JYUserInfomation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JYUserInfomation.swift; sourceTree = "<group>"; };
-		7D416F0B1E8B3E7B003F1D89 /* QRScanVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScanVC.swift; sourceTree = "<group>"; };
-		7D416F0C1E8B3E7B003F1D89 /* QRScanVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QRScanVC.xib; sourceTree = "<group>"; };
-		7D416F0F1E8B8120003F1D89 /* MyQRCardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyQRCardVC.swift; sourceTree = "<group>"; };
-		7D416F101E8B8120003F1D89 /* MyQRCardVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyQRCardVC.xib; sourceTree = "<group>"; };
 		7D7D8BE81EA84A190091B491 /* ALamoNetworkTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALamoNetworkTool.swift; sourceTree = "<group>"; };
 		7D7D8BEA1EA870500091B491 /* BLHttpSessionsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLHttpSessionsRequest.swift; sourceTree = "<group>"; };
 		7D7D8BEC1EA883B10091B491 /* UIImage+category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+category.swift"; sourceTree = "<group>"; };
@@ -125,6 +121,10 @@
 		7DD7BCF11E923461005369F7 /* JYConstFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JYConstFile.swift; sourceTree = "<group>"; };
 		7DD7BCF41E923D95005369F7 /* WelcomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
 		7DD7BCF51E923D95005369F7 /* WelcomeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeVC.xib; sourceTree = "<group>"; };
+		7DFF6EBE1EAFA0A50052369F /* MyQRCardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyQRCardVC.swift; sourceTree = "<group>"; };
+		7DFF6EBF1EAFA0A50052369F /* MyQRCardVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyQRCardVC.xib; sourceTree = "<group>"; };
+		7DFF6EC01EAFA0A50052369F /* QRScanVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScanVC.swift; sourceTree = "<group>"; };
+		7DFF6EC11EAFA0A50052369F /* QRScanVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QRScanVC.xib; sourceTree = "<group>"; };
 		D8E88C51EEC2307D6D23D9EF /* Pods-JYYTPointAcc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JYYTPointAcc.release.xcconfig"; path = "Pods/Target Support Files/Pods-JYYTPointAcc/Pods-JYYTPointAcc.release.xcconfig"; sourceTree = "<group>"; };
 		FCB23C82E8F91FA5724E23B6 /* Pods_JYYTPointAccTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JYYTPointAccTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -164,17 +164,6 @@
 				7D2A93601EAF475500ED43A2 /* JYUserInfomation.swift */,
 			);
 			path = RealModel;
-			sourceTree = "<group>";
-		};
-		7D416F0A1E8B3E52003F1D89 /* QRCode */ = {
-			isa = PBXGroup;
-			children = (
-				7D416F0B1E8B3E7B003F1D89 /* QRScanVC.swift */,
-				7D416F0C1E8B3E7B003F1D89 /* QRScanVC.xib */,
-				7D416F0F1E8B8120003F1D89 /* MyQRCardVC.swift */,
-				7D416F101E8B8120003F1D89 /* MyQRCardVC.xib */,
-			);
-			path = QRCode;
 			sourceTree = "<group>";
 		};
 		7D4BAEB21E8A37D900CE86C3 /* leftDrop */ = {
@@ -229,8 +218,8 @@
 				7D86FDC31E864D4A008EA024 /* Info.plist */,
 				7D7D8BF91EA9CEE00091B491 /* JYYTPointAcc-Bridging-Header.h */,
 				7D86FE061E87B245008EA024 /* Sections */,
+				7DFF6EBC1EAFA0A50052369F /* Cutomer */,
 				7D86FE031E87B244008EA024 /* Category */,
-				7D86FE041E87B244008EA024 /* Common */,
 				7D86FE051E87B245008EA024 /* OtherResoure */,
 				7D86FE071E87B245008EA024 /* Tools */,
 				7D86FE081E87B245008EA024 /* Venders */,
@@ -259,14 +248,6 @@
 				7DD7BCDF1E8F7922005369F7 /* NSDate+category.swift */,
 			);
 			path = Category;
-			sourceTree = "<group>";
-		};
-		7D86FE041E87B244008EA024 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				7D416F0A1E8B3E52003F1D89 /* QRCode */,
-			);
-			path = Common;
 			sourceTree = "<group>";
 		};
 		7D86FE051E87B245008EA024 /* OtherResoure */ = {
@@ -395,6 +376,25 @@
 			path = Welcome;
 			sourceTree = "<group>";
 		};
+		7DFF6EBC1EAFA0A50052369F /* Cutomer */ = {
+			isa = PBXGroup;
+			children = (
+				7DFF6EBD1EAFA0A50052369F /* QRCode */,
+			);
+			path = Cutomer;
+			sourceTree = "<group>";
+		};
+		7DFF6EBD1EAFA0A50052369F /* QRCode */ = {
+			isa = PBXGroup;
+			children = (
+				7DFF6EBE1EAFA0A50052369F /* MyQRCardVC.swift */,
+				7DFF6EBF1EAFA0A50052369F /* MyQRCardVC.xib */,
+				7DFF6EC01EAFA0A50052369F /* QRScanVC.swift */,
+				7DFF6EC11EAFA0A50052369F /* QRScanVC.xib */,
+			);
+			path = QRCode;
+			sourceTree = "<group>";
+		};
 		88B3C6BBDE68BC2DA8CA3B25 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -501,10 +501,10 @@
 				7DD7BCD61E8E513B005369F7 /* LoginVC.xib in Resources */,
 				7D86FE211E88DDD0008EA024 /* NoLogView.xib in Resources */,
 				7D8600401E89F1C0008EA024 /* LeftChoseAccountBookVC.xib in Resources */,
+				7DFF6EC31EAFA0A50052369F /* MyQRCardVC.xib in Resources */,
 				7DD7BCF71E923D95005369F7 /* WelcomeVC.xib in Resources */,
 				7D86FDBF1E864D4A008EA024 /* Assets.xcassets in Resources */,
-				7D416F121E8B8120003F1D89 /* MyQRCardVC.xib in Resources */,
-				7D416F0E1E8B3E7B003F1D89 /* QRScanVC.xib in Resources */,
+				7DFF6EC51EAFA0A50052369F /* QRScanVC.xib in Resources */,
 				7D86FDBD1E864D4A008EA024 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -620,8 +620,8 @@
 				7D97D4001EA5EFE700A8D7BF /* AFNNetWorkTool.swift in Sources */,
 				7D7D8C031EA9D2270091B491 /* NSString+NSString_MD5.m in Sources */,
 				7DD7BCE01E8F7922005369F7 /* NSDate+category.swift in Sources */,
+				7DFF6EC41EAFA0A50052369F /* QRScanVC.swift in Sources */,
 				7D7D8BF11EA8932B0091B491 /* JYComon.swift in Sources */,
-				7D416F111E8B8120003F1D89 /* MyQRCardVC.swift in Sources */,
 				7D86FE0A1E87B485008EA024 /* MainViewController.swift in Sources */,
 				7D86FE151E87B5B9008EA024 /* MineVC.swift in Sources */,
 				7D86003C1E8953F9008EA024 /* UIBarBarItem+category.swift in Sources */,
@@ -636,9 +636,9 @@
 				7D86FDB81E864D4A008EA024 /* AppDelegate.swift in Sources */,
 				7D8600441E89FC3B008EA024 /* HomeUIPresentationVC.swift in Sources */,
 				7D86FE1D1E889B83008EA024 /* BaseViewController.swift in Sources */,
+				7DFF6EC21EAFA0A50052369F /* MyQRCardVC.swift in Sources */,
 				7D7D8BEF1EA88AA20091B491 /* textDownLoad.swift in Sources */,
 				7D86FE111E87B598008EA024 /* BillListVC.swift in Sources */,
-				7D416F0D1E8B3E7B003F1D89 /* QRScanVC.swift in Sources */,
 				7DD7BCF61E923D95005369F7 /* WelcomeVC.swift in Sources */,
 				7D86FE271E890954008EA024 /* InvoiceListVC.swift in Sources */,
 				7D7D8BEB1EA870500091B491 /* BLHttpSessionsRequest.swift in Sources */,
@@ -726,7 +726,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -770,7 +770,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
