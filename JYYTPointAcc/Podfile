@@ -8,6 +8,7 @@ pod 'Alamofire', '~> 4.4.0’
 pod 'AFNetworking'
 pod 'SwiftyJSON'
 pod 'YYModel'
+pod 'RealmSwift'
 end
 
 target 'JYYTPointAccTests' do
