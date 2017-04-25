@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2CF02516A90B4CF70188A83B /* Pods_JYYTPointAccTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCB23C82E8F91FA5724E23B6 /* Pods_JYYTPointAccTests.framework */; };
+		7D2A935E1EAF3E0A00ED43A2 /* AppDelegate+Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2A935D1EAF3E0A00ED43A2 /* AppDelegate+Realm.swift */; };
+		7D2A93611EAF475500ED43A2 /* JYUserInfomation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2A93601EAF475500ED43A2 /* JYUserInfomation.swift */; };
 		7D416F0D1E8B3E7B003F1D89 /* QRScanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D416F0B1E8B3E7B003F1D89 /* QRScanVC.swift */; };
 		7D416F0E1E8B3E7B003F1D89 /* QRScanVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D416F0C1E8B3E7B003F1D89 /* QRScanVC.xib */; };
 		7D416F111E8B8120003F1D89 /* MyQRCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D416F0F1E8B8120003F1D89 /* MyQRCardVC.swift */; };
@@ -70,6 +72,8 @@
 		3417CD3A6F3CAAF33292C299 /* Pods_JYYTPointAcc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JYYTPointAcc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		55CB0895FF46DD0B08F2F855 /* Pods-JYYTPointAcc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JYYTPointAcc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JYYTPointAcc/Pods-JYYTPointAcc.debug.xcconfig"; sourceTree = "<group>"; };
 		659075420C8BD02F216BBAFF /* Pods-JYYTPointAccTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JYYTPointAccTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JYYTPointAccTests/Pods-JYYTPointAccTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7D2A935D1EAF3E0A00ED43A2 /* AppDelegate+Realm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Realm.swift"; sourceTree = "<group>"; };
+		7D2A93601EAF475500ED43A2 /* JYUserInfomation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JYUserInfomation.swift; sourceTree = "<group>"; };
 		7D416F0B1E8B3E7B003F1D89 /* QRScanVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScanVC.swift; sourceTree = "<group>"; };
 		7D416F0C1E8B3E7B003F1D89 /* QRScanVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QRScanVC.xib; sourceTree = "<group>"; };
 		7D416F0F1E8B8120003F1D89 /* MyQRCardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyQRCardVC.swift; sourceTree = "<group>"; };
@@ -154,6 +158,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7D2A935F1EAF474500ED43A2 /* RealModel */ = {
+			isa = PBXGroup;
+			children = (
+				7D2A93601EAF475500ED43A2 /* JYUserInfomation.swift */,
+			);
+			path = RealModel;
+			sourceTree = "<group>";
+		};
 		7D416F0A1E8B3E52003F1D89 /* QRCode */ = {
 			isa = PBXGroup;
 			children = (
@@ -211,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				7D86FDB71E864D4A008EA024 /* AppDelegate.swift */,
+				7D2A935D1EAF3E0A00ED43A2 /* AppDelegate+Realm.swift */,
 				7D86FDBB1E864D4A008EA024 /* Main.storyboard */,
 				7D86FDBE1E864D4A008EA024 /* Assets.xcassets */,
 				7D86FDC31E864D4A008EA024 /* Info.plist */,
@@ -333,6 +346,7 @@
 		7D86FE181E87B909008EA024 /* LoginAndRegist */ = {
 			isa = PBXGroup;
 			children = (
+				7D2A935F1EAF474500ED43A2 /* RealModel */,
 				7DD7BCD31E8E513B005369F7 /* LoginVC.swift */,
 				7DD7BCD41E8E513B005369F7 /* LoginVC.xib */,
 			);
@@ -612,6 +626,7 @@
 				7D86FE151E87B5B9008EA024 /* MineVC.swift in Sources */,
 				7D86003C1E8953F9008EA024 /* UIBarBarItem+category.swift in Sources */,
 				7DD7BCD81E8EA251005369F7 /* VerticalButton.swift in Sources */,
+				7D2A93611EAF475500ED43A2 /* JYUserInfomation.swift in Sources */,
 				7DD7BCF01E921A4B005369F7 /* UIView+AutoLayout.swift in Sources */,
 				7DD7BCF21E923461005369F7 /* JYConstFile.swift in Sources */,
 				7DD7BCDC1E8F68A4005369F7 /* HorizontalButton.swift in Sources */,
@@ -632,6 +647,7 @@
 				7DD7BCD51E8E513B005369F7 /* LoginVC.swift in Sources */,
 				7D7D8BE91EA84A190091B491 /* ALamoNetworkTool.swift in Sources */,
 				7D7D8BED1EA883B10091B491 /* UIImage+category.swift in Sources */,
+				7D2A935E1EAF3E0A00ED43A2 /* AppDelegate+Realm.swift in Sources */,
 				7D7D8C081EAAF9230091B491 /* JYNavigationController.swift in Sources */,
 				7DD7BCDE1E8F73BC005369F7 /* String+category.swift in Sources */,
 				7D86FE171E87B5C7008EA024 /* StatementVC.swift in Sources */,

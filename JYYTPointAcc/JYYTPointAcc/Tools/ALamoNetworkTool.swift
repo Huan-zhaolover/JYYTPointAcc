@@ -37,7 +37,7 @@ extension  ALamoNetworkTool {
     ///   - complection: 完成的回调
     
     func tokenRequest(type:AlaRequestType,url:String,parameters:[String:Any],
-                      isneedEncryToken:Bool = false ,
+                      isneedEncryToken:Bool = true ,
                       needNetWorkTip:Bool = true,
                       complection:@escaping (_ result:Any?,_ error:Error?)->()){
        

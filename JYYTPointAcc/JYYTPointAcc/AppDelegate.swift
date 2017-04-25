@@ -10,11 +10,14 @@ import UIKit
 
 import Alamofire
 
+import RealmSwift
+import YYModel
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var isHaveNet:Bool = false
+    var isHaveNet:Bool = true
     let NetworkListener = NetworkReachabilityManager(host: "www.baidu.com")
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -24,7 +27,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.backgroundColor=UIColor.white
         window?.rootViewController =  defaultContoller()
         window?.makeKeyAndVisible()
+        
         textAla()
+        let realm = setDatamigration()
+        JYPrint(realm.configuration.fileURL)   // realm 数据库路径
         
         startListenNetwork()
         return true
@@ -37,21 +43,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 //MARK: 测试
 extension AppDelegate {
+    
     func textAla(){
-        let prama : [String:Any] = ["mobile":"111111111",
+        let prama : [String:Any] = ["mobile":"1111111111",
                                     "password":NSString.md5StringWIthOrinalString("111111"),
                                     "devicesType":"1",
                                     ]
         
         ALamoNetworkTool.netWorkTools.tokenRequest(type: .GET, url: "app/loginByEncry.htm?", parameters: prama) { (respon, error) in
             
-            JYPrint(respon)
-            JYPrint(error)
             
+            if  error != nil {
+                JYPrint(error)
+                return;
+            }
+            JYPrint(respon)
+            guard let respondic = respon as? [String :AnyObject],
+                  let status =  respondic["status"] as? String,
+                    status == "1",
+                   let dataDic = respondic["data"] as? [String:Any] else{
+                   return
+            }
+             let amiden =  JYUserInfomation.yy_model(with: dataDic);
+            JYPrint(amiden)
         }
-
-        
-        
     }
 }
 //MARK: 界面切换

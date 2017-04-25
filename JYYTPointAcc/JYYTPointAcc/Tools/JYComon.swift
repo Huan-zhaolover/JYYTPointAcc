@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-
+import YYModel
 
 let JYAppUrl = "http://mapi.pointacc.com/"          //正式环境
 //let JYAppUrl = "http://demo.shjysoft.com:3020/"    //测试环境
