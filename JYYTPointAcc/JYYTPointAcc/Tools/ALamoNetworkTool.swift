@@ -119,7 +119,7 @@ extension  ALamoNetworkTool {
         Alamofire.request(url, method: alaType, parameters: parameters).responseJSON { (response) in
             switch response.result {
             case .success:
-                if let value = response.result.value as? [String: AnyObject] {
+                if let value = response.result.value {
                     complection(value,nil)
                 }
                 break

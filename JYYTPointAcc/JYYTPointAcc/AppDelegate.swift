@@ -11,15 +11,14 @@ import UIKit
 import Alamofire
 
 import RealmSwift
-import YYModel
-
+import SwiftyJSON
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var isHaveNet:Bool = true
     let NetworkListener = NetworkReachabilityManager(host: "www.baidu.com")
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
  
         NotificationCenter.default.addObserver(self, selector: #selector(changeRoot), name: SwitchRootVCNotification, object: nil)
@@ -29,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         
         textAla()
-        let realm = setDatamigration()
+        realm = setDatamigration()
         JYPrint(realm.configuration.fileURL)   // realm 数据库路径
         
         startListenNetwork()
@@ -49,23 +48,25 @@ extension AppDelegate {
                                     "password":NSString.md5StringWIthOrinalString("111111"),
                                     "devicesType":"1",
                                     ]
-        
         ALamoNetworkTool.netWorkTools.tokenRequest(type: .GET, url: "app/loginByEncry.htm?", parameters: prama) { (respon, error) in
-            
             
             if  error != nil {
                 JYPrint(error)
                 return;
             }
-            JYPrint(respon)
-            guard let respondic = respon as? [String :AnyObject],
-                  let status =  respondic["status"] as? String,
-                    status == "1",
-                   let dataDic = respondic["data"] as? [String:Any] else{
-                   return
+            let json = JSON(respon!)
+            
+            if let dataDic = json["data"].dictionaryObject {
+                
+                JYPrint(dataDic)
+               let auser = JYUserInfomation.init(value: dataDic)
+               try! realm.write({
+                    realm.add(auser)
+                })
+                JYPrint(auser)
+            }else{
+                JYPrint(json["data"])
             }
-             let amiden =  JYUserInfomation.yy_model(with: dataDic);
-            JYPrint(amiden)
         }
     }
 }

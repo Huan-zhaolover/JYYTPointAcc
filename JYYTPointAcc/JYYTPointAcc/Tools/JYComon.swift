@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-import YYModel
+import RealmSwift
 
 let JYAppUrl = "http://mapi.pointacc.com/"          //正式环境
 //let JYAppUrl = "http://demo.shjysoft.com:3020/"    //测试环境
@@ -40,6 +40,7 @@ let ScreenH = UIScreen.main.bounds.height
 
 let APPDELEGATE = UIApplication.shared.delegate!
 
+var realm = try! Realm()
 
 
 

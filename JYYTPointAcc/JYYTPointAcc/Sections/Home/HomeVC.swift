@@ -19,11 +19,14 @@ class HomeVC: BaseViewController{
     
     var  count  = 21
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        let user = realm.objects(JYUserInfomation.self).first
     
-        if isHadLoggin {
+        if user==nil {
             nologvvv.addRotationAnimation()
         }
+        
     }
     // 重写父类调用数据
     override func loadData() {
