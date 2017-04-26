@@ -31,17 +31,19 @@ let BillRedBadge = "BillRedBadge"                   //首页账单小红点
 
 
 let nameSpace = Bundle.main.infoDictionary!["CFBundleExecutable"] as! String
+let AppVersion = Bundle.main.infoDictionary!["CFBundleShortVersionString"]! as! String
 
 let IOS_VERSION = Double(UIDevice.current.systemVersion)
-let AppVersion = Bundle.main.infoDictionary!["CFBundleShortVersionString"]!
 
 let ScreenW = UIScreen.main.bounds.width
 let ScreenH = UIScreen.main.bounds.height
 
 let APPDELEGATE = UIApplication.shared.delegate!
+let SwitchRootVCNotification = NSNotification.Name(rawValue:"SwitchRootViewControllerKey")
 
 var realm = try! Realm()
 
+let UserDefaultAppVersionKey = "UserDefaultAppVersionKey"
 
 
 

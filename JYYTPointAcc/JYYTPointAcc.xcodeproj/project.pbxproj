@@ -47,7 +47,6 @@
 		7DD7BCE01E8F7922005369F7 /* NSDate+category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7BCDF1E8F7922005369F7 /* NSDate+category.swift */; };
 		7DD7BCEE1E920BA1005369F7 /* NewFeatureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7BCED1E920BA1005369F7 /* NewFeatureVC.swift */; };
 		7DD7BCF01E921A4B005369F7 /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7BCEF1E921A4B005369F7 /* UIView+AutoLayout.swift */; };
-		7DD7BCF21E923461005369F7 /* JYConstFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7BCF11E923461005369F7 /* JYConstFile.swift */; };
 		7DD7BCF61E923D95005369F7 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7BCF41E923D95005369F7 /* WelcomeVC.swift */; };
 		7DD7BCF71E923D95005369F7 /* WelcomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DD7BCF51E923D95005369F7 /* WelcomeVC.xib */; };
 		7DFF6EC21EAFA0A50052369F /* MyQRCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFF6EBE1EAFA0A50052369F /* MyQRCardVC.swift */; };
@@ -119,7 +118,6 @@
 		7DD7BCDF1E8F7922005369F7 /* NSDate+category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+category.swift"; sourceTree = "<group>"; };
 		7DD7BCED1E920BA1005369F7 /* NewFeatureVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewFeatureVC.swift; sourceTree = "<group>"; };
 		7DD7BCEF1E921A4B005369F7 /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AutoLayout.swift"; sourceTree = "<group>"; };
-		7DD7BCF11E923461005369F7 /* JYConstFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JYConstFile.swift; sourceTree = "<group>"; };
 		7DD7BCF41E923D95005369F7 /* WelcomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
 		7DD7BCF51E923D95005369F7 /* WelcomeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeVC.xib; sourceTree = "<group>"; };
 		7DFF6EBE1EAFA0A50052369F /* MyQRCardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyQRCardVC.swift; sourceTree = "<group>"; };
@@ -286,7 +284,6 @@
 				7D97D3FF1EA5EFE700A8D7BF /* AFNNetWorkTool.swift */,
 				7D7D8BEA1EA870500091B491 /* BLHttpSessionsRequest.swift */,
 				7DD7BCEF1E921A4B005369F7 /* UIView+AutoLayout.swift */,
-				7DD7BCF11E923461005369F7 /* JYConstFile.swift */,
 				7D7D8BF01EA8932B0091B491 /* JYComon.swift */,
 			);
 			path = Tools;
@@ -631,7 +628,6 @@
 				7DD7BCD81E8EA251005369F7 /* VerticalButton.swift in Sources */,
 				7D2A93611EAF475500ED43A2 /* JYUserInfomation.swift in Sources */,
 				7DD7BCF01E921A4B005369F7 /* UIView+AutoLayout.swift in Sources */,
-				7DD7BCF21E923461005369F7 /* JYConstFile.swift in Sources */,
 				7DFF6ECD1EB045460052369F /* UserAccountViewModel.swift in Sources */,
 				7DD7BCDC1E8F68A4005369F7 /* HorizontalButton.swift in Sources */,
 				7D7D8C001EA9CF8A0091B491 /* JYBase64.m in Sources */,

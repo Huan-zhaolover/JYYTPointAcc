@@ -61,7 +61,6 @@ extension  ALamoNetworkTool {
          /app/person/querySplash.htm?
          
          */
-
         
         /*
          // 加密之后的token
@@ -82,8 +81,8 @@ extension  ALamoNetworkTool {
         }
         
         if needNetWorkTip {
-            let app =  APPDELEGATE as! AppDelegate
-            if !app.isHaveNet {
+            let appdelegate =  APPDELEGATE as! AppDelegate
+            if !appdelegate.isHaveNet {
                 return;
             }
             /*
@@ -132,7 +131,7 @@ extension  ALamoNetworkTool {
 // MARK: - -----------------图片上传
 extension  ALamoNetworkTool {
     
-    func getRequest(urlstring:String ,
+    func getImageRequest(urlstring:String ,
                     params:[String:AnyObject],
                     datas:[Data],
                     complection:@escaping (_ result:[String:AnyObject]?,_ error:Error?)->()) {

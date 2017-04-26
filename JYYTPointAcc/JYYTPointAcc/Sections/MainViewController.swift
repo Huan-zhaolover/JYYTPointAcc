@@ -18,15 +18,52 @@ class MainViewController: UITabBarController {
         
         tabBar.tintColor=UIColor.orange
         UINavigationBar.appearance().tintColor=UIColor.orange
+        
         addSelfChildViewController(childVC: HomeVC(), title: "首页", imageString: "home_tabbar_fp")
         addSelfChildViewController(childVC: BillListVC(), title: "账单", imageString: "home_tabbar_zd")
         addSelfChildViewController(childVC: StatementVC(), title: "报表", imageString: "home_tabbar_bb")
         addSelfChildViewController(childVC: MineVC(), title: "我的", imageString: "home_tabbar_hb")
-//        text1()
-        // Do any additional setup after loading the view.
+
     }
-    private func addSelfChildViewController(childVC: UIViewController,title:String,imageString:String) {
+}
+
+
+
+// 设置新特性界面，欢迎界面
+extension MainViewController{
+    
+    func  setUpUI(){
+        //  未登录直接进去，不需要引导页，欢迎界面
+        if !UserAccountViewModel.shareIntance.isLogin {
+            return
+        }
+        if isNewVerson() {
+            // 是新版本，加载引导页
+            let NewVC =  NewFeatureVC(imageStrArry: ["1","2","3","4"])
+            view .addSubview(NewVC)
+        }else{
+            // 欢迎界面
+        }
+    }
+}
+extension MainViewController{
+    func isNewVerson()->(Bool) {
+        let localVerion = UserDefaults.standard.value(forKey: UserDefaultAppVersionKey) as? String
         
+        // 如果 localVerionString 为nil,return false，
+        // 如果存储的versionString == 当前的appversion
+        // guard 不满足条件才走else 中
+        guard let localVerionString = localVerion, AppVersion != localVerionString else{
+            return false
+        }
+        UserDefaults.standard.setValue(AppVersion, forKey: UserDefaultAppVersionKey)
+        return true
+    }
+}
+
+extension MainViewController{
+
+    func addSelfChildViewController(childVC: UIViewController,title:String,imageString:String) {
         childVC.tabBarItem.image=UIImage(named: imageString)
         childVC.tabBarItem.selectedImage=UIImage(named: imageString.appending("_h"))
         childVC.tabBarItem.title=title
@@ -40,8 +77,9 @@ class MainViewController: UITabBarController {
         let nav = JYNavigationController(rootViewController: childVC)
         addChildViewController(nav)
     }
+    //  动态获取命名空间
     private func text1()  {
-        //  动态获取命名空间
+        
         let nas = Bundle.main.infoDictionary! ["CFBundleExecutable"] as! String
         
         let cls:AnyClass? =  NSClassFromString(nas+".".appending("BillListVC"))
@@ -62,28 +100,6 @@ class MainViewController: UITabBarController {
                 print("读取本地数据出现错误！")
             }
         }
-
     }
-}
 
-// 设置新特性界面，欢迎界面
-extension MainViewController{
-    func  setUpUI(){
-    
-        
-    
-    }
-    
-    func isNewVerson()->(Bool) {
-
-//        let path = String.cacheDir(path: "verson.data")
-        
-        
-        
-        
-    
-       return true
-    }
-    
-    
 }

@@ -47,7 +47,7 @@ extension UserAccountViewModel {
                 let auser = JYUserInfomation.init(value: dataDic)
                 self.userInfo = auser
                 try! realm.write({
-                    realm.add(auser)
+                    realm.add(auser, update: true)
                 })
                 isSuccess(true)
             }else{

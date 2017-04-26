@@ -55,5 +55,7 @@ class JYUserInfomation: Object {
 //    return []
 //  }
     
-    
+    override static func primaryKey() -> String? {
+        return "person_id"
+    }
 }

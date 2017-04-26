@@ -24,7 +24,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         realm = setDatamigration()
         JYPrint(realm.configuration.fileURL)   // realm 数据库路径
  
-        NotificationCenter.default.addObserver(self, selector: #selector(changeRoot), name: SwitchRootVCNotification, object: nil)
         window=UIWindow(frame: UIScreen.main.bounds)
         window?.backgroundColor=UIColor.white
         window?.rootViewController =  defaultContoller()
@@ -43,12 +42,20 @@ extension AppDelegate {
     // 自动登录
     func autoLog(){
        let amodel =  UserAccountViewModel.shareIntance
-//        if amodel.isLogin {
-//             return
-//        }
-        amodel.loadUserInfo { (isSueccsss) in
-            if isSueccsss {
+        // 如果登录过之后自动登录
+        if amodel.isLogin {
+            amodel.loadUserInfo { (isSueccsss) in
+                if isSueccsss {
+                    
+                    JYPrint(amodel.userInfo)
+                }
+            }
+             return
+        }
+        // 测试登录
+        amodel.loadUserInfo(mobile: "111111111", password: "111111") { (isSueccsss) in
             
+            if isSueccsss {
                 JYPrint(amodel.userInfo)
             }
         }
@@ -58,23 +65,7 @@ extension AppDelegate {
 extension  AppDelegate{
     func  defaultContoller()->UIViewController{
         return MainViewController()
-
          // FIXME: 引导页，欢迎界面，在main里面设置。
-        //   1.检测用户是否登录
-//        let  isLog = true
-//        if isLog {
-//            // 已经登录之后，每次进入判断是不是最新版本，不是最新，显示欢迎回来界面
-//            if isNewVerson() {
-//                let New =  NewFeatureVC()
-//                New.imageArry = ["1","2","3","4"]
-//                return  New
-//            }else{
-//                return WelcomeVC()
-//            }
-//        }else{
-//        }
-        
-        
     }
     func changeRoot(noti:NSNotification){
         window?.rootViewController=MainViewController()
