@@ -28,8 +28,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.backgroundColor=UIColor.white
         window?.rootViewController =  defaultContoller()
         window?.makeKeyAndVisible()
+        
         autoLog()
         startListenNetwork()
+        let text = CellLineColor
+        
         return true
     }
     
