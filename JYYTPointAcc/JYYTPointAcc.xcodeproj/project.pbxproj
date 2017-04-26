@@ -54,6 +54,7 @@
 		7DFF6EC31EAFA0A50052369F /* MyQRCardVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DFF6EBF1EAFA0A50052369F /* MyQRCardVC.xib */; };
 		7DFF6EC41EAFA0A50052369F /* QRScanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFF6EC01EAFA0A50052369F /* QRScanVC.swift */; };
 		7DFF6EC51EAFA0A50052369F /* QRScanVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DFF6EC11EAFA0A50052369F /* QRScanVC.xib */; };
+		7DFF6ECD1EB045460052369F /* UserAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFF6ECC1EB045460052369F /* UserAccountViewModel.swift */; };
 		E48D3A54F04186E1FF709BA3 /* Pods_JYYTPointAcc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3417CD3A6F3CAAF33292C299 /* Pods_JYYTPointAcc.framework */; };
 /* End PBXBuildFile section */
 
@@ -125,6 +126,7 @@
 		7DFF6EBF1EAFA0A50052369F /* MyQRCardVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyQRCardVC.xib; sourceTree = "<group>"; };
 		7DFF6EC01EAFA0A50052369F /* QRScanVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScanVC.swift; sourceTree = "<group>"; };
 		7DFF6EC11EAFA0A50052369F /* QRScanVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QRScanVC.xib; sourceTree = "<group>"; };
+		7DFF6ECC1EB045460052369F /* UserAccountViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccountViewModel.swift; sourceTree = "<group>"; };
 		D8E88C51EEC2307D6D23D9EF /* Pods-JYYTPointAcc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JYYTPointAcc.release.xcconfig"; path = "Pods/Target Support Files/Pods-JYYTPointAcc/Pods-JYYTPointAcc.release.xcconfig"; sourceTree = "<group>"; };
 		FCB23C82E8F91FA5724E23B6 /* Pods_JYYTPointAccTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JYYTPointAccTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -328,6 +330,7 @@
 			isa = PBXGroup;
 			children = (
 				7D2A935F1EAF474500ED43A2 /* RealModel */,
+				7DFF6ECC1EB045460052369F /* UserAccountViewModel.swift */,
 				7DD7BCD31E8E513B005369F7 /* LoginVC.swift */,
 				7DD7BCD41E8E513B005369F7 /* LoginVC.xib */,
 			);
@@ -629,6 +632,7 @@
 				7D2A93611EAF475500ED43A2 /* JYUserInfomation.swift in Sources */,
 				7DD7BCF01E921A4B005369F7 /* UIView+AutoLayout.swift in Sources */,
 				7DD7BCF21E923461005369F7 /* JYConstFile.swift in Sources */,
+				7DFF6ECD1EB045460052369F /* UserAccountViewModel.swift in Sources */,
 				7DD7BCDC1E8F68A4005369F7 /* HorizontalButton.swift in Sources */,
 				7D7D8C001EA9CF8A0091B491 /* JYBase64.m in Sources */,
 				7DD7BCEE1E920BA1005369F7 /* NewFeatureVC.swift in Sources */,

@@ -75,14 +75,13 @@ extension  ALamoNetworkTool {
         
         var tokenDic : [String:Any] = [:]
         if isneedEncryToken {
+            tokenDic["token"] = UserAccountViewModel.shareIntance.userInfo?.appkey // 登录返回的token
+        }else{
             let aency = APPSecreat + "|".appending(Date.nowTimeDetail())
             tokenDic["token"] = NSString.encrypt(aency)!
-        }else{
-            tokenDic["token"] = "" // 登录返回的token
         }
         
         if needNetWorkTip {
-            
             let app =  APPDELEGATE as! AppDelegate
             if !app.isHaveNet {
                 return;
@@ -98,7 +97,6 @@ extension  ALamoNetworkTool {
              }
              */
         }
-        
         for (key,value) in parameters {
             tokenDic[key] = value
         }

@@ -20,17 +20,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let NetworkListener = NetworkReachabilityManager(host: "www.baidu.com")
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        realm = setDatamigration()
+        JYPrint(realm.configuration.fileURL)   // realm 数据库路径
  
         NotificationCenter.default.addObserver(self, selector: #selector(changeRoot), name: SwitchRootVCNotification, object: nil)
         window=UIWindow(frame: UIScreen.main.bounds)
         window?.backgroundColor=UIColor.white
         window?.rootViewController =  defaultContoller()
         window?.makeKeyAndVisible()
-        
-        textAla()
-        realm = setDatamigration()
-        JYPrint(realm.configuration.fileURL)   // realm 数据库路径
-        
+        autoLog()
         startListenNetwork()
         return true
     }
@@ -39,33 +38,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NotificationCenter.default.removeObserver(self)
     }
 }
-
 //MARK: 测试
 extension AppDelegate {
-    
-    func textAla(){
-        let prama : [String:Any] = ["mobile":"1111111111",
-                                    "password":NSString.md5StringWIthOrinalString("111111"),
-                                    "devicesType":"1",
-                                    ]
-        ALamoNetworkTool.netWorkTools.tokenRequest(type: .GET, url: "app/loginByEncry.htm?", parameters: prama) { (respon, error) in
+    // 自动登录
+    func autoLog(){
+       let amodel =  UserAccountViewModel.shareIntance
+//        if amodel.isLogin {
+//             return
+//        }
+        amodel.loadUserInfo { (isSueccsss) in
+            if isSueccsss {
             
-            if  error != nil {
-                JYPrint(error)
-                return;
-            }
-            let json = JSON(respon!)
-            
-            if let dataDic = json["data"].dictionaryObject {
-                
-                JYPrint(dataDic)
-               let auser = JYUserInfomation.init(value: dataDic)
-               try! realm.write({
-                    realm.add(auser)
-                })
-                JYPrint(auser)
-            }else{
-                JYPrint(json["data"])
+                JYPrint(amodel.userInfo)
             }
         }
     }
@@ -73,24 +57,25 @@ extension AppDelegate {
 //MARK: 界面切换
 extension  AppDelegate{
     func  defaultContoller()->UIViewController{
-        
+        return MainViewController()
+
+         // FIXME: 引导页，欢迎界面，在main里面设置。
         //   1.检测用户是否登录
-        let  isLog = true
-        if isLog {
-            // 已经登录之后，每次进入判断是不是最新版本，不是最新，显示欢迎回来界面
-            if isNewVerson() {
-                let New =  NewFeatureVC()
-                New.imageArry = ["1","2","3","4"]
-                return  New
-            }else{
-                return WelcomeVC()
-            }
-        }else{
-            return MainViewController()
-        }
+//        let  isLog = true
+//        if isLog {
+//            // 已经登录之后，每次进入判断是不是最新版本，不是最新，显示欢迎回来界面
+//            if isNewVerson() {
+//                let New =  NewFeatureVC()
+//                New.imageArry = ["1","2","3","4"]
+//                return  New
+//            }else{
+//                return WelcomeVC()
+//            }
+//        }else{
+//        }
+        
+        
     }
-    
-    
     func changeRoot(noti:NSNotification){
         window?.rootViewController=MainViewController()
     }
@@ -108,9 +93,6 @@ extension  AppDelegate{
         }
         return false
     }
-    
-
-    
 }
 //MARK: applegate 的代理
 extension  AppDelegate{
@@ -135,8 +117,6 @@ extension  AppDelegate{
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-    
-    
 }
 
 // MARK: - 网络监测
@@ -166,6 +146,4 @@ extension  AppDelegate{
         NetworkListener?.startListening()
         
     }
-    
-    
 }
