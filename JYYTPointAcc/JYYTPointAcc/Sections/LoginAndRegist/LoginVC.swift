@@ -17,13 +17,13 @@ class LoginVC: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var loginButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        phoneNumberTextField.addTarget(self, action: #selector(textFielddidChanged), for: .editingChanged)
+         phoneNumberTextField.addTarget(self, action: #selector(textFielddidChanged), for: .editingChanged)
          passwordTextField.addTarget(self, action: #selector(textFielddidChanged), for: .editingChanged)
 
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
-         navigationItem.title = "登录"
+         title = "登录"
          
     }
     // MARK: 按钮操作

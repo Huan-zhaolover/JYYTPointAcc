@@ -54,6 +54,7 @@
 		7DFF6ED11EB1AC8A0052369F /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFF6ED01EB1AC890052369F /* WelcomeView.swift */; };
 		7DFF6ED51EB1BA3A0052369F /* NoLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFF6ED31EB1BA3A0052369F /* NoLogView.swift */; };
 		7DFF6ED61EB1BA3A0052369F /* NoLogView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DFF6ED41EB1BA3A0052369F /* NoLogView.xib */; };
+		7DFF6ED81EB1C33F0052369F /* BaseTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFF6ED71EB1C33F0052369F /* BaseTableController.swift */; };
 		E48D3A54F04186E1FF709BA3 /* Pods_JYYTPointAcc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3417CD3A6F3CAAF33292C299 /* Pods_JYYTPointAcc.framework */; };
 /* End PBXBuildFile section */
 
@@ -125,6 +126,7 @@
 		7DFF6ED01EB1AC890052369F /* WelcomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		7DFF6ED31EB1BA3A0052369F /* NoLogView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoLogView.swift; sourceTree = "<group>"; };
 		7DFF6ED41EB1BA3A0052369F /* NoLogView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoLogView.xib; sourceTree = "<group>"; };
+		7DFF6ED71EB1C33F0052369F /* BaseTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableController.swift; sourceTree = "<group>"; };
 		D8E88C51EEC2307D6D23D9EF /* Pods-JYYTPointAcc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JYYTPointAcc.release.xcconfig"; path = "Pods/Target Support Files/Pods-JYYTPointAcc/Pods-JYYTPointAcc.release.xcconfig"; sourceTree = "<group>"; };
 		FCB23C82E8F91FA5724E23B6 /* Pods_JYYTPointAccTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JYYTPointAccTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -263,6 +265,7 @@
 				7D86FE091E87B485008EA024 /* MainViewController.swift */,
 				7D7D8C071EAAF9230091B491 /* JYNavigationController.swift */,
 				7D86FE1C1E889B83008EA024 /* BaseViewController.swift */,
+				7DFF6ED71EB1C33F0052369F /* BaseTableController.swift */,
 				7DFF6ED21EB1BA3A0052369F /* NoLogView */,
 				7DD7BCF31E923D74005369F7 /* Welcome */,
 				7DD7BCEA1E920B0B005369F7 /* NewFeature */,
@@ -627,6 +630,7 @@
 				7D86003F1E89F1C0008EA024 /* LeftChoseAccountBookVC.swift in Sources */,
 				7D97D4001EA5EFE700A8D7BF /* AFNNetWorkTool.swift in Sources */,
 				7D7D8C031EA9D2270091B491 /* NSString+NSString_MD5.m in Sources */,
+				7DFF6ED81EB1C33F0052369F /* BaseTableController.swift in Sources */,
 				7DD7BCE01E8F7922005369F7 /* NSDate+category.swift in Sources */,
 				7DFF6EC41EAFA0A50052369F /* QRScanVC.swift in Sources */,
 				7D7D8BF11EA8932B0091B491 /* JYComon.swift in Sources */,

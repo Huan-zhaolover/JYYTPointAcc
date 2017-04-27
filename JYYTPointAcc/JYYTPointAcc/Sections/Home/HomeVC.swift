@@ -8,7 +8,7 @@
 
 import UIKit
 private let cellid = "cellID"  //  定义全局常量，使用Private 修饰
-class HomeVC: BaseViewController{
+class HomeVC: BaseTableController{
 
     // private
      lazy var homeAnimatir : HomePopOverAnimator = HomePopOverAnimator()
