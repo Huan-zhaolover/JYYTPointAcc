@@ -31,7 +31,6 @@ class MainViewController: UITabBarController {
 
 // 设置新特性界面，欢迎界面
 extension MainViewController{
-    
     func  setUpUI(){
         //  未登录直接进去，不需要引导页，欢迎界面
         if !UserAccountViewModel.shareIntance.isLogin {
@@ -43,6 +42,9 @@ extension MainViewController{
             view .addSubview(NewVC)
         }else{
             // 欢迎界面
+            let aview =   WelcomeView.loadWelcomeView()
+            aview.frame = CGRect(x: 0, y: 0, width: ScreenW, height: ScreenH)
+            view .addSubview(aview)
         }
     }
 }

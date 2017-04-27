@@ -47,13 +47,13 @@
 		7DD7BCE01E8F7922005369F7 /* NSDate+category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7BCDF1E8F7922005369F7 /* NSDate+category.swift */; };
 		7DD7BCEE1E920BA1005369F7 /* NewFeatureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7BCED1E920BA1005369F7 /* NewFeatureVC.swift */; };
 		7DD7BCF01E921A4B005369F7 /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7BCEF1E921A4B005369F7 /* UIView+AutoLayout.swift */; };
-		7DD7BCF61E923D95005369F7 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7BCF41E923D95005369F7 /* WelcomeVC.swift */; };
-		7DD7BCF71E923D95005369F7 /* WelcomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DD7BCF51E923D95005369F7 /* WelcomeVC.xib */; };
 		7DFF6EC21EAFA0A50052369F /* MyQRCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFF6EBE1EAFA0A50052369F /* MyQRCardVC.swift */; };
 		7DFF6EC31EAFA0A50052369F /* MyQRCardVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DFF6EBF1EAFA0A50052369F /* MyQRCardVC.xib */; };
 		7DFF6EC41EAFA0A50052369F /* QRScanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFF6EC01EAFA0A50052369F /* QRScanVC.swift */; };
 		7DFF6EC51EAFA0A50052369F /* QRScanVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DFF6EC11EAFA0A50052369F /* QRScanVC.xib */; };
 		7DFF6ECD1EB045460052369F /* UserAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFF6ECC1EB045460052369F /* UserAccountViewModel.swift */; };
+		7DFF6ECF1EB1AC490052369F /* WelcomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DFF6ECE1EB1AC490052369F /* WelcomeView.xib */; };
+		7DFF6ED11EB1AC8A0052369F /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFF6ED01EB1AC890052369F /* WelcomeView.swift */; };
 		E48D3A54F04186E1FF709BA3 /* Pods_JYYTPointAcc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3417CD3A6F3CAAF33292C299 /* Pods_JYYTPointAcc.framework */; };
 /* End PBXBuildFile section */
 
@@ -118,13 +118,13 @@
 		7DD7BCDF1E8F7922005369F7 /* NSDate+category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+category.swift"; sourceTree = "<group>"; };
 		7DD7BCED1E920BA1005369F7 /* NewFeatureVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewFeatureVC.swift; sourceTree = "<group>"; };
 		7DD7BCEF1E921A4B005369F7 /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AutoLayout.swift"; sourceTree = "<group>"; };
-		7DD7BCF41E923D95005369F7 /* WelcomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
-		7DD7BCF51E923D95005369F7 /* WelcomeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeVC.xib; sourceTree = "<group>"; };
 		7DFF6EBE1EAFA0A50052369F /* MyQRCardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyQRCardVC.swift; sourceTree = "<group>"; };
 		7DFF6EBF1EAFA0A50052369F /* MyQRCardVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyQRCardVC.xib; sourceTree = "<group>"; };
 		7DFF6EC01EAFA0A50052369F /* QRScanVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScanVC.swift; sourceTree = "<group>"; };
 		7DFF6EC11EAFA0A50052369F /* QRScanVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QRScanVC.xib; sourceTree = "<group>"; };
 		7DFF6ECC1EB045460052369F /* UserAccountViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccountViewModel.swift; sourceTree = "<group>"; };
+		7DFF6ECE1EB1AC490052369F /* WelcomeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeView.xib; sourceTree = "<group>"; };
+		7DFF6ED01EB1AC890052369F /* WelcomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		D8E88C51EEC2307D6D23D9EF /* Pods-JYYTPointAcc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JYYTPointAcc.release.xcconfig"; path = "Pods/Target Support Files/Pods-JYYTPointAcc/Pods-JYYTPointAcc.release.xcconfig"; sourceTree = "<group>"; };
 		FCB23C82E8F91FA5724E23B6 /* Pods_JYYTPointAccTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JYYTPointAccTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -370,8 +370,8 @@
 		7DD7BCF31E923D74005369F7 /* Welcome */ = {
 			isa = PBXGroup;
 			children = (
-				7DD7BCF41E923D95005369F7 /* WelcomeVC.swift */,
-				7DD7BCF51E923D95005369F7 /* WelcomeVC.xib */,
+				7DFF6ECE1EB1AC490052369F /* WelcomeView.xib */,
+				7DFF6ED01EB1AC890052369F /* WelcomeView.swift */,
 			);
 			path = Welcome;
 			sourceTree = "<group>";
@@ -499,10 +499,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DD7BCD61E8E513B005369F7 /* LoginVC.xib in Resources */,
+				7DFF6ECF1EB1AC490052369F /* WelcomeView.xib in Resources */,
 				7D86FE211E88DDD0008EA024 /* NoLogView.xib in Resources */,
 				7D8600401E89F1C0008EA024 /* LeftChoseAccountBookVC.xib in Resources */,
 				7DFF6EC31EAFA0A50052369F /* MyQRCardVC.xib in Resources */,
-				7DD7BCF71E923D95005369F7 /* WelcomeVC.xib in Resources */,
 				7D86FDBF1E864D4A008EA024 /* Assets.xcassets in Resources */,
 				7DFF6EC51EAFA0A50052369F /* QRScanVC.xib in Resources */,
 				7D86FDBD1E864D4A008EA024 /* Main.storyboard in Resources */,
@@ -639,7 +639,6 @@
 				7DFF6EC21EAFA0A50052369F /* MyQRCardVC.swift in Sources */,
 				7D7D8BEF1EA88AA20091B491 /* textDownLoad.swift in Sources */,
 				7D86FE111E87B598008EA024 /* BillListVC.swift in Sources */,
-				7DD7BCF61E923D95005369F7 /* WelcomeVC.swift in Sources */,
 				7D86FE271E890954008EA024 /* InvoiceListVC.swift in Sources */,
 				7D7D8BEB1EA870500091B491 /* BLHttpSessionsRequest.swift in Sources */,
 				7D86FE281E890954008EA024 /* PartnerVC.swift in Sources */,
@@ -653,6 +652,7 @@
 				7D86FE171E87B5C7008EA024 /* StatementVC.swift in Sources */,
 				7D86FE2A1E8909CF008EA024 /* HomeVC.swift in Sources */,
 				7D86FE1F1E88DDBE008EA024 /* NoLogView.swift in Sources */,
+				7DFF6ED11EB1AC8A0052369F /* WelcomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

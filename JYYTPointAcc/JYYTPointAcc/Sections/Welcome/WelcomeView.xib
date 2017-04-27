@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="mjB-sU-jKj" customClass="WelcomeView" customModule="JYYTPointAcc" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash" translatesAutoresizingMaskIntoConstraints="NO" id="XfQ-bl-GYW">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6CO-HM-6Ix">
+                    <rect key="frame" x="100" y="323.5" width="175" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nr3-ef-xnn">
+                    <rect key="frame" x="142" y="213.5" width="90" height="90"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="nr3-ef-xnn" secondAttribute="height" id="Z2R-18-ibh"/>
+                        <constraint firstAttribute="height" constant="90" id="xH7-0z-OSa"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="6CO-HM-6Ix" firstAttribute="top" secondItem="nr3-ef-xnn" secondAttribute="bottom" constant="20" id="5G2-k6-dQr"/>
+                <constraint firstAttribute="bottom" secondItem="XfQ-bl-GYW" secondAttribute="bottom" id="EHI-Xe-KAh"/>
+                <constraint firstAttribute="trailing" secondItem="XfQ-bl-GYW" secondAttribute="trailing" id="Svq-b9-SAw"/>
+                <constraint firstItem="XfQ-bl-GYW" firstAttribute="leading" secondItem="mjB-sU-jKj" secondAttribute="leading" id="V86-QU-6w4"/>
+                <constraint firstItem="6CO-HM-6Ix" firstAttribute="centerY" secondItem="XfQ-bl-GYW" secondAttribute="centerY" id="dIz-Pv-vVd"/>
+                <constraint firstAttribute="trailing" secondItem="6CO-HM-6Ix" secondAttribute="trailing" constant="100" id="dbs-PZ-dfD"/>
+                <constraint firstItem="XfQ-bl-GYW" firstAttribute="top" secondItem="mjB-sU-jKj" secondAttribute="top" id="dyL-ba-UWQ"/>
+                <constraint firstItem="nr3-ef-xnn" firstAttribute="centerX" secondItem="mjB-sU-jKj" secondAttribute="centerX" id="kzk-Ti-B7z"/>
+                <constraint firstItem="6CO-HM-6Ix" firstAttribute="leading" secondItem="mjB-sU-jKj" secondAttribute="leading" constant="100" id="zbd-fD-mHQ"/>
+            </constraints>
+            <connections>
+                <outlet property="weclomeLable" destination="6CO-HM-6Ix" id="Q3I-uM-hpg"/>
+                <outlet property="welcomeIconView" destination="nr3-ef-xnn" id="Rsk-Xw-iNl"/>
+            </connections>
+            <point key="canvasLocation" x="37.5" y="126.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="splash" width="750" height="1334"/>
+    </resources>
+</document>

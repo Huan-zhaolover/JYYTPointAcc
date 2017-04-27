@@ -54,12 +54,13 @@ extension AppDelegate {
                 }
             }
              return
-        }
-        // 测试登录
-        amodel.loadUserInfo(mobile: "111111111", password: "111111") { (isSueccsss) in
-            
-            if isSueccsss {
-                JYPrint(amodel.userInfo)
+        }else{
+            // 测试登录
+            amodel.loadUserInfo(mobile: "111111111", password: "111111") { (isSueccsss) in
+                
+                if isSueccsss {
+                    JYPrint(amodel.userInfo)
+                }
             }
         }
     }
