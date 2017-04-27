@@ -32,8 +32,6 @@
 		7D86FE151E87B5B9008EA024 /* MineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D86FE141E87B5B9008EA024 /* MineVC.swift */; };
 		7D86FE171E87B5C7008EA024 /* StatementVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D86FE161E87B5C7008EA024 /* StatementVC.swift */; };
 		7D86FE1D1E889B83008EA024 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D86FE1C1E889B83008EA024 /* BaseViewController.swift */; };
-		7D86FE1F1E88DDBE008EA024 /* NoLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D86FE1E1E88DDBE008EA024 /* NoLogView.swift */; };
-		7D86FE211E88DDD0008EA024 /* NoLogView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D86FE201E88DDD0008EA024 /* NoLogView.xib */; };
 		7D86FE271E890954008EA024 /* InvoiceListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D86FE241E890954008EA024 /* InvoiceListVC.swift */; };
 		7D86FE281E890954008EA024 /* PartnerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D86FE261E890954008EA024 /* PartnerVC.swift */; };
 		7D86FE2A1E8909CF008EA024 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D86FE291E8909CF008EA024 /* HomeVC.swift */; };
@@ -54,6 +52,8 @@
 		7DFF6ECD1EB045460052369F /* UserAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFF6ECC1EB045460052369F /* UserAccountViewModel.swift */; };
 		7DFF6ECF1EB1AC490052369F /* WelcomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DFF6ECE1EB1AC490052369F /* WelcomeView.xib */; };
 		7DFF6ED11EB1AC8A0052369F /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFF6ED01EB1AC890052369F /* WelcomeView.swift */; };
+		7DFF6ED51EB1BA3A0052369F /* NoLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFF6ED31EB1BA3A0052369F /* NoLogView.swift */; };
+		7DFF6ED61EB1BA3A0052369F /* NoLogView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DFF6ED41EB1BA3A0052369F /* NoLogView.xib */; };
 		E48D3A54F04186E1FF709BA3 /* Pods_JYYTPointAcc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3417CD3A6F3CAAF33292C299 /* Pods_JYYTPointAcc.framework */; };
 /* End PBXBuildFile section */
 
@@ -103,8 +103,6 @@
 		7D86FE141E87B5B9008EA024 /* MineVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineVC.swift; sourceTree = "<group>"; };
 		7D86FE161E87B5C7008EA024 /* StatementVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatementVC.swift; sourceTree = "<group>"; };
 		7D86FE1C1E889B83008EA024 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		7D86FE1E1E88DDBE008EA024 /* NoLogView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoLogView.swift; sourceTree = "<group>"; };
-		7D86FE201E88DDD0008EA024 /* NoLogView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoLogView.xib; sourceTree = "<group>"; };
 		7D86FE241E890954008EA024 /* InvoiceListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvoiceListVC.swift; sourceTree = "<group>"; };
 		7D86FE261E890954008EA024 /* PartnerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartnerVC.swift; sourceTree = "<group>"; };
 		7D86FE291E8909CF008EA024 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -125,6 +123,8 @@
 		7DFF6ECC1EB045460052369F /* UserAccountViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccountViewModel.swift; sourceTree = "<group>"; };
 		7DFF6ECE1EB1AC490052369F /* WelcomeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeView.xib; sourceTree = "<group>"; };
 		7DFF6ED01EB1AC890052369F /* WelcomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		7DFF6ED31EB1BA3A0052369F /* NoLogView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoLogView.swift; sourceTree = "<group>"; };
+		7DFF6ED41EB1BA3A0052369F /* NoLogView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoLogView.xib; sourceTree = "<group>"; };
 		D8E88C51EEC2307D6D23D9EF /* Pods-JYYTPointAcc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JYYTPointAcc.release.xcconfig"; path = "Pods/Target Support Files/Pods-JYYTPointAcc/Pods-JYYTPointAcc.release.xcconfig"; sourceTree = "<group>"; };
 		FCB23C82E8F91FA5724E23B6 /* Pods_JYYTPointAccTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JYYTPointAccTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -260,11 +260,10 @@
 		7D86FE061E87B245008EA024 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
-				7D86FE1E1E88DDBE008EA024 /* NoLogView.swift */,
-				7D86FE201E88DDD0008EA024 /* NoLogView.xib */,
 				7D86FE091E87B485008EA024 /* MainViewController.swift */,
 				7D7D8C071EAAF9230091B491 /* JYNavigationController.swift */,
 				7D86FE1C1E889B83008EA024 /* BaseViewController.swift */,
+				7DFF6ED21EB1BA3A0052369F /* NoLogView */,
 				7DD7BCF31E923D74005369F7 /* Welcome */,
 				7DD7BCEA1E920B0B005369F7 /* NewFeature */,
 				7D86FE221E89094B008EA024 /* Home */,
@@ -395,6 +394,15 @@
 			path = QRCode;
 			sourceTree = "<group>";
 		};
+		7DFF6ED21EB1BA3A0052369F /* NoLogView */ = {
+			isa = PBXGroup;
+			children = (
+				7DFF6ED31EB1BA3A0052369F /* NoLogView.swift */,
+				7DFF6ED41EB1BA3A0052369F /* NoLogView.xib */,
+			);
+			path = NoLogView;
+			sourceTree = "<group>";
+		};
 		88B3C6BBDE68BC2DA8CA3B25 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -498,9 +506,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DFF6ED61EB1BA3A0052369F /* NoLogView.xib in Resources */,
 				7DD7BCD61E8E513B005369F7 /* LoginVC.xib in Resources */,
 				7DFF6ECF1EB1AC490052369F /* WelcomeView.xib in Resources */,
-				7D86FE211E88DDD0008EA024 /* NoLogView.xib in Resources */,
 				7D8600401E89F1C0008EA024 /* LeftChoseAccountBookVC.xib in Resources */,
 				7DFF6EC31EAFA0A50052369F /* MyQRCardVC.xib in Resources */,
 				7D86FDBF1E864D4A008EA024 /* Assets.xcassets in Resources */,
@@ -631,6 +639,7 @@
 				7DFF6ECD1EB045460052369F /* UserAccountViewModel.swift in Sources */,
 				7DD7BCDC1E8F68A4005369F7 /* HorizontalButton.swift in Sources */,
 				7D7D8C001EA9CF8A0091B491 /* JYBase64.m in Sources */,
+				7DFF6ED51EB1BA3A0052369F /* NoLogView.swift in Sources */,
 				7DD7BCEE1E920BA1005369F7 /* NewFeatureVC.swift in Sources */,
 				7D8600421E89F909008EA024 /* HomePopOverAnimator.swift in Sources */,
 				7D86FDB81E864D4A008EA024 /* AppDelegate.swift in Sources */,
@@ -651,7 +660,6 @@
 				7DD7BCDE1E8F73BC005369F7 /* String+category.swift in Sources */,
 				7D86FE171E87B5C7008EA024 /* StatementVC.swift in Sources */,
 				7D86FE2A1E8909CF008EA024 /* HomeVC.swift in Sources */,
-				7D86FE1F1E88DDBE008EA024 /* NoLogView.swift in Sources */,
 				7DFF6ED11EB1AC8A0052369F /* WelcomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
