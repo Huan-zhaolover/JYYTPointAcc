@@ -10,7 +10,7 @@ import UIKit
 
 import Alamofire
 
-class LoginVC: UIViewController,UITextFieldDelegate {
+class LoginVC: BaseViewController,UITextFieldDelegate {
     @IBOutlet weak var phoneNumberTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
 
@@ -24,16 +24,25 @@ class LoginVC: UIViewController,UITextFieldDelegate {
     }
     override func viewWillAppear(_ animated: Bool) {
          title = "登录"
-         
     }
     // MARK: 按钮操作
     @IBAction func clearPhoneNumberButtonClick(_ sender: Any) {
+        phoneNumberTextField.text = ""
     }
-    @IBAction func seePasswodButtonClick(_ sender: Any) {
-   
+    
+    @IBAction func seePasswodButtonClick(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+        passwordTextField.isSecureTextEntry = !passwordTextField.isSecureTextEntry
     }
     
     @IBAction func loginButtonClick(_ sender: Any) {
+        UserAccountViewModel.shareIntance.loadUserInfo(mobile: phoneNumberTextField.text!, password:passwordTextField.text!) { (isSuccess) in
+    
+            if isSuccess{
+                NotificationCenter.default.post(name: NotificationNameHadLoged, object: "hadLog");
+               self.dismiss(animated: true, completion: nil)
+            }
+        }
     }
     
     @IBAction func forgetPasswordButtonClick(_ sender: Any) {
@@ -57,8 +66,7 @@ class LoginVC: UIViewController,UITextFieldDelegate {
         }
 
     }
-    
-    
+
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         view.endEditing(true)

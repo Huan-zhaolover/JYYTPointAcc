@@ -40,6 +40,8 @@ let ScreenH = UIScreen.main.bounds.height
 
 let APPDELEGATE = UIApplication.shared.delegate!
 let NotificationNameGoLogin = NSNotification.Name(rawValue:"NotificationNameGoLogin")
+let NotificationNameHadLoged = NSNotification.Name(rawValue:"NotificationNameHadLoged")
+
 let UserDefaultAppVersionKey = "UserDefaultAppVersionKey"
 
 var realm = try! Realm()

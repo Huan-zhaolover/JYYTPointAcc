@@ -84,10 +84,11 @@ extension MainViewController{
         addChildViewController(childVC)
     }
     //  加载登录界面
-    @objc func gotoLogin(){
+    @objc func gotoLogin(noti:Notification){
+        // hadLog
         let logVC = JYLoadBundleNib(LoginVC.self)
         let nav = JYNavigationController(rootViewController: logVC)
-         present(nav, animated: true, completion: nil)
+        present(nav, animated: true, completion: nil)
     }
     
     //  动态获取命名空间

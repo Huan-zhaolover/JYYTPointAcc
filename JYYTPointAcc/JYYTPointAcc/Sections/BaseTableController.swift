@@ -10,7 +10,7 @@ import UIKit
 
 class BaseTableController: BaseViewController {
     
-    let isHadLoggin :Bool = UserAccountViewModel.shareIntance.isLogin
+    var isHadLoggin :Bool = UserAccountViewModel.shareIntance.isLogin
     lazy var nologvvv : NoLogView = NoLogView.shareNoLogView()
     //  基类的表格tableView
     var tableView :UITableView?
@@ -21,6 +21,9 @@ class BaseTableController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(changeUI), name: NotificationNameHadLoged, object: nil)
+
         // Do any additional setup after loading the view.
     }
     // 加载数据，具体实现由子类实现
@@ -34,6 +37,16 @@ class BaseTableController: BaseViewController {
         // 取消自动缩进，如果隐藏了导航条，会缩进20
         automaticallyAdjustsScrollViewInsets = false
          isHadLoggin ?  setTableView(): setNoLogView()
+    }
+    
+    //  加载登录界面
+    @objc func changeUI(noti:Notification){
+        // hadLog
+        isHadLoggin = UserAccountViewModel.shareIntance.isLogin
+        guard let notti = noti.object, notti as! String == "hadLog" else {
+            return
+        }
+        setUpUI()
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
