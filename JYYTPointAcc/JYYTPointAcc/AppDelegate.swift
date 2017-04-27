@@ -31,8 +31,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         autoLog()
         startListenNetwork()
-        let text = CellLineColor
-        
         return true
     }
     

@@ -12,7 +12,8 @@ import UIKit
 
 class BaseViewController: UIViewController {
     
-    let isHadLoggin :Bool = true
+    let isHadLoggin :Bool = UserAccountViewModel.shareIntance.isLogin
+    
     lazy var nologvvv : NoLogView = NoLogView.shareNoLogView()
 
     //  自定义导航栏
@@ -43,7 +44,6 @@ class BaseViewController: UIViewController {
         refreshControl?.endRefreshing()
         
     }
-
 }
 
 // MARK: - ---------------设置子视图
@@ -125,34 +125,22 @@ extension  BaseViewController:UITableViewDataSource,UITableViewDelegate {
             loadData()
             
         }
-    
     }
-    
-    
 }
-
-
 // MARK: - ---------------登录注册的代理
 extension  BaseViewController:NoLogViewDelegate {
-    
- 
     func registButtonWillClick() {
         print("zhuce")
+        NotificationCenter.default.post(name: NotificationNameGoLogin, object: nil);
     }
     func logginButtonWillClick() {
         print("denglu")
-        let VC = LoginVC()
-        
-        navigationController?.pushViewController(VC, animated: true)
+        NotificationCenter.default.post(name: NotificationNameGoLogin, object: nil);
     }
-    
     func setNavgationBarNoLogedItems(){
-        //        UIBarButtonItem.titleLableWithText(title: "hhhhhh")
-        
         navItem.leftBarButtonItem=UIBarButtonItem.init(title: "登录", style: .plain, target: self, action: #selector(registButtonWillClick))
         navItem.rightBarButtonItem=UIBarButtonItem.init(title: "注册", style: .plain, target: self, action: #selector(logginButtonWillClick))
     }
-    
 }
 
 // extension不能写属性，不能重写父类方法，extension 是对的类的扩展

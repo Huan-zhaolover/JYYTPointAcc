@@ -14,7 +14,6 @@ class MainViewController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpUI()
         
         tabBar.tintColor=UIColor.orange
         UINavigationBar.appearance().tintColor=UIColor.orange
@@ -24,27 +23,34 @@ class MainViewController: UITabBarController {
         addSelfChildViewController(childVC: StatementVC(), title: "报表", imageString: "home_tabbar_bb")
         addSelfChildViewController(childVC: MineVC(), title: "我的", imageString: "home_tabbar_hb")
 
+        NotificationCenter.default.addObserver(self, selector: #selector(gotoLogin), name: NotificationNameGoLogin, object: nil)
     }
+    override func loadView() {
+         super.loadView()
+            setUpUI()
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
 }
-
-
-
 // 设置新特性界面，欢迎界面
 extension MainViewController{
     func  setUpUI(){
         //  未登录直接进去，不需要引导页，欢迎界面
-        if !UserAccountViewModel.shareIntance.isLogin {
-            return
-        }
-        if isNewVerson() {
-            // 是新版本，加载引导页
-            let NewVC =  NewFeatureVC(imageStrArry: ["1","2","3","4"])
-            view .addSubview(NewVC)
-        }else{
-            // 欢迎界面
-            let aview =   WelcomeView.loadWelcomeView()
-            aview.frame = CGRect(x: 0, y: 0, width: ScreenW, height: ScreenH)
-            view .addSubview(aview)
+        
+        if UserAccountViewModel.shareIntance.isLogin {
+            if isNewVerson() {
+                // 是新版本，加载引导页
+                let NewVC =  NewFeatureVC(imageStrArry: ["1","2","3","4"])
+                view .addSubview(NewVC)
+            }else{
+                // 欢迎界面
+                let aview =   WelcomeView.loadWelcomeView()
+                aview.frame = CGRect(x: 0, y: 0, width: ScreenW, height: ScreenH)
+                view .addSubview(aview)
+            }
         }
     }
 }
@@ -75,10 +81,15 @@ extension MainViewController{
         // 设置tabbar 标题的大小，颜色 大小默认是12号字体
         childVC.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName:UIColor.orange], for: .normal)
         childVC.tabBarItem.setTitleTextAttributes([NSFontAttributeName:UIFont.systemFont(ofSize: 13)], for: .normal)
-        
-        let nav = JYNavigationController(rootViewController: childVC)
-        addChildViewController(nav)
+        addChildViewController(childVC)
     }
+    //  加载登录界面
+    @objc func gotoLogin(){
+        let logVC = JYLoadBundleNib(LoginVC.self)
+        let nav = JYNavigationController(rootViewController: logVC)
+         present(nav, animated: true, completion: nil)
+    }
+    
     //  动态获取命名空间
     private func text1()  {
         

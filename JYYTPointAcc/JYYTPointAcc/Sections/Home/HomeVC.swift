@@ -7,11 +7,7 @@
 //
 
 import UIKit
-
-import Alamofire
-
 private let cellid = "cellID"  //  定义全局常量，使用Private 修饰
-
 class HomeVC: BaseViewController{
 
     // private

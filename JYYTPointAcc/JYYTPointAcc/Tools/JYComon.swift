@@ -39,46 +39,19 @@ let ScreenW = UIScreen.main.bounds.width
 let ScreenH = UIScreen.main.bounds.height
 
 let APPDELEGATE = UIApplication.shared.delegate!
-let SwitchRootVCNotification = NSNotification.Name(rawValue:"SwitchRootViewControllerKey")
+let NotificationNameGoLogin = NSNotification.Name(rawValue:"NotificationNameGoLogin")
+let UserDefaultAppVersionKey = "UserDefaultAppVersionKey"
 
 var realm = try! Realm()
 
-let UserDefaultAppVersionKey = "UserDefaultAppVersionKey"
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    
 
  // 加载nib 文件
-func LOLoadBundleNib(_ nibVC:UIViewController.Type) ->(UIViewController){
+func JYLoadBundleNib(_ nibVC:UIViewController.Type) ->(UIViewController){
     return  nibVC.init(nibName: nil, bundle: nil)
 }
 // print
