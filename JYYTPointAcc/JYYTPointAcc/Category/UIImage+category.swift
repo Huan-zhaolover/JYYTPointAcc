@@ -71,53 +71,68 @@ extension UIImage {
         return img
     }
     
-    //  处理图片拉伸渲染消耗GPU，或者混合模式，PNG图片透明混合渲染问题
-    //  PNG图片是支持透明的，JPG图片是不支持透明的
+   
+   
+    
+    /// 根据尺寸重写绘图
+    ///
+    /// - Parameters:
+    ///   - aimage: 需要绘制的图像
+    ///   - size:  绘制的尺寸
+    /// - Returns: 绘制好的UIImage
     static func getNoMisalignedImage(aimage:UIImage,size:CGSize)->UIImage?{
-        
-        let rect = CGRect(origin: CGPoint(), size: size)
-
+        //  处理图片拉伸渲染消耗GPU，或者混合模式，PNG图片透明混合渲染问题
+        //  PNG图片是支持透明的，JPG图片是不支持透明的
         // 开启图像上下文
         // 图像上下文，在内存中开辟一个地址，跟屏幕无关，
         // 参数 size 绘图的尺寸  ||不透明：false(透明),true(不透明)  || scale 屏幕分辨率，默认使用1.0，可以使用0，是当前屏幕的分辨率
-        
-        UIGraphicsBeginImageContextWithOptions(size, true, 0)
         // 绘图，指定固定区域内的拉伸屏幕
-        aimage.draw(in: rect)
         // 取得结果
-        let result = UIGraphicsGetImageFromCurrentImageContext()
         // 关闭上下文
+        
+        let rect = CGRect(origin: CGPoint(), size: size)
+        UIGraphicsBeginImageContextWithOptions(size, true, 0)
+        aimage.draw(in: rect)
+        let result = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         return result
     }
     
-    func getRoundedImage(aimage:UIImage,size:CGSize,backGroudColor:UIColor?)->UIImage?{
+    /// 获取圆角半径
+    ///
+    /// - Parameters:
+    ///   - aimage: 原图
+    ///   - size: 绘制size
+    ///   - backGroudColor:  绘制圆角的背景色 ,默认是白色背景
+    /// - Returns: 绘制好的背景
+    func getRoundedImage(size:CGSize,backGroudColor:UIColor?=UIColor.white)->UIImage?{
     
-        let rect = CGRect(origin: CGPoint(), size: size)
         
         // 开启图像上下文
         // 图像上下文，在内存中开辟一个地址，跟屏幕无关，
         // 参数 size 绘图的尺寸  ||不透明：false(透明),true(不透明)  || scale 屏幕分辨率，默认使用1.0，可以使用0，是当前屏幕的分辨率
+        // 背景填充
+        // 进行路径裁剪  -> 剪切之后再路径内绘图，设置为不透明，呈现黑色，需要裁剪前进行背景填充
+        // 绘图，指定固定区域内的拉伸屏幕
+        // 设置边线
+        // 取得结果
+        // 关闭上下文
+        
+        let rect = CGRect(origin: CGPoint(), size: size)
         UIGraphicsBeginImageContextWithOptions(size, true, 0)
         
-        // 背景填充
         backGroudColor?.setFill()
         UIRectFill(rect)
-        // 进行路径裁剪  -> 剪切之后再路径内绘图，设置为不透明，呈现黑色，需要裁剪前进行背景填充
         let path = UIBezierPath(ovalIn: rect)
         path.addClip()
-        // 绘图，指定固定区域内的拉伸屏幕
-        aimage.draw(in: rect)
         
-        // 设置边线
+        self.draw(in: rect)
+        
         UIColor.red.setStroke()
         path.lineWidth = 2 // 默认是1
         path.stroke()
-        
-        
-        // 取得结果
+    
         let result = UIGraphicsGetImageFromCurrentImageContext()
-        // 关闭上下文
         UIGraphicsEndImageContext()
         return result
     }
