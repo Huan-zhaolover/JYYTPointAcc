@@ -11,6 +11,9 @@
 		7D2A935E1EAF3E0A00ED43A2 /* AppDelegate+Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2A935D1EAF3E0A00ED43A2 /* AppDelegate+Realm.swift */; };
 		7D2A93611EAF475500ED43A2 /* JYUserInfomation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2A93601EAF475500ED43A2 /* JYUserInfomation.swift */; };
 		7D3227E11EB440B8004A666C /* UIImageView+category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3227E01EB440B8004A666C /* UIImageView+category.swift */; };
+		7D3227E41EB56390004A666C /* textSwiftVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3227E31EB56390004A666C /* textSwiftVC.swift */; };
+		7D3227E71EB563A7004A666C /* textOCVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D3227E61EB563A7004A666C /* textOCVC.m */; };
+		7D3227E91EB59886004A666C /* JYRefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3227E81EB59886004A666C /* JYRefreshControl.swift */; };
 		7D7D8BE91EA84A190091B491 /* ALamoNetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7D8BE81EA84A190091B491 /* ALamoNetworkTool.swift */; };
 		7D7D8BEB1EA870500091B491 /* BLHttpSessionsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7D8BEA1EA870500091B491 /* BLHttpSessionsRequest.swift */; };
 		7D7D8BED1EA883B10091B491 /* UIImage+category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7D8BEC1EA883B10091B491 /* UIImage+category.swift */; };
@@ -77,6 +80,10 @@
 		7D2A935D1EAF3E0A00ED43A2 /* AppDelegate+Realm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Realm.swift"; sourceTree = "<group>"; };
 		7D2A93601EAF475500ED43A2 /* JYUserInfomation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JYUserInfomation.swift; sourceTree = "<group>"; };
 		7D3227E01EB440B8004A666C /* UIImageView+category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+category.swift"; sourceTree = "<group>"; };
+		7D3227E31EB56390004A666C /* textSwiftVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = textSwiftVC.swift; sourceTree = "<group>"; };
+		7D3227E51EB563A7004A666C /* textOCVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = textOCVC.h; sourceTree = "<group>"; };
+		7D3227E61EB563A7004A666C /* textOCVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = textOCVC.m; sourceTree = "<group>"; };
+		7D3227E81EB59886004A666C /* JYRefreshControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JYRefreshControl.swift; sourceTree = "<group>"; };
 		7D7D8BE81EA84A190091B491 /* ALamoNetworkTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALamoNetworkTool.swift; sourceTree = "<group>"; };
 		7D7D8BEA1EA870500091B491 /* BLHttpSessionsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLHttpSessionsRequest.swift; sourceTree = "<group>"; };
 		7D7D8BEC1EA883B10091B491 /* UIImage+category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+category.swift"; sourceTree = "<group>"; };
@@ -168,6 +175,16 @@
 				7D2A93601EAF475500ED43A2 /* JYUserInfomation.swift */,
 			);
 			path = RealModel;
+			sourceTree = "<group>";
+		};
+		7D3227E21EB56360004A666C /* Text */ = {
+			isa = PBXGroup;
+			children = (
+				7D3227E31EB56390004A666C /* textSwiftVC.swift */,
+				7D3227E51EB563A7004A666C /* textOCVC.h */,
+				7D3227E61EB563A7004A666C /* textOCVC.m */,
+			);
+			path = Text;
 			sourceTree = "<group>";
 		};
 		7D4BAEB21E8A37D900CE86C3 /* leftDrop */ = {
@@ -265,6 +282,7 @@
 		7D86FE061E87B245008EA024 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				7D3227E21EB56360004A666C /* Text */,
 				7D86FE091E87B485008EA024 /* MainViewController.swift */,
 				7D7D8C071EAAF9230091B491 /* JYNavigationController.swift */,
 				7D86FE1C1E889B83008EA024 /* BaseViewController.swift */,
@@ -385,6 +403,7 @@
 			isa = PBXGroup;
 			children = (
 				7DFF6EBD1EAFA0A50052369F /* QRCode */,
+				7D3227E81EB59886004A666C /* JYRefreshControl.swift */,
 			);
 			path = Cutomer;
 			sourceTree = "<group>";
@@ -630,8 +649,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D3227E91EB59886004A666C /* JYRefreshControl.swift in Sources */,
 				7D86003F1E89F1C0008EA024 /* LeftChoseAccountBookVC.swift in Sources */,
 				7D97D4001EA5EFE700A8D7BF /* AFNNetWorkTool.swift in Sources */,
+				7D3227E71EB563A7004A666C /* textOCVC.m in Sources */,
 				7D7D8C031EA9D2270091B491 /* NSString+NSString_MD5.m in Sources */,
 				7DFF6ED81EB1C33F0052369F /* BaseTableController.swift in Sources */,
 				7DD7BCE01E8F7922005369F7 /* NSDate+category.swift in Sources */,
@@ -653,6 +674,7 @@
 				7D8600441E89FC3B008EA024 /* HomeUIPresentationVC.swift in Sources */,
 				7D86FE1D1E889B83008EA024 /* BaseViewController.swift in Sources */,
 				7D3227E11EB440B8004A666C /* UIImageView+category.swift in Sources */,
+				7D3227E41EB56390004A666C /* textSwiftVC.swift in Sources */,
 				7DFF6EC21EAFA0A50052369F /* MyQRCardVC.swift in Sources */,
 				7D7D8BEF1EA88AA20091B491 /* textDownLoad.swift in Sources */,
 				7D86FE111E87B598008EA024 /* BillListVC.swift in Sources */,

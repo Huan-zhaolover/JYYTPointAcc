@@ -69,7 +69,7 @@ extension MainViewController{
     }
 }
 
-extension MainViewController{
+extension MainViewController :UITabBarControllerDelegate{
 
     func addSelfChildViewController(childVC: UIViewController,title:String,imageString:String) {
         childVC.tabBarItem.image=UIImage(named: imageString)
@@ -90,6 +90,31 @@ extension MainViewController{
         let nav = JYNavigationController(rootViewController: logVC)
         present(nav, animated: true, completion: nil)
     }
+    
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+        
+        //在此间实现点击tabbar 刷新数据，清除角标
+        // 获取vc  在数组中的索引
+        // 判断当前的选择是首页，同时indx 是首页，重复点击首页的按钮
+        //  是首页，滑动首页之后再刷新数据
+        // 增加延迟，是控制滑到顶部再刷新数据
+        let index = childViewControllers.index(of: viewController)
+        if selectedIndex == 0 && selectedIndex == index{
+            let nav  = childViewControllers[0] as! UINavigationController
+            let vc = nav.childViewControllers[0] as! HomeVC
+            vc.tableView?.setContentOffset(CGPoint(x: 0, y: -64), animated: true)
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1 , execute: {
+                vc.loadData()
+            })
+            vc.tabBarItem.badgeValue = nil
+            UIApplication.shared.applicationIconBadgeNumber = 0
+        
+        }
+        
+        return true;
+    }
+    
+    
     
     //  动态获取命名空间
     private func text1()  {

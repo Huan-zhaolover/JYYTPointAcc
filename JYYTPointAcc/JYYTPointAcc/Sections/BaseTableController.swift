@@ -54,35 +54,7 @@ class BaseTableController: BaseViewController {
     }
 
 }
-// MARK: - ---------------tableView 的代理和数据源方法
-extension  BaseTableController:UITableViewDataSource,UITableViewDelegate {
-    
-    // 基类只是准备方法，子类负责实现，return 只是为了不报错
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
-    }
-    // 在显示最后一行的时候下拉刷新
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        
-        let row = indexPath.row
-        let section = tableView.numberOfSections - 1
-        if row < 0 || section < 0 {
-            return
-        }
-        let arow = tableView.numberOfRows(inSection: section)
-        
-        if row == (arow-1) && !isPullup {
-            JYPrint("上拉刷新")
-            isPullup = true
-            loadData()
-            
-        }
-    }
-}
+
 extension BaseTableController{
     /// 设置表格视图
     func setTableView(){
@@ -111,6 +83,35 @@ extension BaseTableController{
     }
     
 
+}
+// MARK: - ---------------tableView 的代理和数据源方法
+extension  BaseTableController:UITableViewDataSource,UITableViewDelegate {
+    
+    // 基类只是准备方法，子类负责实现，return 只是为了不报错
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
+    // 在显示最后一行的时候下拉刷新
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+        let row = indexPath.row
+        let section = tableView.numberOfSections - 1
+        if row < 0 || section < 0 {
+            return
+        }
+        let arow = tableView.numberOfRows(inSection: section)
+        
+        if row == (arow-1) && !isPullup {
+            JYPrint("上拉刷新")
+            isPullup = true
+            loadData()
+            
+        }
+    }
 }
 // MARK: - ---------------登录注册的代理
 extension  BaseTableController:NoLogViewDelegate {

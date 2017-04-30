@@ -14,10 +14,8 @@ class JYNavigationController: UINavigationController {
         super.viewDidLoad()
         // 隐藏默认的navigationBar，在BaseViewController中自定义navigationBar和item
         navigationBar.isHidden = true
-        // Do any additional setup after loading the view.
+        // Do any additional setup after loading the view
     }
-
-    
     
     // 重写push方法，initRootviewcontroller 的时候就压栈，调用此方法
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
