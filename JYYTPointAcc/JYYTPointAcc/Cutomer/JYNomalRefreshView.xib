@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="5xg-iK-jOH" customClass="JYNomalRefreshView" customModule="JYYTPointAcc" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="422" height="59"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="下拉刷新" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gaY-a8-n3u">
+                    <rect key="frame" x="176" y="28" width="69.5" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tableview_pull_refresh" translatesAutoresizingMaskIntoConstraints="NO" id="R2N-3F-oal">
+                    <rect key="frame" x="134.5" y="23" width="32" height="32"/>
+                </imageView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="48v-A4-sXP">
+                    <rect key="frame" x="146" y="28" width="20" height="20"/>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="R2N-3F-oal" firstAttribute="centerY" secondItem="gaY-a8-n3u" secondAttribute="centerY" id="7Dv-yE-kw2"/>
+                <constraint firstItem="gaY-a8-n3u" firstAttribute="leading" secondItem="R2N-3F-oal" secondAttribute="trailing" constant="10" id="LK5-db-9HN"/>
+                <constraint firstItem="gaY-a8-n3u" firstAttribute="centerX" secondItem="5xg-iK-jOH" secondAttribute="centerX" id="UsD-fb-yrp"/>
+                <constraint firstItem="48v-A4-sXP" firstAttribute="bottom" secondItem="gaY-a8-n3u" secondAttribute="bottom" id="Vv4-OS-j3a"/>
+                <constraint firstAttribute="bottom" secondItem="gaY-a8-n3u" secondAttribute="bottom" constant="10" id="m2p-jv-dbe"/>
+                <constraint firstItem="gaY-a8-n3u" firstAttribute="leading" secondItem="48v-A4-sXP" secondAttribute="trailing" constant="10" id="sgY-3t-DUs"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="icomImageView" destination="R2N-3F-oal" id="jlm-Hu-RXb"/>
+                <outlet property="indictior" destination="48v-A4-sXP" id="3PX-MS-kGQ"/>
+                <outlet property="titleLable" destination="gaY-a8-n3u" id="8aD-A1-MIL"/>
+            </connections>
+            <point key="canvasLocation" x="-77" y="-78.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="tableview_pull_refresh" width="32" height="32"/>
+    </resources>
+</document>

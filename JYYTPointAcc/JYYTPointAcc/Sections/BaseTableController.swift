@@ -14,7 +14,8 @@ class BaseTableController: BaseViewController {
     lazy var nologvvv : NoLogView = NoLogView.shareNoLogView()
     //  基类的表格tableView
     var tableView :UITableView?
-    var refreshControl: UIRefreshControl?
+    
+    var refreshControl: JYRefreshControl?
     // 定义变量区分上拉，下拉刷新
     var isPullup = false
     
@@ -70,7 +71,7 @@ extension BaseTableController{
                                                bottom: tabBarController?.tabBar.bounds.height ?? 49,
                                                right: 0)
         
-        refreshControl = UIRefreshControl()
+        refreshControl = JYRefreshControl()
         tableView?.addSubview(refreshControl!)
         refreshControl?.addTarget(self, action: #selector(loadData), for: .valueChanged)
     }
