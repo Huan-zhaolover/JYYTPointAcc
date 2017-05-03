@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="yK0-ms-96b" customClass="JYNomalRefreshView" customModule="JYYTPointAcc" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="422" height="85"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tableview_pull_refresh" translatesAutoresizingMaskIntoConstraints="NO" id="ENB-VL-K0c">
+                    <rect key="frame" x="144" y="50.5" width="32" height="32"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="下拉刷新" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ESe-fl-ERs">
+                    <rect key="frame" x="181" y="57" width="61.5" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="uFt-d5-hfh">
+                    <rect key="frame" x="151" y="54.5" width="20" height="20"/>
+                </activityIndicatorView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="normalRefreshImage" translatesAutoresizingMaskIntoConstraints="NO" id="Xr2-yY-QUs">
+                    <rect key="frame" x="0.0" y="-177" width="422" height="262"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="ENB-VL-K0c" firstAttribute="centerY" secondItem="ESe-fl-ERs" secondAttribute="centerY" id="5tO-k6-IUR"/>
+                <constraint firstAttribute="bottom" secondItem="ESe-fl-ERs" secondAttribute="bottom" constant="10" id="7Ki-A5-ebt"/>
+                <constraint firstItem="ESe-fl-ERs" firstAttribute="leading" secondItem="ENB-VL-K0c" secondAttribute="trailing" constant="5" id="JqS-7R-x0s"/>
+                <constraint firstAttribute="bottom" secondItem="Xr2-yY-QUs" secondAttribute="bottom" id="Lhy-pp-4eO"/>
+                <constraint firstItem="Xr2-yY-QUs" firstAttribute="leading" secondItem="yK0-ms-96b" secondAttribute="leading" id="M2F-bA-Es0"/>
+                <constraint firstItem="ESe-fl-ERs" firstAttribute="centerX" secondItem="yK0-ms-96b" secondAttribute="centerX" id="aUQ-xf-dom"/>
+                <constraint firstItem="ESe-fl-ERs" firstAttribute="leading" secondItem="uFt-d5-hfh" secondAttribute="trailing" constant="10" id="ez8-Bg-57t"/>
+                <constraint firstItem="uFt-d5-hfh" firstAttribute="bottom" secondItem="ESe-fl-ERs" secondAttribute="bottom" id="lQW-AJ-Daq"/>
+                <constraint firstAttribute="trailing" secondItem="Xr2-yY-QUs" secondAttribute="trailing" id="tEv-R8-dOt"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="icomImageView" destination="ENB-VL-K0c" id="XPm-T4-5Mj"/>
+                <outlet property="indictior" destination="uFt-d5-hfh" id="ccg-CE-Qda"/>
+                <outlet property="titleLable" destination="ESe-fl-ERs" id="ARt-1I-kkx"/>
+            </connections>
+            <point key="canvasLocation" x="-73" y="-163.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="normalRefreshImage" width="504" height="262"/>
+        <image name="tableview_pull_refresh" width="32" height="32"/>
+    </resources>
+</document>

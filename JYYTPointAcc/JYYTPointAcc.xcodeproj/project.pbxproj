@@ -42,6 +42,7 @@
 		7D97D4001EA5EFE700A8D7BF /* AFNNetWorkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D97D3FF1EA5EFE700A8D7BF /* AFNNetWorkTool.swift */; };
 		7DD5E1871EB8C1BD005001A9 /* JYNomalRefreshView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DD5E1861EB8C1BD005001A9 /* JYNomalRefreshView.xib */; };
 		7DD5E1891EB8C522005001A9 /* JYNomalRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD5E1881EB8C522005001A9 /* JYNomalRefreshView.swift */; };
+		7DD5E19E1EBA203F005001A9 /* JYNomalImageRefreshView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DD5E19D1EBA203F005001A9 /* JYNomalImageRefreshView.xib */; };
 		7DD7BCD51E8E513B005369F7 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7BCD31E8E513B005369F7 /* LoginVC.swift */; };
 		7DD7BCD61E8E513B005369F7 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DD7BCD41E8E513B005369F7 /* LoginVC.xib */; };
 		7DD7BCD81E8EA251005369F7 /* VerticalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7BCD71E8EA251005369F7 /* VerticalButton.swift */; };
@@ -121,6 +122,7 @@
 		7D97D3FF1EA5EFE700A8D7BF /* AFNNetWorkTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFNNetWorkTool.swift; sourceTree = "<group>"; };
 		7DD5E1861EB8C1BD005001A9 /* JYNomalRefreshView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JYNomalRefreshView.xib; sourceTree = "<group>"; };
 		7DD5E1881EB8C522005001A9 /* JYNomalRefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JYNomalRefreshView.swift; sourceTree = "<group>"; };
+		7DD5E19D1EBA203F005001A9 /* JYNomalImageRefreshView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JYNomalImageRefreshView.xib; sourceTree = "<group>"; };
 		7DD7BCD31E8E513B005369F7 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		7DD7BCD41E8E513B005369F7 /* LoginVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
 		7DD7BCD71E8EA251005369F7 /* VerticalButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalButton.swift; sourceTree = "<group>"; };
@@ -410,6 +412,7 @@
 				7D3227E81EB59886004A666C /* JYRefreshControl.swift */,
 				7DD5E1881EB8C522005001A9 /* JYNomalRefreshView.swift */,
 				7DD5E1861EB8C1BD005001A9 /* JYNomalRefreshView.xib */,
+				7DD5E19D1EBA203F005001A9 /* JYNomalImageRefreshView.xib */,
 			);
 			path = Cutomer;
 			sourceTree = "<group>";
@@ -546,6 +549,7 @@
 				7D86FDBF1E864D4A008EA024 /* Assets.xcassets in Resources */,
 				7DFF6EC51EAFA0A50052369F /* QRScanVC.xib in Resources */,
 				7D86FDBD1E864D4A008EA024 /* Main.storyboard in Resources */,
+				7DD5E19E1EBA203F005001A9 /* JYNomalImageRefreshView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

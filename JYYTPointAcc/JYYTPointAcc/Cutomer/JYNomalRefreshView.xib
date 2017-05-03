@@ -14,23 +14,23 @@
             <rect key="frame" x="0.0" y="0.0" width="422" height="59"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tableview_pull_refresh" translatesAutoresizingMaskIntoConstraints="NO" id="R2N-3F-oal">
+                    <rect key="frame" x="144" y="24" width="32" height="32"/>
+                </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="下拉刷新" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gaY-a8-n3u">
-                    <rect key="frame" x="176" y="28" width="69.5" height="20.5"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <rect key="frame" x="181" y="30.5" width="61.5" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tableview_pull_refresh" translatesAutoresizingMaskIntoConstraints="NO" id="R2N-3F-oal">
-                    <rect key="frame" x="134.5" y="23" width="32" height="32"/>
-                </imageView>
-                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="48v-A4-sXP">
-                    <rect key="frame" x="146" y="28" width="20" height="20"/>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="48v-A4-sXP">
+                    <rect key="frame" x="151" y="28" width="20" height="20"/>
                 </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="R2N-3F-oal" firstAttribute="centerY" secondItem="gaY-a8-n3u" secondAttribute="centerY" id="7Dv-yE-kw2"/>
-                <constraint firstItem="gaY-a8-n3u" firstAttribute="leading" secondItem="R2N-3F-oal" secondAttribute="trailing" constant="10" id="LK5-db-9HN"/>
+                <constraint firstItem="gaY-a8-n3u" firstAttribute="leading" secondItem="R2N-3F-oal" secondAttribute="trailing" constant="5" id="LK5-db-9HN"/>
                 <constraint firstItem="gaY-a8-n3u" firstAttribute="centerX" secondItem="5xg-iK-jOH" secondAttribute="centerX" id="UsD-fb-yrp"/>
                 <constraint firstItem="48v-A4-sXP" firstAttribute="bottom" secondItem="gaY-a8-n3u" secondAttribute="bottom" id="Vv4-OS-j3a"/>
                 <constraint firstAttribute="bottom" secondItem="gaY-a8-n3u" secondAttribute="bottom" constant="10" id="m2p-jv-dbe"/>

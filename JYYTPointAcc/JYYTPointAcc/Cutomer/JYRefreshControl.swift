@@ -9,11 +9,11 @@
 import UIKit
 
 enum JYRefreshState {
-    case Normal
-    case Pulling
-    case WillRefresh
+    case Normal            // 普通状态
+    case Pulling           // 如果放手，立即刷新
+    case WillRefresh       //用户超过临界值，并且放手
 }
-let JYRefreshViewHeigh :CGFloat = 40
+let JYRefreshViewHeigh :CGFloat = 60
 
 class JYRefreshControl: UIControl {
 
@@ -60,11 +60,12 @@ class JYRefreshControl: UIControl {
         guard let sv = scrollView else {
              return
         }
-        
         let heigh = -(sv.contentOffset.y+sv.contentInset.top)
+        if heigh < 0 {
+            return
+        }
         
         self.frame = CGRect(x: 0, y: -heigh, width: sv.bounds.width, height: heigh)
-
         //判断临界点，只判断一次
         if sv.isDragging {
             if heigh > JYRefreshViewHeigh && (refreshView.refreshState == .Normal) {
@@ -79,8 +80,9 @@ class JYRefreshControl: UIControl {
         // 放手，判断是否超过临界点
             if refreshView.refreshState == .Pulling {
                  print("准备开始刷新")
-                // 刷新之后将状态修改为nomad 之后才能继续响应刷新
-                refreshView.refreshState = .WillRefresh
+                beginRefreshing()
+                sendActions(for: .valueChanged)
+                
             }
         }
         
@@ -89,23 +91,51 @@ class JYRefreshControl: UIControl {
     }
     
     func beginRefreshing(){
-    
+        print("开始刷新");
+        guard let sv = scrollView else {
+             return
+        }
+        
+        // 判断是否在刷新，如果正在刷新，直接返回
+        if refreshView.refreshState == .WillRefresh {
+            return;
+        }
+        
+        // 刷新之后将状态修改为nomad 之后才能继续响应刷新
+        refreshView.refreshState = .WillRefresh
+        // 让整个刷新视图显示出来
+        var inset = sv.contentInset
+        inset.top += JYRefreshViewHeigh
+        sv.contentInset = inset
+
     }
     func endRefreshing(){
     
+        guard let sv = scrollView else {
+             return
+        }
+        if refreshView.refreshState != .WillRefresh {
+             return
+        }
+        // 恢复刷新状态
+        refreshView.refreshState = .Normal
+        // 恢复表格视图的contentInset
+        var inset = sv.contentInset
+        inset.top -= JYRefreshViewHeigh
+        sv.contentInset = inset
+        
     }
-    
 }
 
 extension JYRefreshControl {
 
     func setupUI(){
-        backgroundColor = UIColor.orange
+        backgroundColor = superview?.backgroundColor
         
-        clipsToBounds = true
+//        clipsToBounds = true
+        
         addSubview(refreshView)
         refreshView.center = center
-        
         refreshView.translatesAutoresizingMaskIntoConstraints = false;
         
         // 中心对齐
