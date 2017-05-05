@@ -11,10 +11,10 @@ import UIKit
 
 class JYNomalRefreshView: UIView {
 
-    @IBOutlet weak var titleLable: UILabel!
-    @IBOutlet weak var icomImageView: UIImageView!
-    @IBOutlet weak var indictior: UIActivityIndicatorView!
-    
+    @IBOutlet weak var titleLable: UILabel?
+    @IBOutlet weak var icomImageView: UIImageView?
+    @IBOutlet weak var indictior: UIActivityIndicatorView?
+    var parentViewHigh: CGFloat  = 0 
     /*
      ios  中旋转动画默认是
      1.顺时针的旋转，
@@ -26,32 +26,33 @@ class JYNomalRefreshView: UIView {
         didSet{
             switch refreshState {
             case .Normal:
-                icomImageView.isHidden = false
-                indictior.stopAnimating()
+                icomImageView?.isHidden = false
+                indictior?.stopAnimating()
                 
-                titleLable.text = "继续使劲拉---"
+                titleLable?.text = "继续使劲拉---"
                 UIView.animate(withDuration: 0.25, animations: { 
-                    self.icomImageView.transform = CGAffineTransform.identity
+                    self.icomImageView?.transform = CGAffineTransform.identity
                 })
                 
             case .Pulling:
-                titleLable.text = "放手就刷新-----"
+                titleLable?.text = "放手就刷新-----"
                 UIView.animate(withDuration: 0.25, animations: { 
-                    self.icomImageView.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi-0.00001))
+                    self.icomImageView?.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi-0.00001))
                 })
                 
             case .WillRefresh:
-                titleLable.text = "正在刷新中----"
+                titleLable?.text = "正在刷新中----"
                 
-                icomImageView.isHidden = true
-                indictior.startAnimating()
+                icomImageView?.isHidden = true
+                indictior?.startAnimating()
                 
         }
             
         }
     }
     class func refreshView()-> JYNomalRefreshView{
-        let nib = UINib.init(nibName: "JYNomalImageRefreshView", bundle: nil)
+        
+        let nib = UINib.init(nibName: "JYAnimationRefreshView", bundle: nil)
         return nib.instantiate(withOwner: nil, options: nil)[0] as! JYNomalRefreshView
     }
     

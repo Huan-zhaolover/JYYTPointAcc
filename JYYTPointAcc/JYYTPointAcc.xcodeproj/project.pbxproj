@@ -43,6 +43,8 @@
 		7DD5E1871EB8C1BD005001A9 /* JYNomalRefreshView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DD5E1861EB8C1BD005001A9 /* JYNomalRefreshView.xib */; };
 		7DD5E1891EB8C522005001A9 /* JYNomalRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD5E1881EB8C522005001A9 /* JYNomalRefreshView.swift */; };
 		7DD5E19E1EBA203F005001A9 /* JYNomalImageRefreshView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DD5E19D1EBA203F005001A9 /* JYNomalImageRefreshView.xib */; };
+		7DD5E1AF1EBB61E0005001A9 /* JYAnimationRefreshView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DD5E1AE1EBB61E0005001A9 /* JYAnimationRefreshView.xib */; };
+		7DD5E1B11EBB6260005001A9 /* JYAnimationRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD5E1B01EBB6260005001A9 /* JYAnimationRefreshView.swift */; };
 		7DD7BCD51E8E513B005369F7 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7BCD31E8E513B005369F7 /* LoginVC.swift */; };
 		7DD7BCD61E8E513B005369F7 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DD7BCD41E8E513B005369F7 /* LoginVC.xib */; };
 		7DD7BCD81E8EA251005369F7 /* VerticalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7BCD71E8EA251005369F7 /* VerticalButton.swift */; };
@@ -123,6 +125,8 @@
 		7DD5E1861EB8C1BD005001A9 /* JYNomalRefreshView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JYNomalRefreshView.xib; sourceTree = "<group>"; };
 		7DD5E1881EB8C522005001A9 /* JYNomalRefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JYNomalRefreshView.swift; sourceTree = "<group>"; };
 		7DD5E19D1EBA203F005001A9 /* JYNomalImageRefreshView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JYNomalImageRefreshView.xib; sourceTree = "<group>"; };
+		7DD5E1AE1EBB61E0005001A9 /* JYAnimationRefreshView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JYAnimationRefreshView.xib; sourceTree = "<group>"; };
+		7DD5E1B01EBB6260005001A9 /* JYAnimationRefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JYAnimationRefreshView.swift; sourceTree = "<group>"; };
 		7DD7BCD31E8E513B005369F7 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		7DD7BCD41E8E513B005369F7 /* LoginVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
 		7DD7BCD71E8EA251005369F7 /* VerticalButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalButton.swift; sourceTree = "<group>"; };
@@ -413,6 +417,8 @@
 				7DD5E1881EB8C522005001A9 /* JYNomalRefreshView.swift */,
 				7DD5E1861EB8C1BD005001A9 /* JYNomalRefreshView.xib */,
 				7DD5E19D1EBA203F005001A9 /* JYNomalImageRefreshView.xib */,
+				7DD5E1B01EBB6260005001A9 /* JYAnimationRefreshView.swift */,
+				7DD5E1AE1EBB61E0005001A9 /* JYAnimationRefreshView.xib */,
 			);
 			path = Cutomer;
 			sourceTree = "<group>";
@@ -547,6 +553,7 @@
 				7D8600401E89F1C0008EA024 /* LeftChoseAccountBookVC.xib in Resources */,
 				7DFF6EC31EAFA0A50052369F /* MyQRCardVC.xib in Resources */,
 				7D86FDBF1E864D4A008EA024 /* Assets.xcassets in Resources */,
+				7DD5E1AF1EBB61E0005001A9 /* JYAnimationRefreshView.xib in Resources */,
 				7DFF6EC51EAFA0A50052369F /* QRScanVC.xib in Resources */,
 				7D86FDBD1E864D4A008EA024 /* Main.storyboard in Resources */,
 				7DD5E19E1EBA203F005001A9 /* JYNomalImageRefreshView.xib in Resources */,
@@ -680,6 +687,7 @@
 				7D7D8C001EA9CF8A0091B491 /* JYBase64.m in Sources */,
 				7DFF6ED51EB1BA3A0052369F /* NoLogView.swift in Sources */,
 				7DD7BCEE1E920BA1005369F7 /* NewFeatureVC.swift in Sources */,
+				7DD5E1B11EBB6260005001A9 /* JYAnimationRefreshView.swift in Sources */,
 				7D8600421E89F909008EA024 /* HomePopOverAnimator.swift in Sources */,
 				7D86FDB81E864D4A008EA024 /* AppDelegate.swift in Sources */,
 				7D8600441E89FC3B008EA024 /* HomeUIPresentationVC.swift in Sources */,

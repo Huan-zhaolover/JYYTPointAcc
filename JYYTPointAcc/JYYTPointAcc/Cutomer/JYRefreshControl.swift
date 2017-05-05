@@ -76,6 +76,8 @@ class JYRefreshControl: UIControl {
                 print("继续使劲拉")
                 refreshView.refreshState = .Normal
             }
+            // 视图传下去，根据高度控制动画
+            refreshView.parentViewHigh = heigh
         }else{
         // 放手，判断是否超过临界点
             if refreshView.refreshState == .Pulling {
