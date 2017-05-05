@@ -46,16 +46,18 @@ extension UIBarButtonItem {
     ///   - target:  target
     ///   - fontsize:   字体，默认16号
     ///   - action: action
-    convenience init (titleStr:String,fontsize:CGFloat = 16.0, target:Any?,action:Selector){
-        let btn = UIButton(frame: CGRect.init(x: 0, y: 0, width: 40, height: 35))
-        btn.titleLabel?.text=titleStr
+    static func itemWithTitle(titleStr:String,fontsize:CGFloat = 16.0, target:Any?,action:Selector) -> UIBarButtonItem{
+        let btn = UIButton(frame: CGRect.init(x: 0, y: 0, width: 60, height: 35))
+//        btn.titleLabel?.text=titleStr
+        
+        btn.setTitle(titleStr, for: .normal)
         btn.addTarget(target, action: action, for: .touchUpInside)
         btn.titleLabel?.font=UIFont.systemFont(ofSize: fontsize)
         btn.titleLabel?.textAlignment=NSTextAlignment.center
         btn.setTitleColor(UIColor.init(red: 51, green: 51, blue: 51, alpha: 1), for: .normal)
         btn.setTitleColor(UIColor.init(red: 51, green: 51, blue: 51, alpha: 1), for: .highlighted)
-        
-        self.init(customView: btn)
+
+        return UIBarButtonItem.init(customView: btn)
     }
     /// 设置文字button，里面设置字体大小颜色，高亮颜色
 //    class func itemWithTitle(titleStr:String,target:Any?,action:Selector) -> UIBarButtonItem{

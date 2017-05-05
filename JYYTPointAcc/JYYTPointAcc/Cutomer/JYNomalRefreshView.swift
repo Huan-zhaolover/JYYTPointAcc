@@ -42,7 +42,6 @@ class JYNomalRefreshView: UIView {
                 
             case .WillRefresh:
                 titleLable?.text = "正在刷新中----"
-                
                 icomImageView?.isHidden = true
                 indictior?.startAnimating()
                 
@@ -51,8 +50,8 @@ class JYNomalRefreshView: UIView {
         }
     }
     class func refreshView()-> JYNomalRefreshView{
-        
-        let nib = UINib.init(nibName: "JYAnimationRefreshView", bundle: nil)
+        // JYNomalRefreshView  JYNomalImageRefreshView  JYAnimationRefreshView
+        let nib = UINib.init(nibName: "JYNomalRefreshView", bundle: nil)
         return nib.instantiate(withOwner: nil, options: nil)[0] as! JYNomalRefreshView
     }
     

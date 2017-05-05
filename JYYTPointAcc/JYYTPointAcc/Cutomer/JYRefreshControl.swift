@@ -31,7 +31,6 @@ class JYRefreshControl: UIControl {
         setupUI()
     }
     
-    
     /// addSubview 会调用 willMove方法，
     /// 当添加到父视图的时候，newSuperview是父视图
     /// 当父视图被移除的时候， newSuperview 为nil
@@ -87,9 +86,6 @@ class JYRefreshControl: UIControl {
                 
             }
         }
-        
-        
-    
     }
     
     func beginRefreshing(){
@@ -112,7 +108,6 @@ class JYRefreshControl: UIControl {
 
     }
     func endRefreshing(){
-    
         guard let sv = scrollView else {
              return
         }
@@ -130,7 +125,6 @@ class JYRefreshControl: UIControl {
 }
 
 extension JYRefreshControl {
-
     func setupUI(){
         backgroundColor = superview?.backgroundColor
         

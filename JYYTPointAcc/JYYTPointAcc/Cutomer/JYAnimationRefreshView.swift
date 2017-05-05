@@ -13,7 +13,7 @@ class JYAnimationRefreshView: JYNomalRefreshView {
     @IBOutlet weak var bulidingIconView: UIImageView!
     @IBOutlet weak var earthIconView: UIImageView!
     @IBOutlet weak var kangronIconView: UIImageView!
-   
+    
     override var parentViewHigh: CGFloat {
         didSet{
             print("\(parentViewHigh)")
@@ -33,7 +33,6 @@ class JYAnimationRefreshView: JYNomalRefreshView {
             }
             kangronIconView.transform = CGAffineTransform(scaleX: scale, y: scale)
         }
-        
     }
     override func awakeFromNib() {
         
@@ -57,12 +56,5 @@ class JYAnimationRefreshView: JYNomalRefreshView {
         let y = self.bounds.height - 23
         kangronIconView.center = CGPoint(x: x, y: y)
         kangronIconView.transform = CGAffineTransform(scaleX: 0.2, y: 0.2)
-        
-        
-        
     }
-    
-    
-    
-
 }
