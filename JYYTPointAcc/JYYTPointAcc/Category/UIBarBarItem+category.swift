@@ -8,6 +8,11 @@
 
 import UIKit
 
+enum BarItemType {
+    case Right
+    case Left
+}
+
 extension UIBarButtonItem {
     /// 设置主题颜色
     class func setTheBarTintColor(color:UIColor){
@@ -46,30 +51,21 @@ extension UIBarButtonItem {
     ///   - target:  target
     ///   - fontsize:   字体，默认16号
     ///   - action: action
-    static func itemWithTitle(titleStr:String,fontsize:CGFloat = 16.0, target:Any?,action:Selector) -> UIBarButtonItem{
-        let btn = UIButton(frame: CGRect.init(x: 0, y: 0, width: 60, height: 35))
-//        btn.titleLabel?.text=titleStr
+    static func itemWithTitle(itemType:BarItemType, titleStr:String,fontsize:CGFloat = 16.0, target:Any?,action:Selector) -> UIBarButtonItem{
         
+        let font = UIFont.systemFont(ofSize: fontsize)
+        let width = titleStr.sizeWithFont(fontsize: fontsize)
+        
+        let btn = UIButton(frame: CGRect.init(x: 0, y: 0, width: width.width, height: 35))
         btn.setTitle(titleStr, for: .normal)
         btn.addTarget(target, action: action, for: .touchUpInside)
-        btn.titleLabel?.font=UIFont.systemFont(ofSize: fontsize)
-        btn.titleLabel?.textAlignment=NSTextAlignment.center
-        btn.setTitleColor(UIColor.init(red: 51, green: 51, blue: 51, alpha: 1), for: .normal)
-        btn.setTitleColor(UIColor.init(red: 51, green: 51, blue: 51, alpha: 1), for: .highlighted)
+        btn.titleLabel?.font = font
+        btn.titleLabel?.textAlignment = (itemType == .Right) ? .right:.left
+        btn.setTitleColor(UIColor.RGB(149, 69, 20), for: .normal)
 
+        btn.setTitleColor(UIColor.init(red: 51, green: 51, blue: 51, alpha: 1), for: .highlighted)
+        btn.sizeToFit()
         return UIBarButtonItem.init(customView: btn)
     }
-    /// 设置文字button，里面设置字体大小颜色，高亮颜色
-//    class func itemWithTitle(titleStr:String,target:Any?,action:Selector) -> UIBarButtonItem{
-//        let btn = UIButton(frame: CGRect.init(x: 0, y: 0, width: 40, height: 35))
-//        btn.titleLabel?.text=titleStr
-//        btn.addTarget(target, action: action, for: .touchUpInside)
-//        btn.titleLabel?.font=UIFont.systemFont(ofSize: 16)
-//        btn.titleLabel?.textAlignment=NSTextAlignment.center
-//        btn.setTitleColor(UIColor.init(red: 51, green: 51, blue: 51, alpha: 1), for: .normal)
-//        btn.setTitleColor(UIColor.init(red: 51, green: 51, blue: 51, alpha: 1), for: .highlighted)
-//        
-//        return UIBarButtonItem.init(customView: btn)
-//    }
     
 }

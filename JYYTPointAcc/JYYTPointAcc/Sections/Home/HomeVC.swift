@@ -64,8 +64,8 @@ extension HomeVC {
     //MARK: ---------------设置NavBar
     func  setHomeNavBars(){
         if isHadLoggin {
-            navItem.leftBarButtonItem = UIBarButtonItem.itemWithTitle(titleStr: "账本", target: self, action: #selector(changeAccoountBook))
-            navItem.rightBarButtonItem = UIBarButtonItem(title: "消息", style: .plain, target: self, action: #selector(messageList))
+            navItem.leftBarButtonItem = UIBarButtonItem.itemWithTitle(itemType: .Left, titleStr: "账本", target: self, action: #selector(changeAccoountBook))
+            navItem.rightBarButtonItem = UIBarButtonItem.itemWithTitle(itemType: .Right, titleStr: "消息", target: self, action: #selector(messageList))
         }else{
             setNavgationBarNoLogedItems()
         }

@@ -69,6 +69,7 @@ extension  AppDelegate{
         return MainViewController()
          // FIXME: 引导页，欢迎界面，在main里面设置。
     }
+    
     func changeRoot(noti:NSNotification){
         window?.rootViewController=MainViewController()
     }

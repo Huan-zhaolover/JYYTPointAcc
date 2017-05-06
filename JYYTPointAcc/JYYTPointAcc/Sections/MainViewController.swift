@@ -15,8 +15,8 @@ class MainViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tabBar.tintColor=UIColor.orange
-        UINavigationBar.appearance().tintColor=UIColor.orange
+        tabBar.tintColor=NavColor
+//        UINavigationBar.appearance().tintColor=UIColor.orange
         
         addSelfChildViewController(childVC: HomeVC(), title: "首页", imageString: "home_tabbar_fp")
         addSelfChildViewController(childVC: BillListVC(), title: "账单", imageString: "home_tabbar_zd")
@@ -79,7 +79,7 @@ extension MainViewController :UITabBarControllerDelegate{
         
         
         // 设置tabbar 标题的大小，颜色 大小默认是12号字体
-        childVC.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName:UIColor.orange], for: .normal)
+        childVC.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName:NavTitleColor], for: .normal)
         childVC.tabBarItem.setTitleTextAttributes([NSFontAttributeName:UIFont.systemFont(ofSize: 13)], for: .normal)
         addChildViewController(childVC)
     }

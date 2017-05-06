@@ -28,8 +28,7 @@ class JYNavigationController: UINavigationController {
                 title = childViewControllers.first?.title ?? "返回"
                 viewController.hidesBottomBarWhenPushed = true
             }
-            
-            vc.navItem.leftBarButtonItem = UIBarButtonItem.itemWithTitle(titleStr: title, target: self, action: #selector(goBack))
+            vc.navItem.leftBarButtonItem = UIBarButtonItem.itemWithTitle(itemType: .Left, titleStr: title, target: self, action: #selector(goBack))
         }
         
         super.pushViewController(viewController, animated: animated)

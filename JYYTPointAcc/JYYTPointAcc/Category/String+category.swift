@@ -8,6 +8,7 @@
 
 import UIKit
 
+// MARK: - 类方法
 extension String {
 
     /**
@@ -50,4 +51,19 @@ extension String {
     
     }
 
+}
+
+// MARK: - 对象方法
+extension String {
+
+    func sizeWithFont(fontsize:CGFloat,maxWidth:CGFloat = CGFloat.greatestFiniteMagnitude)->(CGSize){
+
+        let font  = UIFont.systemFont(ofSize: fontsize)
+        let attibute = [NSFontAttributeName:font];
+        var size = CGRect()
+        let size2 = CGSize(width: maxWidth, height: 0)//设置label的最大宽度
+        size = self.boundingRect(with: size2, options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: attibute , context: nil);
+        return size.size;
+        
+    }
 }
