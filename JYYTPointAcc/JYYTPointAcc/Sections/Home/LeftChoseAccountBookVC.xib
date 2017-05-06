@@ -1,11 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LeftChoseAccountBookVC" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LeftChoseAccountBookVC" customModule="JYYTPointAcc" customModuleProvider="target">
             <connections>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -14,7 +18,41 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TVs-iZ-w5L">
+                    <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxE-I7-zhW">
+                            <rect key="frame" x="109.5" y="15" width="31" height="30"/>
+                            <state key="normal" title="编辑"/>
+                            <connections>
+                                <action selector="editButtonClick:" destination="-1" eventType="touchUpInside" id="wTY-L2-A2R"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PuV-IY-kpw">
+                            <rect key="frame" x="266" y="15" width="31" height="30"/>
+                            <state key="normal" title="新建"/>
+                            <connections>
+                                <action selector="newButtonClick:" destination="-1" eventType="touchUpInside" id="lNq-MH-C0I"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="centerX" secondItem="PuV-IY-kpw" secondAttribute="centerX" multiplier="2/3" id="4Kb-ID-1vT"/>
+                        <constraint firstAttribute="height" constant="60" id="BFw-te-seV"/>
+                        <constraint firstItem="kxE-I7-zhW" firstAttribute="centerX" secondItem="TVs-iZ-w5L" secondAttribute="centerX" multiplier="2/3" id="KQK-IZ-OZa"/>
+                        <constraint firstItem="kxE-I7-zhW" firstAttribute="centerY" secondItem="TVs-iZ-w5L" secondAttribute="centerY" id="M30-1i-IHI"/>
+                        <constraint firstItem="PuV-IY-kpw" firstAttribute="centerY" secondItem="TVs-iZ-w5L" secondAttribute="centerY" id="v4D-dd-pzO"/>
+                    </constraints>
+                </view>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="TVs-iZ-w5L" secondAttribute="bottom" id="A74-MQ-440"/>
+                <constraint firstItem="TVs-iZ-w5L" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Ahy-Gr-5on"/>
+                <constraint firstAttribute="trailing" secondItem="TVs-iZ-w5L" secondAttribute="trailing" id="zeZ-Sn-p6f"/>
+            </constraints>
         </view>
     </objects>
 </document>

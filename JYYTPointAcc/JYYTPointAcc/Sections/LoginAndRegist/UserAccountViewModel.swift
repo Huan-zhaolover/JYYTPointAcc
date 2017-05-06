@@ -11,6 +11,7 @@ import SwiftyJSON
 
 class UserAccountViewModel {
     static let shareIntance : UserAccountViewModel = UserAccountViewModel()
+    
     var userInfo = realm.objects(JYUserInfomation.self).first
     var isLogin : Bool {
         return userInfo != nil
@@ -34,7 +35,7 @@ extension UserAccountViewModel {
                                     "password":apassword ?? "",
                                     "devicesType":"1",
                                     ]
-        ALamoNetworkTool.netWorkTools.tokenRequest(type: .GET, url: "app/loginByEncry.htm?", parameters: prama, isneedEncryToken: false, needNetWorkTip: false) { (respon, error) in
+        ALamoNetworkTool.netWorkTools.tokenRequest(type: .GET, url: "app/loginByEncry.htm?", parameters: prama, needNetWorkTip: false) { (respon, error) in
             
             if  error != nil {
                 JYPrint(error)

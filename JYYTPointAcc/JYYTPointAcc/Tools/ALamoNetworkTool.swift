@@ -73,11 +73,26 @@ extension  ALamoNetworkTool {
         // |
         
         var tokenDic : [String:Any] = [:]
-        if isneedEncryToken {
-            tokenDic["token"] = UserAccountViewModel.shareIntance.userInfo?.appkey // 登录返回的token
-        }else{
+        
+//        if isneedEncryToken {
+//            tokenDic["token"] = UserAccountViewModel.shareIntance.userInfo?.appkey // 登录返回的token
+//        }else{
+//            let aency = APPSecreat + "|".appending(Date.nowTimeDetail())
+//            tokenDic["token"] = NSString.encrypt(aency)!
+//        }
+        if url == "app/loginByEncry.htm?" {
+//            tokenDic["appkey"] = appkey // 登录返回的token
             let aency = APPSecreat + "|".appending(Date.nowTimeDetail())
             tokenDic["token"] = NSString.encrypt(aency)!
+        }else{
+            if let uesr = UserAccountViewModel.shareIntance.userInfo {
+                let appkey = uesr.appkey
+                tokenDic["token"] = appkey // 登录返回的token
+                
+            }else{
+                let aency = APPSecreat + "|".appending(Date.nowTimeDetail())
+                tokenDic["token"] = NSString.encrypt(aency)!
+            }
         }
         
         if needNetWorkTip {

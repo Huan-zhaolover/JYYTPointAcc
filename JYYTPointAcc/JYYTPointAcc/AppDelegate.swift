@@ -23,17 +23,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         realm = setDatamigration()
         JYPrint(realm.configuration.fileURL)   // realm 数据库路径
- 
+
         window=UIWindow(frame: UIScreen.main.bounds)
         window?.backgroundColor=UIColor.white
         window?.rootViewController =  defaultContoller()
         window?.makeKeyAndVisible()
         
-        autoLog()
         startListenNetwork()
+        
+        autoLog()  // 等其他登录之后再登录，登录之后token切换
         return true
     }
-    
        deinit {
         NotificationCenter.default.removeObserver(self)
     }

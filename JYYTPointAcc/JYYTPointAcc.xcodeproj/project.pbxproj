@@ -45,6 +45,11 @@
 		7DD5E19E1EBA203F005001A9 /* JYNomalImageRefreshView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DD5E19D1EBA203F005001A9 /* JYNomalImageRefreshView.xib */; };
 		7DD5E1AF1EBB61E0005001A9 /* JYAnimationRefreshView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DD5E1AE1EBB61E0005001A9 /* JYAnimationRefreshView.xib */; };
 		7DD5E1B11EBB6260005001A9 /* JYAnimationRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD5E1B01EBB6260005001A9 /* JYAnimationRefreshView.swift */; };
+		7DD5E1C01EBD8DCB005001A9 /* AccBookListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD5E1BF1EBD8DCB005001A9 /* AccBookListVM.swift */; };
+		7DD5E1C21EBD8EE6005001A9 /* AccBookVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD5E1C11EBD8EE6005001A9 /* AccBookVM.swift */; };
+		7DD5E1C51EBD8F31005001A9 /* AccountBookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD5E1C41EBD8F31005001A9 /* AccountBookModel.swift */; };
+		7DD5E1C71EBD90E6005001A9 /* AccStatisticsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD5E1C61EBD90E6005001A9 /* AccStatisticsModel.swift */; };
+		7DD5E1C91EBD922F005001A9 /* AccountPartenrModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD5E1C81EBD922F005001A9 /* AccountPartenrModel.swift */; };
 		7DD7BCD51E8E513B005369F7 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7BCD31E8E513B005369F7 /* LoginVC.swift */; };
 		7DD7BCD61E8E513B005369F7 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DD7BCD41E8E513B005369F7 /* LoginVC.xib */; };
 		7DD7BCD81E8EA251005369F7 /* VerticalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7BCD71E8EA251005369F7 /* VerticalButton.swift */; };
@@ -127,6 +132,11 @@
 		7DD5E19D1EBA203F005001A9 /* JYNomalImageRefreshView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JYNomalImageRefreshView.xib; sourceTree = "<group>"; };
 		7DD5E1AE1EBB61E0005001A9 /* JYAnimationRefreshView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JYAnimationRefreshView.xib; sourceTree = "<group>"; };
 		7DD5E1B01EBB6260005001A9 /* JYAnimationRefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JYAnimationRefreshView.swift; sourceTree = "<group>"; };
+		7DD5E1BF1EBD8DCB005001A9 /* AccBookListVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccBookListVM.swift; sourceTree = "<group>"; };
+		7DD5E1C11EBD8EE6005001A9 /* AccBookVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccBookVM.swift; sourceTree = "<group>"; };
+		7DD5E1C41EBD8F31005001A9 /* AccountBookModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountBookModel.swift; sourceTree = "<group>"; };
+		7DD5E1C61EBD90E6005001A9 /* AccStatisticsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccStatisticsModel.swift; sourceTree = "<group>"; };
+		7DD5E1C81EBD922F005001A9 /* AccountPartenrModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountPartenrModel.swift; sourceTree = "<group>"; };
 		7DD7BCD31E8E513B005369F7 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		7DD7BCD41E8E513B005369F7 /* LoginVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
 		7DD7BCD71E8EA251005369F7 /* VerticalButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalButton.swift; sourceTree = "<group>"; };
@@ -371,6 +381,8 @@
 			isa = PBXGroup;
 			children = (
 				7D86FE291E8909CF008EA024 /* HomeVC.swift */,
+				7DD5E1C31EBD8F13005001A9 /* Model */,
+				7DD5E1BE1EBD8CEC005001A9 /* ViewModel */,
 				7D4BAEB21E8A37D900CE86C3 /* leftDrop */,
 			);
 			path = Home;
@@ -390,6 +402,25 @@
 				7D86FE261E890954008EA024 /* PartnerVC.swift */,
 			);
 			path = PartnerVC;
+			sourceTree = "<group>";
+		};
+		7DD5E1BE1EBD8CEC005001A9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7DD5E1BF1EBD8DCB005001A9 /* AccBookListVM.swift */,
+				7DD5E1C11EBD8EE6005001A9 /* AccBookVM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7DD5E1C31EBD8F13005001A9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7DD5E1C41EBD8F31005001A9 /* AccountBookModel.swift */,
+				7DD5E1C61EBD90E6005001A9 /* AccStatisticsModel.swift */,
+				7DD5E1C81EBD922F005001A9 /* AccountPartenrModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		7DD7BCEA1E920B0B005369F7 /* NewFeature */ = {
@@ -672,6 +703,8 @@
 				7D97D4001EA5EFE700A8D7BF /* AFNNetWorkTool.swift in Sources */,
 				7D3227E71EB563A7004A666C /* textOCVC.m in Sources */,
 				7D7D8C031EA9D2270091B491 /* NSString+NSString_MD5.m in Sources */,
+				7DD5E1C21EBD8EE6005001A9 /* AccBookVM.swift in Sources */,
+				7DD5E1C01EBD8DCB005001A9 /* AccBookListVM.swift in Sources */,
 				7DFF6ED81EB1C33F0052369F /* BaseTableController.swift in Sources */,
 				7DD7BCE01E8F7922005369F7 /* NSDate+category.swift in Sources */,
 				7DFF6EC41EAFA0A50052369F /* QRScanVC.swift in Sources */,
@@ -693,6 +726,7 @@
 				7D8600441E89FC3B008EA024 /* HomeUIPresentationVC.swift in Sources */,
 				7D86FE1D1E889B83008EA024 /* BaseViewController.swift in Sources */,
 				7DD5E1891EB8C522005001A9 /* JYNomalRefreshView.swift in Sources */,
+				7DD5E1C91EBD922F005001A9 /* AccountPartenrModel.swift in Sources */,
 				7D3227E11EB440B8004A666C /* UIImageView+category.swift in Sources */,
 				7D3227E41EB56390004A666C /* textSwiftVC.swift in Sources */,
 				7DFF6EC21EAFA0A50052369F /* MyQRCardVC.swift in Sources */,
@@ -703,7 +737,9 @@
 				7D86FE281E890954008EA024 /* PartnerVC.swift in Sources */,
 				7DD7BCDA1E8F65CD005369F7 /* UIColor+category.swift in Sources */,
 				7DD7BCD51E8E513B005369F7 /* LoginVC.swift in Sources */,
+				7DD5E1C71EBD90E6005001A9 /* AccStatisticsModel.swift in Sources */,
 				7D7D8BE91EA84A190091B491 /* ALamoNetworkTool.swift in Sources */,
+				7DD5E1C51EBD8F31005001A9 /* AccountBookModel.swift in Sources */,
 				7D7D8BED1EA883B10091B491 /* UIImage+category.swift in Sources */,
 				7D2A935E1EAF3E0A00ED43A2 /* AppDelegate+Realm.swift in Sources */,
 				7D7D8C081EAAF9230091B491 /* JYNavigationController.swift in Sources */,

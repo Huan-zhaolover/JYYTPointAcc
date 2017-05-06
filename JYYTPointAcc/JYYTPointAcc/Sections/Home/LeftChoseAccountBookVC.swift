@@ -12,7 +12,7 @@ class LeftChoseAccountBookVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.red
+//        view.backgroundColor = UIColor.red
         // Do any additional setup after loading the view.
     }
 
@@ -20,8 +20,15 @@ class LeftChoseAccountBookVC: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    // 编辑账本
+    @IBAction func editButtonClick(_ sender: Any) {
+    }
+   // 新建账本
+     @IBAction func newButtonClick(_ sender: Any) {
     
-
+    }
+    
+ 
     /*
     // MARK: - Navigation
 
@@ -33,3 +40,8 @@ class LeftChoseAccountBookVC: UIViewController {
     */
 
 }
+extension LeftChoseAccountBookVC{
+
+    
+}
+

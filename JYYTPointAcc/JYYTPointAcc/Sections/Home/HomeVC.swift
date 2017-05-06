@@ -10,7 +10,9 @@ import UIKit
 private let cellid = "cellID"  //  定义全局常量，使用Private 修饰
 class HomeVC: BaseTableController{
     // private
-     lazy var homeAnimatir : HomePopOverAnimator = HomePopOverAnimator()
+    lazy var homeAnimatir : HomePopOverAnimator = HomePopOverAnimator()
+    let accListVM = AccBookListVM.shareAccListVM
+    
     var  count  = 21
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +21,8 @@ class HomeVC: BaseTableController{
         if user==nil {
             nologvvv.addRotationAnimation()
         }
+        loadList()
+        
     }
     // 重写父类调用数据
     override func loadData() {
@@ -37,22 +41,15 @@ class HomeVC: BaseTableController{
             self.tableView?.reloadData()
             
         }
-//        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) { 
-//            JYPrint("延迟加载")
-//            if self.isPullup {
-//            // 上拉刷新，加载数据后面
-//            }else {
-//                // 下拉刷新，拼接数据在前面
-//            }
-//            
-//            // 停止刷新，恢复刷新状态，刷新表格数据
-//            self.refreshControl?.endRefreshing()
-//            self.isPullup = false
-//            self.tableView?.reloadData()
-//            
-//        }
         
     }
+    
+    func  loadList(){
+        accListVM.loadAccBookList()
+        
+    }
+    
+    
 }
 extension HomeVC {
 
@@ -73,11 +70,10 @@ extension HomeVC {
     //MARK: ---------------设置NavBar 的点击
     /// 切换账本
     @objc func changeAccoountBook(){
+        
         let vc =  LeftChoseAccountBookVC()
         vc.modalPresentationStyle = .custom
-        
         vc.transitioningDelegate = homeAnimatir
-        
         present(vc, animated: true, completion:nil)
     }
     /// 查看消息
