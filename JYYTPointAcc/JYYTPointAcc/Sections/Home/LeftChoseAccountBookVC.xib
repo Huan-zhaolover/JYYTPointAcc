@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LeftChoseAccountBookVC" customModule="JYYTPointAcc" customModuleProvider="target">
             <connections>
+                <outlet property="theTableView" destination="Xgn-0o-pZv" id="i26-o1-GBh"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -46,11 +47,23 @@
                         <constraint firstItem="PuV-IY-kpw" firstAttribute="centerY" secondItem="TVs-iZ-w5L" secondAttribute="centerY" id="v4D-dd-pzO"/>
                     </constraints>
                 </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Xgn-0o-pZv">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="607"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Ham-Uh-b5L"/>
+                        <outlet property="delegate" destination="-1" id="qN5-JB-R1E"/>
+                    </connections>
+                </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="Xgn-0o-pZv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="5nG-ee-B0I"/>
                 <constraint firstAttribute="bottom" secondItem="TVs-iZ-w5L" secondAttribute="bottom" id="A74-MQ-440"/>
                 <constraint firstItem="TVs-iZ-w5L" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Ahy-Gr-5on"/>
+                <constraint firstItem="Xgn-0o-pZv" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="EBx-0F-wIS"/>
+                <constraint firstItem="TVs-iZ-w5L" firstAttribute="top" secondItem="Xgn-0o-pZv" secondAttribute="bottom" id="Onu-aG-u39"/>
+                <constraint firstAttribute="trailing" secondItem="Xgn-0o-pZv" secondAttribute="trailing" id="ufY-hW-oyz"/>
                 <constraint firstAttribute="trailing" secondItem="TVs-iZ-w5L" secondAttribute="trailing" id="zeZ-Sn-p6f"/>
             </constraints>
         </view>

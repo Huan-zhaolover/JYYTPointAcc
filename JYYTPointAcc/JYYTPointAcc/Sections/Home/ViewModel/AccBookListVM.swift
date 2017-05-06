@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class AccBookListVM {
     
@@ -15,7 +16,7 @@ class AccBookListVM {
 }
 extension AccBookListVM{
 
-    func loadAccBookList(){
+    func loadAccBookList(complection:@escaping (_ isSuccess:Bool,_ viewModels:Array<Any>?)->()){
         
         let person_id = UserAccountViewModel.shareIntance.userInfo?.person_id
         let mobile = UserAccountViewModel.shareIntance.userInfo?.mobile
@@ -26,8 +27,23 @@ extension AccBookListVM{
         
         ALamoNetworkTool.netWorkTools.tokenRequest(type: .GET, url: "app/sys/listBooksData.htm?", parameters: prama,needNetWorkTip: false) { (respon, error) in
             
-            JYPrint(respon)
-            
+            if error != nil{
+                complection(false,nil);
+                return
+            }
+            let responJson = JSON(respon!)
+            var models = Array<Any>()
+            if let accs = responJson["data"].arrayObject {
+                for aAcc in accs {
+                    let Account =  AccountBookModel.init(value: aAcc)
+                    let accviewmolde = AccBookVM.init(accBookmodel: Account)
+                    models.append(accviewmolde)
+                }
+                complection(true,models);
+            }else{
+                // 数组为空
+                complection(false,nil);
+            }
         }
         
     }

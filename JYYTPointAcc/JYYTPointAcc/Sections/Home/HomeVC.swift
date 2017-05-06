@@ -11,8 +11,20 @@ private let cellid = "cellID"  //  定义全局常量，使用Private 修饰
 class HomeVC: BaseTableController{
     // private
     lazy var homeAnimatir : HomePopOverAnimator = HomePopOverAnimator()
-    let accListVM = AccBookListVM.shareAccListVM
+    lazy var dataArray :Array = Array<Any>()
     
+    let accListVM = AccBookListVM.shareAccListVM
+    // MARK:-----加载账本详情
+    var accViewModel:AccBookVM?{
+        didSet{
+            accViewModel?.loadAccounDetailRequest(complection: { [weak self] (isSucess) in
+                if isSucess {
+                    self?.tableView?.reloadData()
+                    
+                }
+            })
+        }
+    }
     var  count  = 21
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +34,6 @@ class HomeVC: BaseTableController{
             nologvvv.addRotationAnimation()
         }
         loadList()
-        
     }
     // 重写父类调用数据
     override func loadData() {
@@ -43,9 +54,21 @@ class HomeVC: BaseTableController{
         }
         
     }
-    
+    // MARK:-----加载账本列表
     func  loadList(){
-        accListVM.loadAccBookList()
+        
+        accListVM.loadAccBookList { (isSucces, viewmodes) in
+            
+            if !isSucces {
+                return;
+            }
+            self.accViewModel = viewmodes?[0] as? AccBookVM
+
+            self.dataArray.removeAll()
+            self.dataArray += viewmodes!
+            JYPrint(viewmodes);
+            
+        }
         
     }
     
@@ -81,9 +104,7 @@ extension HomeVC {
         let  vc  = QRScanVC()
         navigationController?.pushViewController(vc, animated: true)
     }
-    
 }
-
 extension HomeVC {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

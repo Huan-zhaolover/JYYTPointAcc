@@ -117,17 +117,16 @@ extension  ALamoNetworkTool {
         request(type: type, url: totlalUrl, parameters: tokenDic, complection: complection)
     
     }
-}
-// MARK: - -----------------封装的网络请求 GET POST
-extension  ALamoNetworkTool {
-    func request(type:AlaRequestType,url:String,parameters:[String:Any],complection:@escaping (_ result:Any?,_ error:Error?)->()){
+    
+    // MARK: - -----------------封装的网络请求 GET POST
+    private func request(type:AlaRequestType,url:String,parameters:[String:Any],complection:@escaping (_ result:Any?,_ error:Error?)->()){
         var alaType:HTTPMethod
         if (type == .GET) {
-              alaType = .get;
+            alaType = .get;
         }else{
             alaType = .post;
         }
-
+        
         Alamofire.request(url, method: alaType, parameters: parameters).responseJSON { (response) in
             switch response.result {
             case .success:

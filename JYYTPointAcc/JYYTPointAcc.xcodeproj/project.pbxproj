@@ -40,6 +40,8 @@
 		7D86FE281E890954008EA024 /* PartnerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D86FE261E890954008EA024 /* PartnerVC.swift */; };
 		7D86FE2A1E8909CF008EA024 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D86FE291E8909CF008EA024 /* HomeVC.swift */; };
 		7D97D4001EA5EFE700A8D7BF /* AFNNetWorkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D97D3FF1EA5EFE700A8D7BF /* AFNNetWorkTool.swift */; };
+		7DBDC8881EBDBCD80029E559 /* HomeListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDC8861EBDBCD80029E559 /* HomeListCell.swift */; };
+		7DBDC8891EBDBCD80029E559 /* HomeListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DBDC8871EBDBCD80029E559 /* HomeListCell.xib */; };
 		7DD5E1871EB8C1BD005001A9 /* JYNomalRefreshView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DD5E1861EB8C1BD005001A9 /* JYNomalRefreshView.xib */; };
 		7DD5E1891EB8C522005001A9 /* JYNomalRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD5E1881EB8C522005001A9 /* JYNomalRefreshView.swift */; };
 		7DD5E19E1EBA203F005001A9 /* JYNomalImageRefreshView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DD5E19D1EBA203F005001A9 /* JYNomalImageRefreshView.xib */; };
@@ -127,6 +129,8 @@
 		7D86FE261E890954008EA024 /* PartnerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartnerVC.swift; sourceTree = "<group>"; };
 		7D86FE291E8909CF008EA024 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		7D97D3FF1EA5EFE700A8D7BF /* AFNNetWorkTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFNNetWorkTool.swift; sourceTree = "<group>"; };
+		7DBDC8861EBDBCD80029E559 /* HomeListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeListCell.swift; sourceTree = "<group>"; };
+		7DBDC8871EBDBCD80029E559 /* HomeListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeListCell.xib; sourceTree = "<group>"; };
 		7DD5E1861EB8C1BD005001A9 /* JYNomalRefreshView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JYNomalRefreshView.xib; sourceTree = "<group>"; };
 		7DD5E1881EB8C522005001A9 /* JYNomalRefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JYNomalRefreshView.swift; sourceTree = "<group>"; };
 		7DD5E19D1EBA203F005001A9 /* JYNomalImageRefreshView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JYNomalImageRefreshView.xib; sourceTree = "<group>"; };
@@ -381,9 +385,10 @@
 			isa = PBXGroup;
 			children = (
 				7D86FE291E8909CF008EA024 /* HomeVC.swift */,
-				7DD5E1C31EBD8F13005001A9 /* Model */,
-				7DD5E1BE1EBD8CEC005001A9 /* ViewModel */,
 				7D4BAEB21E8A37D900CE86C3 /* leftDrop */,
+				7DD5E1BE1EBD8CEC005001A9 /* ViewModel */,
+				7DBDC8851EBDBC990029E559 /* View */,
+				7DD5E1C31EBD8F13005001A9 /* Model */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -402,6 +407,15 @@
 				7D86FE261E890954008EA024 /* PartnerVC.swift */,
 			);
 			path = PartnerVC;
+			sourceTree = "<group>";
+		};
+		7DBDC8851EBDBC990029E559 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7DBDC8861EBDBCD80029E559 /* HomeListCell.swift */,
+				7DBDC8871EBDBCD80029E559 /* HomeListCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		7DD5E1BE1EBD8CEC005001A9 /* ViewModel */ = {
@@ -583,6 +597,7 @@
 				7DFF6ECF1EB1AC490052369F /* WelcomeView.xib in Resources */,
 				7D8600401E89F1C0008EA024 /* LeftChoseAccountBookVC.xib in Resources */,
 				7DFF6EC31EAFA0A50052369F /* MyQRCardVC.xib in Resources */,
+				7DBDC8891EBDBCD80029E559 /* HomeListCell.xib in Resources */,
 				7D86FDBF1E864D4A008EA024 /* Assets.xcassets in Resources */,
 				7DD5E1AF1EBB61E0005001A9 /* JYAnimationRefreshView.xib in Resources */,
 				7DFF6EC51EAFA0A50052369F /* QRScanVC.xib in Resources */,
@@ -704,6 +719,7 @@
 				7D3227E71EB563A7004A666C /* textOCVC.m in Sources */,
 				7D7D8C031EA9D2270091B491 /* NSString+NSString_MD5.m in Sources */,
 				7DD5E1C21EBD8EE6005001A9 /* AccBookVM.swift in Sources */,
+				7DBDC8881EBDBCD80029E559 /* HomeListCell.swift in Sources */,
 				7DD5E1C01EBD8DCB005001A9 /* AccBookListVM.swift in Sources */,
 				7DFF6ED81EB1C33F0052369F /* BaseTableController.swift in Sources */,
 				7DD7BCE01E8F7922005369F7 /* NSDate+category.swift in Sources */,

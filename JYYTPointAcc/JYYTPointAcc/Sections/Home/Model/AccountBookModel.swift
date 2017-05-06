@@ -15,7 +15,7 @@ class AccountBookModel: Object {
     dynamic var photo_path = ""   // 账本背景图片，取本地图片
     dynamic var path = ""         // 图片name
     dynamic var name = ""         //账本name
-    dynamic var partner_count = "" //伙伴的count
+    dynamic var partner_count = 0 //伙伴的count
     dynamic var templet_id = ""   //账本模版ID
     dynamic var templet_name = ""   //账本模版name
     dynamic var is_admin = true     //是不是拥有者
@@ -23,7 +23,7 @@ class AccountBookModel: Object {
 
  
     dynamic var booksStatis : AccStatisticsModel?  //账本统计数据
-    let partners = List<AccountPartenrModel>()      //账本中的伙伴
+//    let partners = List<AccountPartenrModel>()      //账本中的伙伴
     dynamic var uniqueCode = ""   // 唯一标识
     
     override static func primaryKey() -> String? {

@@ -31,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         startListenNetwork()
         
-        autoLog()  // 等其他登录之后再登录，登录之后token切换
+//        autoLog()  // 等其他登录之后再登录，登录之后token切换
         return true
     }
        deinit {
