@@ -57,15 +57,20 @@ class LeftChoseAccountBookVC: UIViewController {
 }
 extension LeftChoseAccountBookVC : UITableViewDataSource,UITableViewDelegate{
    
-     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
          return dataArray.count
     }
-     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HomeListCell", for: indexPath) as! HomeListCell
         
         let listmodel = dataArray[indexPath.row] as! AccBookVM
         cell.listViewModel = listmodel
         return cell
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true);
+        
+    }
+    
 }
 
