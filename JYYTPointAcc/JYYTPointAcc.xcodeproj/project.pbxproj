@@ -61,6 +61,8 @@
 		7DD7BCE01E8F7922005369F7 /* NSDate+category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7BCDF1E8F7922005369F7 /* NSDate+category.swift */; };
 		7DD7BCEE1E920BA1005369F7 /* NewFeatureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7BCED1E920BA1005369F7 /* NewFeatureVC.swift */; };
 		7DD7BCF01E921A4B005369F7 /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD7BCEF1E921A4B005369F7 /* UIView+AutoLayout.swift */; };
+		7DD8DD351EC1C0E200F5E0E3 /* CZEmotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD8DD341EC1C0E200F5E0E3 /* CZEmotionManager.swift */; };
+		7DD8DD371EC2AED500F5E0E3 /* CZLable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD8DD361EC2AED500F5E0E3 /* CZLable.swift */; };
 		7DFF6EC21EAFA0A50052369F /* MyQRCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFF6EBE1EAFA0A50052369F /* MyQRCardVC.swift */; };
 		7DFF6EC31EAFA0A50052369F /* MyQRCardVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DFF6EBF1EAFA0A50052369F /* MyQRCardVC.xib */; };
 		7DFF6EC41EAFA0A50052369F /* QRScanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFF6EC01EAFA0A50052369F /* QRScanVC.swift */; };
@@ -150,6 +152,8 @@
 		7DD7BCDF1E8F7922005369F7 /* NSDate+category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+category.swift"; sourceTree = "<group>"; };
 		7DD7BCED1E920BA1005369F7 /* NewFeatureVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewFeatureVC.swift; sourceTree = "<group>"; };
 		7DD7BCEF1E921A4B005369F7 /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AutoLayout.swift"; sourceTree = "<group>"; };
+		7DD8DD341EC1C0E200F5E0E3 /* CZEmotionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CZEmotionManager.swift; sourceTree = "<group>"; };
+		7DD8DD361EC2AED500F5E0E3 /* CZLable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CZLable.swift; sourceTree = "<group>"; };
 		7DFF6EBE1EAFA0A50052369F /* MyQRCardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyQRCardVC.swift; sourceTree = "<group>"; };
 		7DFF6EBF1EAFA0A50052369F /* MyQRCardVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyQRCardVC.xib; sourceTree = "<group>"; };
 		7DFF6EC01EAFA0A50052369F /* QRScanVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScanVC.swift; sourceTree = "<group>"; };
@@ -205,6 +209,8 @@
 			isa = PBXGroup;
 			children = (
 				7D3227E31EB56390004A666C /* textSwiftVC.swift */,
+				7DD8DD341EC1C0E200F5E0E3 /* CZEmotionManager.swift */,
+				7DD8DD361EC2AED500F5E0E3 /* CZLable.swift */,
 				7D3227E51EB563A7004A666C /* textOCVC.h */,
 				7D3227E61EB563A7004A666C /* textOCVC.m */,
 			);
@@ -718,9 +724,11 @@
 				7D97D4001EA5EFE700A8D7BF /* AFNNetWorkTool.swift in Sources */,
 				7D3227E71EB563A7004A666C /* textOCVC.m in Sources */,
 				7D7D8C031EA9D2270091B491 /* NSString+NSString_MD5.m in Sources */,
+				7DD8DD351EC1C0E200F5E0E3 /* CZEmotionManager.swift in Sources */,
 				7DD5E1C21EBD8EE6005001A9 /* AccBookVM.swift in Sources */,
 				7DBDC8881EBDBCD80029E559 /* HomeListCell.swift in Sources */,
 				7DD5E1C01EBD8DCB005001A9 /* AccBookListVM.swift in Sources */,
+				7DD8DD371EC2AED500F5E0E3 /* CZLable.swift in Sources */,
 				7DFF6ED81EB1C33F0052369F /* BaseTableController.swift in Sources */,
 				7DD7BCE01E8F7922005369F7 /* NSDate+category.swift in Sources */,
 				7DFF6EC41EAFA0A50052369F /* QRScanVC.swift in Sources */,
