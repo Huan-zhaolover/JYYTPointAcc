@@ -14,10 +14,11 @@ class CZEmotionManager {
     
     // 单例如果调用了init方法，和share方法，得到的是不同的对象，
     //  init 用private 修饰，外部只能使用share 方法
-    //
-    init() {
+    private init() {
         loadPackAges()
     }
+    
+    
     var packges :[[AccountBookModel]]{
         
         return[[AccountBookModel(), AccountBookModel()]]
@@ -51,20 +52,19 @@ extension CZEmotionManager{
             })
             
             // 尾随闭包：
-            let resur2 =  p.filter(){ (em) -> Bool in
+            let _ =  p.filter(){ (em) -> Bool in
                 return em.name == sting
             }
             
             // 如果是尾随闭包只有一句，并且是返回，
             // 闭包格式可以省略，
             // 参数省略之后，可以使用$0,$1....以此替代原有的参数
-            let resur3 =  p.filter() {
+            let _ =  p.filter() {
                 return $0.name == sting
             }
             
             // return 也可以省略
-            
-            let resur4 =  p.filter() { $0.name == sting }
+            let _ =  p.filter() { $0.name == sting }
             
             
             
@@ -97,10 +97,5 @@ extension CZEmotionManager{
             print("\(subStr)")
             
         }
-        
-        
     }
-    
-   
-    
 }

@@ -45,18 +45,12 @@ class textSwiftVC: UIViewController {
         
         
     }
-    /*
-     属性字符串
-     1.NSTextStorage  管理NSLayoutManager 对象，字符或者属性变化的时候，通知LayoutManager重新布局并显示文本
-     2.NSLayoutManager 负责协调布局，显示NSTextStorage对象中保存的字符，将字形设置为一系列NSTextContainer 对象，然后以系列文本视图对象显示
-     3.NStextContainer 也可以定义一个排除路径，定义一下矩形区域，在layoutSubviews中更新调用
-     
-     
-     
-     */
+  
     func textTextKit2(){
     
     }
+    
+    
     func textTextKit(){
       
         let attchment = NSTextAttachment()
@@ -76,6 +70,8 @@ class textSwiftVC: UIViewController {
         attrStrM.append(NSAttributedString(string: "99999"))
         
         lable.attributedText = attrStrM
+        
+         
         
     }
     

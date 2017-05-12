@@ -49,6 +49,17 @@
         
         NSLog(@"come herer%@",[NSThread currentThread]);
     });
+    
+    
+    NSString *arrr = @"测试";
+    NSStringEncoding gbkEncoding =CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);
+    NSData *adata = [arrr dataUsingEncoding:gbkEncoding];
+
+    
+//    NSString *giftString = [[NSString alloc]initWithData:adata encoding:gbkEncoding];
+
+ 
+ 
 
 }
 - (void)didReceiveMemoryWarning {

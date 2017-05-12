@@ -10,13 +10,21 @@ import UIKit
 // 默认不能实现垂直顶部对齐，使用TextKit
 
 class CZLable: UILabel {
- 
+    /*
+     属性字符串
+     1.NSTextStorage  管理NSLayoutManager 对象，字符或者属性变化的时候，通知LayoutManager重新布局并显示文本
+     2.NSLayoutManager 负责协调布局，显示NSTextStorage对象中保存的字符，将字形设置为一系列NSTextContainer 对象，然后以系列文本视图对象显示
+     3.NStextContainer 也可以定义一个排除路径，定义一下矩形区域，在layoutSubviews中更新调用
+     
+     */
+    
     // 属性文本存储  是 NSMutableAttributedString子类
     private lazy var textStore = NSTextStorage()
     // 负责文本“字形”布局
     private lazy var layoutManager = NSLayoutManager()
     // 设定文本绘制的的范围
     private lazy var textContainer = NSTextContainer ()
+   
     // 构造函数
     override init(frame: CGRect) {
          super.init(frame: frame)
@@ -27,6 +35,7 @@ class CZLable: UILabel {
         super.init(coder: aDecoder)
         prepareTextSystem()
     }
+   
     // 绘制文本
     // 绘制类似油画，后绘制的内容，会把之前绘制的内容覆盖
     override func drawText(in rect: CGRect) {
@@ -37,7 +46,6 @@ class CZLable: UILabel {
         layoutManager.drawGlyphs(forGlyphRange: range, at: CGPoint())
         //
     }
-    
 
     override func layoutSubviews() {
          super.layoutSubviews()
@@ -82,7 +90,6 @@ class CZLable: UILabel {
         }
         
         return ranges
-//        return [NSRange()]
     }
     
     // UILable 的点击
