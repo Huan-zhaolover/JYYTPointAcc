@@ -42,6 +42,8 @@
 		7D97D4001EA5EFE700A8D7BF /* AFNNetWorkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D97D3FF1EA5EFE700A8D7BF /* AFNNetWorkTool.swift */; };
 		7DBDC8881EBDBCD80029E559 /* HomeListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBDC8861EBDBCD80029E559 /* HomeListCell.swift */; };
 		7DBDC8891EBDBCD80029E559 /* HomeListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DBDC8871EBDBCD80029E559 /* HomeListCell.xib */; };
+		7DC8B7741EFD079100B8E6CA /* CZSqliteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC8B7731EFD079100B8E6CA /* CZSqliteManager.swift */; };
+		7DC8B7761EFD18AB00B8E6CA /* CZEmotionTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC8B7751EFD18AB00B8E6CA /* CZEmotionTipView.swift */; };
 		7DD5E1871EB8C1BD005001A9 /* JYNomalRefreshView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DD5E1861EB8C1BD005001A9 /* JYNomalRefreshView.xib */; };
 		7DD5E1891EB8C522005001A9 /* JYNomalRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD5E1881EB8C522005001A9 /* JYNomalRefreshView.swift */; };
 		7DD5E19E1EBA203F005001A9 /* JYNomalImageRefreshView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7DD5E19D1EBA203F005001A9 /* JYNomalImageRefreshView.xib */; };
@@ -133,6 +135,8 @@
 		7D97D3FF1EA5EFE700A8D7BF /* AFNNetWorkTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFNNetWorkTool.swift; sourceTree = "<group>"; };
 		7DBDC8861EBDBCD80029E559 /* HomeListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeListCell.swift; sourceTree = "<group>"; };
 		7DBDC8871EBDBCD80029E559 /* HomeListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeListCell.xib; sourceTree = "<group>"; };
+		7DC8B7731EFD079100B8E6CA /* CZSqliteManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CZSqliteManager.swift; sourceTree = "<group>"; };
+		7DC8B7751EFD18AB00B8E6CA /* CZEmotionTipView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CZEmotionTipView.swift; sourceTree = "<group>"; };
 		7DD5E1861EB8C1BD005001A9 /* JYNomalRefreshView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JYNomalRefreshView.xib; sourceTree = "<group>"; };
 		7DD5E1881EB8C522005001A9 /* JYNomalRefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JYNomalRefreshView.swift; sourceTree = "<group>"; };
 		7DD5E19D1EBA203F005001A9 /* JYNomalImageRefreshView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JYNomalImageRefreshView.xib; sourceTree = "<group>"; };
@@ -209,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				7D3227E31EB56390004A666C /* textSwiftVC.swift */,
+				7DC8B7751EFD18AB00B8E6CA /* CZEmotionTipView.swift */,
 				7DD8DD341EC1C0E200F5E0E3 /* CZEmotionManager.swift */,
 				7DD8DD361EC2AED500F5E0E3 /* CZLable.swift */,
 				7D3227E51EB563A7004A666C /* textOCVC.h */,
@@ -338,6 +343,7 @@
 				7D7D8BEA1EA870500091B491 /* BLHttpSessionsRequest.swift */,
 				7DD7BCEF1E921A4B005369F7 /* UIView+AutoLayout.swift */,
 				7D7D8BF01EA8932B0091B491 /* JYComon.swift */,
+				7DC8B7731EFD079100B8E6CA /* CZSqliteManager.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -732,6 +738,7 @@
 				7DFF6ED81EB1C33F0052369F /* BaseTableController.swift in Sources */,
 				7DD7BCE01E8F7922005369F7 /* NSDate+category.swift in Sources */,
 				7DFF6EC41EAFA0A50052369F /* QRScanVC.swift in Sources */,
+				7DC8B7741EFD079100B8E6CA /* CZSqliteManager.swift in Sources */,
 				7D7D8BF11EA8932B0091B491 /* JYComon.swift in Sources */,
 				7D86FE0A1E87B485008EA024 /* MainViewController.swift in Sources */,
 				7D86FE151E87B5B9008EA024 /* MineVC.swift in Sources */,
@@ -755,6 +762,7 @@
 				7D3227E41EB56390004A666C /* textSwiftVC.swift in Sources */,
 				7DFF6EC21EAFA0A50052369F /* MyQRCardVC.swift in Sources */,
 				7D7D8BEF1EA88AA20091B491 /* textDownLoad.swift in Sources */,
+				7DC8B7761EFD18AB00B8E6CA /* CZEmotionTipView.swift in Sources */,
 				7D86FE111E87B598008EA024 /* BillListVC.swift in Sources */,
 				7D86FE271E890954008EA024 /* InvoiceListVC.swift in Sources */,
 				7D7D8BEB1EA870500091B491 /* BLHttpSessionsRequest.swift in Sources */,

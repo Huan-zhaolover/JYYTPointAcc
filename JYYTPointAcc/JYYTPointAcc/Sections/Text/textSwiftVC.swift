@@ -11,13 +11,30 @@ import UIKit
 class textSwiftVC: UIViewController {
 
     let lable = UILabel()
-    
+    let tipView = CZEmotionTipView()
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tipView.addGestureRecognizer((UILongPressGestureRecognizer(target: self, action: #selector(longPressVie))))
+        
         textGroup()
         // Do any additional setup after loading the view.
     }
-
+    
+    @objc  func longPressVie(gesture:UILongPressGestureRecognizer){
+    
+        let location = gesture.location(in: self.view)
+        switch gesture.state {
+        case .began,.cancelled:
+            tipView.isHidden = false
+            let center = self.view.convert(tipView.center, to: (UIApplication.shared.delegate?.window)!)
+           tipView.center = center
+        default:
+            break
+        }
+        
+    }
     
     func textGroup(){
         let group = DispatchGroup()

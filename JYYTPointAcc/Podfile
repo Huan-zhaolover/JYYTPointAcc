@@ -9,6 +9,7 @@ pod 'AFNetworking'
 pod 'SwiftyJSON'
 pod 'RealmSwift'
 pod 'SDWebImage'
+pod ‘FMDB’
 end
 
 target 'JYYTPointAccTests' do
